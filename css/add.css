@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+body:before {
+	content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	/* background-size: cover;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px); */
+}
+#sfrom{
+    position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 280px;
+	padding: 80px 40px;
+background: 	rgb(184,184,184);
+
+	/* background-size: cover;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px); */
+}
+#avatar{
+    position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	
+	top: calc(-80px/2);
+	left: 190px;
+
+}
+h3{
+    margin: 0;
+	padding: 0 0 20px;
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+label{
+    margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: ;
+    font-family: 'Playfair Display', serif;
+}
