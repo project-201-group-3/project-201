@@ -9,6 +9,11 @@
 			height: 100vh;
 			background-color: #333;
 		}
+         .videoSection{
+			 position: relative;
+			 left: 240px;
+		 }
+		 
         .sortContainer ul{
             margin-bottom: 50px;
         }
@@ -64,6 +69,10 @@
             border: 2px solid rgba(95, 94, 94, 0.315);
             border-radius: 10px;
             transition: 0.5s;
+			background-color: rgb(75, 72, 72);
+			width: 305px;
+            height: 400px;
+
         }
         .box:hover{
             box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px);
@@ -71,9 +80,11 @@
         }
           
         div.moviesItems img {
+			
             width: 280px;
             height: 250px;
-            padding: 10px;
+            padding-top: 0px;
+
             border-radius: 10%;
             transition: .350ms;
         }
