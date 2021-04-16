@@ -49,3 +49,19 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+// let button = document.getElementById('button');
+// form.addEventListener('button',SubmitAdd);
+
+// function SubmitAdd(event){
+//   // prevent the default behaviour of refreshing the page
+//   event.preventDefault();
+//   let Name = event.target.Name.value;
+//   console.log(Name);
+//   let YearOfProduction = parseInt(event.target.YearOfProduction.value);
+//   console.log(YearOfProduction);
+//   let Rating = parseInt(event.target.Rating.value);
+//   console.log(Rating);
+//   let Image = event.target.Image.value;
+//   console.log(Image);
+// }
