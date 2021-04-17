@@ -69,7 +69,7 @@
             border: 2px solid rgba(95, 94, 94, 0.315);
             border-radius: 10px;
             transition: 0.5s;
-			background-color: rgb(75, 72, 72);
+			background-color: rgb(139, 3, 3);
 			width: 305px;
             height: 400px;
 
@@ -92,3 +92,13 @@
             transform: scale(1.1);
             border-radius: 20%;
         }
+
+		.checked {
+			color: orange;
+		  }
+		
+		  .stars{
+			  position: relative;
+			  float: right;
+			  bottom: 35px;
+		  }
