@@ -16,10 +16,23 @@ function Item(name, year, type, movieType, sourse) {
 }
 
 
-let item1 = new Item("john wick", 2018, "movie", "drama", "image/wick.jpg");
-let item2 = new Item("john wick", 2018, "anime", "action", "https://memberpress.com/wp-content/uploads/2020/05/act-now-button-concept-3d-illustration-picture-id1000849426.jpg");
-let item3 = new Item("john wick", 2018, "anime", " action", "https://st2.depositphotos.com/1498528/9192/v/950/depositphotos_91922214-stock-illustration-action-word-icon.jpg");
-let item4 = new Item("john wick", 2018, "series", "comedy", "https://media.gettyimages.com/photos/keanu-reeves-attends-the-john-wick-special-screenings-at-ham-yard-on-picture-id1146739180?s=612x612");
+let item1 = new Item("john wick", 2018, "movie", "action", "image/wick.jpg");
+
+let item2 = new Item("The equlizer", 2018, "anime", "action", "movies-Images/action the equalizer.jpg");
+
+let item3 = new Item("Batman The Dark Night", 2018, "anime", "action", "movies-Images/action batman the dark night.png");
+
+let item4 = new Item("Harry Potter", 2018, "series", "drama", "movies-Images/action harry potter.jpg");
+
+let item5 = new Item("Intersteller", 2018, "movie", "action", "movies-Images/sience intersteller.jpg");
+
+let item6 = new Item("Enola Holmes", 2018, "anime", "drama", "movies-Images/drama enolla holmes.jpg");
+
+let item7 = new Item("Fury", 2018, "anime", "action", "movies-Images/drama fury.jpg");
+
+let item8 = new Item("Joker", 2018, "series", "drama", "movies-Images/drama joker.jpg");
+
+let item9 = new Item("Shools of rock", 2018, "series", "comedy", "movies-Images/comedian schools of rock.jpg");
 
 
 console.log(allItem);
@@ -42,7 +55,7 @@ function render() {
     let myP = document.createElement('p');
     box.appendChild(myP);
 
-    myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].name}`);
+    myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].movieType}`);
 
 
     image.src = allItem[i].sourse;
@@ -55,6 +68,19 @@ function render() {
 
 render();
 
+
+
+// events 
+
+let allDisplay = document.getElementById('all');
+
+allDisplay.addEventListener('click', allClick);
+
+function allClick() {
+  display.textContent = ''
+  render();
+  
+}
 
 let comedy = document.getElementById('comedy');
 
@@ -80,7 +106,7 @@ function comedyClick() {
       let myP = document.createElement('p');
       box.appendChild(myP);
 
-      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].name}`);
+      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].movieType}`);
 
 
       image.src = allItem[i].sourse;
@@ -121,6 +147,8 @@ function comedyClick() {
         let box = document.createElement('div');
         display.appendChild(box);
 
+        
+
 
 
         let image = document.createElement('img');
@@ -131,19 +159,52 @@ function comedyClick() {
         let myP = document.createElement('p');
         box.appendChild(myP);
 
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].name}`);
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].movieType}`);
 
 
         image.src = allItem[i].sourse;
+       
 
       }
 
-
-
-
-
-
     }
 
+  }
+
+  
+  let drama = document.getElementById('drama');
+
+  drama.addEventListener('click', dramaClick);
+
+
+  function dramaClick() {
+
+    display.textContent = ''
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].movieType == "drama") {
+        let box = document.createElement('div');
+        display.appendChild(box);
+
+        
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+        image.style.height = "100px";
+        image.style.width = "100px";
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].movieType}`);
+
+
+        image.src = allItem[i].sourse;
+       
+
+      }
+
+    }
 
   }
