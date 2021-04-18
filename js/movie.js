@@ -46,8 +46,7 @@ function Item(name , year ,type , movieType ,   sourse ){
 
          
       image.src= allItem[i].sourse;
-      
-    
+
 
     }
         
@@ -76,7 +75,6 @@ render();
 
 
             }
-            
            
         }
      
