@@ -1,109 +1,103 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	
+	justify-content: center;
+	height: 100vh;
+	background-color: #333;
+	
+}
+.videoSection{
+	position: relative;
+	left: 240px;
+}
+/*** Generated Box ***/
 
-		*{
-			box-sizing: border-box;
-		}
+.box1{
+	width: 100px;
+	height: 100px;
+	border-width: 1.5px;
+}		 
+.sortContainer ul{
+    margin-bottom: 50px;
+}
+.sortContainer ul li{
+	display: inline-block;
+	position: relative;
+}
+.sortContainer ul li a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	padding: 15px;
+	transition: all ease 0.3s;
+}
+.sortContainer ul li a:hover{
+	background-color: red;
+	color: #fff !important;
+}
+.sortContainer ul li.selection ul{
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	padding-left: 0;
+	min-width: 180px;
+	display: none;
+}
+.sortContainer ul li.selection ul li a{
+	color: #000;
+	width: 180px;
+}
+.sortContainer ul li.selection:hover ul{
+	display: block;
+}
+/*****************Video******************/
+.videoSection{
+    width: 100%;
+}
+video{
+    margin-bottom: 50px;
+    clear: both;
+}
+/*****************MoviesItems******************/
+.box{
+    margin: 5px;
+    padding: 10px;
+    float: left;
+    margin-left: 80px;
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
+    border: 2px solid rgba(95, 94, 94, 0.315);
+    border-radius: 10px;
+    transition: 0.5s;
+	background-color: rgb(139, 3, 3);
+	width: 305px;
+    height: 400px;
+}
+.box:hover{
+    box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px);
+    transform: translateY(-30px);
+}
+div.moviesItems img {
+	width: 280px;
+    height: 250px;
+    padding-top: 0px;
+    border-radius: 10%;
+    transition: .350ms;
+}
+div.moviesItems img:hover{
+    transform: scale(1.05);
+    border-radius: 5%;
+}
 
-		.box1{
-			width: 100px;
-			height: 100px;
-			border-width: 1.5px;
-		}
-		body{
-			display: flex;
-			justify-content: center;
-			height: 100vh;
-			background-color: #333;
-		}
-         .videoSection{
-			 position: relative;
-			 left: 240px;
-		 }
-		 
-        .sortContainer ul{
-            margin-bottom: 50px;
-        }
-		.sortContainer ul li{
-			display: inline-block;
-			position: relative;
-		}
-		.sortContainer ul li a{
-			display: inline-block;
-			color: #fff;
-			text-decoration: none;
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-			padding: 15px;
-			transition: all ease 0.3s;
-		}
-		.sortContainer ul li a:hover{
-			background-color: red;
-			color: #fff !important;
-		}
+.checked {
+	color: orange;
+}
 
-		.sortContainer ul li.selection ul{
-			background-color: #fff;
-			position: absolute;
-			left: 0;
-			padding-left: 0;
-			min-width: 180px;
-			display: none;
-		}
-		.sortContainer ul li.selection ul li a{
-			color: #000;
-			width: 180px;
-		}
-
-		.sortContainer ul li.selection:hover ul{
-			display: block;
-		}
-        /*****************Video******************/
-        .videoSection{
-            width: 100%;
-        }
-        video{
-            margin-bottom: 50px;
-            clear: both;
-        }
-        /*****************MoviesItems******************/
-        .box{
-            margin: 5px;
-            padding: 10px;
-            float: left;
-            margin-left: 80px;
-            box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
-            border: 2px solid rgba(95, 94, 94, 0.315);
-            border-radius: 10px;
-            transition: 0.5s;
-			background-color: rgb(139, 3, 3);
-			width: 305px;
-            height: 400px;
-
-        }
-        .box:hover{
-            box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px);
-            transform: translateY(-30px);
-        }
-          
-        div.moviesItems img {
-			
-            width: 280px;
-            height: 250px;
-            padding-top: 0px;
-
-            border-radius: 10%;
-            transition: .350ms;
-        }
-        div.moviesItems img:hover{
-            transform: scale(1.1);
-            border-radius: 20%;
-        }
-
-		.checked {
-			color: orange;
-		  }
-		
-		  .stars{
-			  position: relative;
-			  float: right;
-			  bottom: 35px;
-		  }
+.stars{
+	position: relative;
+	float: right;
+	bottom: 35px;
+}
