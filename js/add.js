@@ -1,12 +1,13 @@
 'use strict';
 
 
-function FormPage(Name, YearOfProduction, Rating, browser, file) {
+function FormPage(Name, YearOfProduction, Rating, catogary,browser, file) {
   this.Name = Name;
   this.YearOfProduction = YearOfProduction;
   this.Rating = Rating;
   this.browser = browser;
   this.file = file;
+  this.catogary=catogary;
   //create array as object 
   FormPage.addForm.push(this);
 
@@ -18,6 +19,8 @@ FormPage.addForm = [];
 let image = document.getElementById('file');
 let form = document.getElementById('form');
 let submit = document.getElementById('submit');
+let display = document.getElementById('display');
+
 form.appendChild(submit);
 
 
@@ -30,7 +33,32 @@ form.appendChild(submit);
 //create eventlistner
 form.addEventListener('submit', UserClick);
 
+// create render function to show new elemnt in next page that selecetd
+function render() {
 
+  for (let i = 0; i < FormPage.addForm.length; i++) {
+
+    let box = document.createElement('div');
+    display.appendChild(box);
+
+    let image = document.createElement('img');
+    box.appendChild(image);
+    image.style.height = "100px";
+    image.style.width = "100px";
+
+    let myP = document.createElement('p');
+    box.appendChild(myP);
+
+    myP.innerHTML = (`${FormPage.addForm[i].Name} \n ${FormPage.addForm[i].YearOfProduction} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catogary} \n ${FormPage.addForm[i].browser}`);
+
+
+    image.src = FormPage.addForm[i].file;
+
+
+
+  }
+
+}
 
 //creat the UserClick function 
 function UserClick(event) {
@@ -46,11 +74,13 @@ function UserClick(event) {
   console.log(RatingMSA);
   let browserMSA = event.target.browser.value;
   console.log(browserMSA);
+  let catogaryMSA=event.target.catogary.value;
+  console.log(catogaryMSA);
 
   let fileMSA = event.target.file.value;
   console.log(fileMSA);
 
-  const add = new FormPage(NameMSA, YearOfProductionMSA, RatingMSA, browserMSA, fileMSA);
+  const add = new FormPage(NameMSA, YearOfProductionMSA, RatingMSA,catogaryMSA ,browserMSA, fileMSA);
   console.log(add);
   updateStorage();
 
@@ -58,21 +88,30 @@ function UserClick(event) {
 
   if (browserMSA == 'movie') {
     alert('Thank you for your updating ');
-    
-    window.location.href = "movies.html";
-    //let data = localStorage.getItem('product');
+    getForm();
 
+   
+
+    window.location.assign("movies.html") ;
+    //let data = localStorage.getItem('product');
+  
 
   }
   else if (browserMSA == 'series') {
     alert('Thank you for your updating ');
 
     window.location.href = "series.html";
+    getForm();
+    
+render();
   }
   else {
     alert('Thank you for your updating ');
 
     window.location.href = "anime.html";
+    getForm();
+    
+render();
   }
 
 
@@ -80,6 +119,7 @@ function UserClick(event) {
   submit.removeEventListener('submit', UserClick);
 
 }
+
 
 
 //create function for update storge

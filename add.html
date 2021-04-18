@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add form</title>
     <link rel="stylesheet" href="css/add.css">
+    <link rel="" href="anime.html">
+    <link rel="" href="movies.html">
+    <link rel="" href="series.html">
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Zen+Dots&display=swap"
         rel="stylesheet">
 </head>
@@ -26,8 +32,9 @@
             </h3>
             <hr>
 
-            <form action="" id="form">
+            <form action=" " id="form">
 
+                <!-- <input type="text" name="serialNumber" /> -->
 
                 <label for="Name">
                     Name :
@@ -59,7 +66,7 @@
                 <input style="
                     height: 30px;
                     
-                    font-size: 16px;" placeholder="Enter the Rate" type="number" id='Rating' name="Rating"
+              font-size: 16px;" placeholder="Enter the Rate" type="number" id='Rating' name="Rating"
                     autocomplete="off">
                 </input>
                 <br>
@@ -73,7 +80,6 @@
                 </div>
 
 
-
                 <!-- <label for="Type:">Type :</label>
     <select id="Type" name="Type :">
 
@@ -82,7 +88,9 @@
       <option value="moive">moive</option>
     <br> -->
                 <br>
-
+                <label for="catogary">catogary:</label>
+                <input type="text" id="catogary" ;name="catogary" , placeholder="Enter the Action |Comady|Drama">
+<br>
                 <span>
                     <label for="file"> Please specify a file:
                     </label>
@@ -101,10 +109,12 @@
 
             </form>
         </div>
+        <div id="display"></div>
+
 
     </main>
     <footer>
-        &copy;
+        &copy;MSA
     </footer>
     <script src="js/add.js">
 
