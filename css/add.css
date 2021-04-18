@@ -90,7 +90,7 @@ label{
 }
 
 
-#button{
+#submit{
 	 margin-left: 300px;
 	width: 100px;
 	height: 50px;
@@ -107,7 +107,7 @@ label{
   box-shadow: 0 9px #999;
 top: 70px;
 }
-#button:hover{
+#submit:hover{
 	 background-color:rgb(223, 151, 151); 
 
 }
