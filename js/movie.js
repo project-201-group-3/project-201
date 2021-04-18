@@ -1,7 +1,5 @@
 'use strict'
-
 let allItem = [];
-
 function Item(name, year, type, movieType, sourse) {
 
   this.name = name;
@@ -38,15 +36,82 @@ let item9 = new Item("Shools of rock", 2018, "series", "comedy", "movies-Images/
 console.log(allItem);
 
 
-let display = document.getElementById('movies-display');
-
-function render() {
-
+const display = document.getElementById('movies-display');
+/*********************Noor&Ibrahem**************************/
+const clearCartBtn  = document.getElementById("#clearCart");
+const tableBody = document.getElementById('tableBody');
+const clearAll = document.getElementById('clearCart');
+///////////////////// making the table 
+function addItemToLocal(){
+let itemSeperate = JSON.stringify(allItem);
+// console.log(itemSeperate);
+localStorage.setItem("key", itemSeperate);
+}
+let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
+console.log(itemNotSeperate);
+// making the table 
+let noor = function () {
+  
   for (let i = 0; i < allItem.length; i++) {
+    let firstRowElemnt = document.createElement('tr');
+    tableBody.appendChild(firstRowElemnt);
+    let imageCoulmn = document.createElement('img');
+    firstRowElemnt.appendChild(imageCoulmn);
+    imageCoulmn.src = allItem[i].sourse;
+    imageCoulmn.style.width = '100px';
+    let nameColumn = document.createElement('td');
+    firstRowElemnt.appendChild(nameColumn);
+    nameColumn.textContent = allItem[i].name;
+    //deleteItem
+    let deleteIcon = document.createElement('td');
+    deleteIcon.classList.add("delete");
+    deleteIcon.setAttribute('data',allItem[i].sourse);
+    firstRowElemnt.appendChild(deleteIcon);
+    deleteIcon.textContent = 'X';  
+    deleteIcon.style.color= 'red';
+    //link everyelemnt to its class name for design
+  }
+}
+//click for add element ...
+/* Not added yet */
+//click for clear item ..
+tableBody.addEventListener('click',deleteItem);
+function deleteItem(e){
+  if (e.target.classList.contains('delete')){
+      let attributeName = e.target.getAttribute('data');
+      deleteItemFromLocal(attributeName);
+    e.target.parentElement.remove(); //parent which is row // parent parent is tbody
+  }
+}
+function deleteItemFromLocal(attributeName){
+  for (let i = 0; i < allItem.length; i++){
+      if (allItem[i].sourse === attributeName[i]){
+        allItem.splice(i,1)
+      }
+  }
+  addItemToLocal();
+}
+//to delete all
+clearAll.addEventListener('click',deleteAll);
+function deleteAll(e){
+  e.preventDefault();
+  while(tableBody!=null){ //tableBody.firstChild
+    tableBody.removeChild(tableBody.firstChild);
+  }
+ // allItem = [];
+  addItemToLocal();
+  
+}
 
-    let box = document.createElement('div');
-    display.appendChild(box);
-
+console.log(noor());
+allItem.image;
+console.log(allItem[0].name);
+/***************Finish Ibraheem&Noor Part**************************/
+let box = document.createElement('div');
+function render() {
+  
+  //display.appendChild(box);
+  for (let i = 0; i < allItem.length; i++) {
     let image = document.createElement('img');
     box.appendChild(image);
     image.style.height = "100px";
@@ -71,13 +136,13 @@ render();
 
 
 // events 
-
+/*
 let allDisplay = document.getElementById('all');
 
 allDisplay.addEventListener('click', allClick);
 
 function allClick() {
-  display.textContent = ''
+  box.textContent = ''
   render();
   
 }
@@ -89,12 +154,12 @@ comedy.addEventListener('click', comedyClick);
 
 function comedyClick() {
 
-  display.textContent = ''
+  box.textContent = ''
   
   for (let i = 0; i < allItem.length; i++) {
     if (allItem[i].movieType == "comedy") {
       let box = document.createElement('div');
-      display.appendChild(box);
+      //display.appendChild(box);
 
 
 
@@ -141,11 +206,11 @@ function comedyClick() {
 
   function actionClick() {
 
-    display.textContent = ''
+    box.textContent = ''
     for (let i = 0; i < allItem.length; i++) {
       if (allItem[i].movieType == "action") {
         let box = document.createElement('div');
-        display.appendChild(box);
+     //   display.appendChild(box);
 
         
 
@@ -179,11 +244,11 @@ function comedyClick() {
 
   function dramaClick() {
 
-    display.textContent = ''
+    box.textContent = ''
     for (let i = 0; i < allItem.length; i++) {
       if (allItem[i].movieType == "drama") {
         let box = document.createElement('div');
-        display.appendChild(box);
+  //      display.appendChild(box);
 
         
 
@@ -208,3 +273,5 @@ function comedyClick() {
     }
 
   }
+
+  */
