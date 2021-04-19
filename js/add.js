@@ -5,10 +5,10 @@
 function FormPage(name, year, catagory, type, sourse) {
   this.name = name;
   this.year = year;
-  this.Rating = Rating;
+  // this.Rating = Rating;
+  this.catagory = catagory;
   this.type = type;
   this.sourse = sourse;
-  this.catagory = catagory;
   //create array as object 
   FormPage.addForm.push(this);
  
@@ -17,14 +17,14 @@ function FormPage(name, year, catagory, type, sourse) {
 
 FormPage.addForm = [];
 
-let item1 = new FormPage("kkkk", 2020, 4, "movie", "asdqasd", "asdasd");
-let item2 = new FormPage("mmmm", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
+// let item1 = new FormPage("kkkk", 2020, 4, "movie", "asdqasd", "asdasd");
+// let item2 = new FormPage("mmmm", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
 
-let item3 = new FormPage("lolo", 2020, 4, "movie", "asdqasd", "asdasd");
-let item4 = new FormPage("cccccc", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
-//let item3 = new FormPage("lololol", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
+// let item3 = new FormPage("lolo", 2020, 4, "movie", "asdqasd", "asdasd");
+// let item4 = new FormPage("cccccc", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
+// //let item3 = new FormPage("lololol", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
 
-console.log(FormPage.addForm);
+// console.log(FormPage.addForm);
 
 
 
@@ -44,7 +44,7 @@ form.appendChild(submit);
 
 
 //create eventlistner
-form.addEventListener('submit', UserClick);
+// form.addEventListener('submit', UserClick);
 
 // create render function to show new elemnt in next page that selecetd
 // function render() {
@@ -72,6 +72,7 @@ form.addEventListener('submit', UserClick);
 //   }
 
 
+form.addEventListener('submit', UserClick);
 
 //creat the UserClick function 
 function UserClick(event) {
@@ -85,10 +86,11 @@ function UserClick(event) {
   console.log(yearMSA);
   // let RatingMSA = parseInt(event.target.Rating.value);
   // console.log(RatingMSA);
-  let typeMSA = event.target.typeId.value;
-  console.log(typeMSA);
   let catagoryMSA = event.target.catogaryId.value;
   console.log(catagoryMSA);
+
+  let typeMSA = event.target.typeId.value;
+  console.log(typeMSA);
 
   let sourseMSA = event.target.sourseId.value;
   console.log(sourseMSA);
@@ -99,11 +101,11 @@ function UserClick(event) {
 
 
 
-  if (typeMSA == 'movie') {
+  if (catagoryMSA == 'movie') {
     alert('Thank you for your updating ');
     // let arr= getForm();
 
-    window.location.href = "movies.html";
+    // window.location.href = "movies.html";
 
     //  let fr = localStorage.getItem('FormPage.addForm ');
 
@@ -119,10 +121,10 @@ function UserClick(event) {
 
 
 
-  else if (typeMSA == 'series') {
+  else if (catagoryMSA == 'series') {
     alert('Thank you for your updating ');
 
-    window.location.href = "series.html";
+    // window.location.href = "series.html";
     getForm();
 
 
@@ -130,7 +132,7 @@ function UserClick(event) {
   else {
     alert('Thank you for your updating ');
 
-    window.location.href = "anime.html";
+    // window.location.href = "anime.html";
     getForm();
 
 
@@ -138,7 +140,7 @@ function UserClick(event) {
 }
 
 
-submit.removeEventListener('submit', UserClick);
+// submit.removeEventListener('submit', UserClick);
 
 
 
