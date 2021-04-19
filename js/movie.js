@@ -15,6 +15,7 @@ function Item(name, year, catagory, type, sourse) {
 
 }
 
+
 // Movie items
 
 let item1 = new Item("john wick", 2018, "movie", "action", "image/wick.jpg");
@@ -84,7 +85,7 @@ let item31 = new Item("Black Lagoon", 2006, "anime", "action", "https://cdn.anis
 
 let item32 = new Item("The Legend of Korra", 2012, "anime", "action", "https://decider.com/wp-content/uploads/2020/05/the-legend-of-korra.jpg?quality=80&strip=all&w=680&h=356&crop=1");
 
-let item33 = new Item("Gintama", 2006, "anime", "comedy", "https://i.pinimg.com/originals/6a/9a/e1/6a9ae1584d676f3818afe468c85c648b.jpg");
+let item33 = new Item("Gintama", 2006, "anime", "comedy", "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Gintama%27firstdvd.jpg/220px-Gintama%27firstdvd.jpg");
 
 let item34 = new Item("Mr. Osomatsu", 2015, "anime", "comedy", "https://images-na.ssl-images-amazon.com/images/I/81RO8JrCFxL._RI_.jpg");
 
@@ -127,7 +128,7 @@ let item51 = new Item("Brooklyn Nine-Nine", 2013, "series", "comedy", "https://m
 
 let item52 = new Item("Modern Family", 2009, "series", "action", "https://cdn1.edgedatg.com/aws/v2/abc/ModernFamily/showimages/e06cb0991ee33445654b96d29aa0d02b/1200x627-Q80_e06cb0991ee33445654b96d29aa0d02b.jpg");
 
-let item53 = new Item("The Punisher", 2017, "series", "action", "https://i.pinimg.com/originals/c0/df/ce/c0dfce00051900ebd2006bffc4478001.jpg");
+let item53 = new Item("The Punisher", 2017, "series", "action", "https://wallpapercave.com/wp/wp8822616.jpg");
 
 let item54 = new Item("The Witcher", 2019, "series", "action", "https://arabicpost.net/wp-content/uploads/2019/12/thewitcher_101_unit_06900_rt-fk3ph4dhp-0.jpg");
 
@@ -633,7 +634,8 @@ let listGenerator = function () {
   
   for (let i = 0; i < allItem.length; i++) {
     let firstRowElemnt = document.createElement('tr');
-    tableBody.appendChild(firstRowElemnt);
+    if (tableBody!= null){
+    tableBody.appendChild(firstRowElemnt);}
     let imageCoulmn = document.createElement('img');
     firstRowElemnt.appendChild(imageCoulmn);
     imageCoulmn.src = allItem[i].sourse;
