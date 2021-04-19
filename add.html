@@ -32,7 +32,7 @@
             </h3>
             <hr>
 
-            <form action=" " id="form">
+            <form action="" id="form">
 
                 <!-- <input type="text" name="serialNumber" /> -->
 
@@ -117,8 +117,13 @@
         &copy;MSA
     </footer>
     <script src="js/add.js">
-
-
+    </script>
+    <script>
+function passvalue(){
+let first=document.getElementById('NameField').value;
+localStorage.setItem('textvalue',first);
+return false;
+}
     </script>
 </body>
 

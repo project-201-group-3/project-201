@@ -34,29 +34,29 @@ form.appendChild(submit);
 form.addEventListener('submit', UserClick);
 
 // create render function to show new elemnt in next page that selecetd
-function render() {
+// function render() {
 
-  for (let i = 0; i < FormPage.addForm.length; i++) {
+//   for (let i = 0; i < FormPage.addForm.length; i++) {
 
-    let box = document.createElement('div');
-    display.appendChild(box);
+//     let box = document.createElement('div');
+//     display.appendChild(box);
 
-    let image = document.createElement('img');
-    box.appendChild(image);
-    image.style.height = "100px";
-    image.style.width = "100px";
+//     let image = document.createElement('img');
+//     box.appendChild(image);
+//     image.style.height = "100px";
+//     image.style.width = "100px";
 
-    let myP = document.createElement('p');
-    box.appendChild(myP);
+//     let myP = document.createElement('p');
+//     box.appendChild(myP);
 
-    myP.innerHTML = (`${FormPage.addForm[i].Name} \n ${FormPage.addForm[i].YearOfProduction} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catogary} \n ${FormPage.addForm[i].browser}`);
-
-
-    image.src = FormPage.addForm[i].file;
+//     myP.innerHTML = (`${FormPage.addForm[i].Name} \n ${FormPage.addForm[i].YearOfProduction} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catogary} \n ${FormPage.addForm[i].browser}`);
 
 
+//     image.src = FormPage.addForm[i].file;
 
-  }
+
+
+//   }
 
 }
 
@@ -88,11 +88,19 @@ function UserClick(event) {
 
   if (browserMSA == 'movie') {
     alert('Thank you for your updating ');
-    getForm();
+    //let arr= getForm();
+    window.addEventListener('load', () => {
 
-   
+    //  let fr = localStorage.getItem('FormPage.addForm ');
+      
+    //   document.getElementById('result').innerHTML = fr;
+  
+  })
+    // arr.push(window.location.assign("movies.html") )
+// ;    
+// render();
 
-    window.location.assign("movies.html") ;
+   //window.location.assign("movies.html") ;
     //let data = localStorage.getItem('product');
   
 
@@ -154,4 +162,4 @@ function getForm() {
 
 }
 
-getForm();
+getForm()
