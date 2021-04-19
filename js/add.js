@@ -58,7 +58,7 @@ form.addEventListener('submit', UserClick);
 
 //   }
 
-}
+
 
 //creat the UserClick function 
 function UserClick(event) {
@@ -88,30 +88,31 @@ function UserClick(event) {
 
   if (browserMSA == 'movie') {
     alert('Thank you for your updating ');
-    //let arr= getForm();
-    window.addEventListener('load', () => {
+    // let arr= getForm();
+  
+window.location.href = "movies.html";
 
     //  let fr = localStorage.getItem('FormPage.addForm ');
       
     //   document.getElementById('result').innerHTML = fr;
   
-  })
+  }
     // arr.push(window.location.assign("movies.html") )
 // ;    
 // render();
 
-   //window.location.assign("movies.html") ;
+
     //let data = localStorage.getItem('product');
   
 
-  }
+  
   else if (browserMSA == 'series') {
     alert('Thank you for your updating ');
 
     window.location.href = "series.html";
     getForm();
     
-render();
+
   }
   else {
     alert('Thank you for your updating ');
@@ -121,12 +122,12 @@ render();
     
 render();
   }
-
+}
 
 
   submit.removeEventListener('submit', UserClick);
 
-}
+
 
 
 
