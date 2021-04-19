@@ -8,26 +8,29 @@ body:before {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg);
+	background-image: url(https://image.freepik.com/free-vector/movie-time-neon-sign-popcorn-bucket-clapperboard-film-reel-poster_1262-13530.jpg);
+	/* background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg); */
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
-	/* background-size: cover;
-	-webkit-filter: blur(10px);
+	background-size: cover;
+	/* -webkit-filter: blur(10px);
 	-moz-filter: blur(10px);
-	filter: blur(10px); */
+	filter: blur(5px); */
 }
 #sfrom{
     position: absolute;
 	top: 50%;
-	left: 30%;
+	left: 25%;
 	transform: translate(-50%, -50%);
-	width: 400px;
-	height: 450px;
+	width: 450px;
+	height: 300px;
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
- background-image:url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm309-adj-05.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=33bf9355664e888e28ed1e4f17bce729);
+background-color: whitesmoke;
+ /* background-image:url(https://ak.picdn.net/shutterstock/videos/1042121761/thumb/1.jpg) ; */
+ box-shadow: 10px 10px 40px 20px #CDC7FF;
 
 
 	/* background-size: cover;
@@ -36,14 +39,15 @@ body:before {
 	filter: blur(1px); */
 }
 
+
 #avatar{
     position: absolute;
 	width: 80px;
 	height: 80px;
-	border-radius: 50%;
+	border-radius: 30%;
 	
 	top: calc(-80px/2);
-	left: 190px;
+	left: 220px;
 	animation-name: example;
 	animation-duration: 4s;
 	animation-direction: reverse;
@@ -72,7 +76,7 @@ body:before {
   }
 
 
-
+/* 
 h3{
     margin: 0;
 	padding: 0 0 20px;
@@ -80,14 +84,31 @@ h3{
 	text-align: center;
 	text-transform: uppercase;
     font-family: 'Playfair Display', serif;
-}
+} */
 label{
     margin: 0;
 	padding: 0;
 	font-weight: bold;
-	color:black ;
-    font-family: 'Playfair Display', serif;
-}
+	
+	
+		font-size: 20px;
+		color: rgb(193, 20, 199);
+		text-align: center;
+		-webkit-animation: label 1s ease-in-out infinite alternate;
+		-moz-animation: label 1s ease-in-out infinite alternate;
+		animation: label 1s ease-in-out infinite alternate;
+	  }
+	  
+	  @-webkit-keyframes label {
+		from {
+		  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #605ab9, 0 0 40px #434253, 0 0 50px #434253, 0 0 60px #434253, 0 0 70px #434253;
+		}
+		to {
+		  text-shadow: 0 0 20px #fff, 0 0 30px #A49FCC, 0 0 40px #A49FCC, 0 0 50px #A49FCC, 0 0 60px #A49FCC, 0 0 70px #A49FCC, 0 0 80px #A49FCC;
+		}
+	  }
+    /* font-family: 'Playfair Display', serif; */
+
 
 
 #submit{
@@ -165,3 +186,22 @@ input[type=number]:focus {
 			border-radius: 20px;
 		
 	}
+
+
+	/* h3 {
+		font-size: 10px;
+		color: #fff;
+		text-align: center;
+		-webkit-animation: glow 1s ease-in-out infinite alternate;
+		-moz-animation: glow 1s ease-in-out infinite alternate;
+		animation: glow 1s ease-in-out infinite alternate;
+	  }
+	  
+	  @-webkit-keyframes h3 {
+		from {
+		  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		}
+		to {
+		  text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		}
+	  } */
