@@ -78,94 +78,145 @@ let item26 = new Item("Schitt's Creek ", 2015, "series", "comedy", "https://m.me
 let item27 = new Item("The Big Bang Theory ", 2007, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg");
 
 
-console.log(allItem);
+// console.log(allItem);
+// let moviesArray = [];
+// let seriesArray = [];
+// let animeArray = [] ; 
+// for (let i = 0; i < allItem.length; i++) {
+//   if (allItem[i].catagory === 'movie') {
+//     moviesArray.push(allItem[i])
+    
+//   }else if (allItem[i].catagory === 'series') {
+//     seriesArray.push(allItem[i])
+//   }else if (allItem[i].catagory === 'anime') {
+//     animeArray.push(allItem[i])
+//   }
+// }
+
+// console.log(moviesArray);
+// console.log(seriesArray);
+// console.log(animeArray);
+
+
 
 
 let displayMovies = document.getElementById('movies');
-let displayAnimes = document.getElementById('anime');
 let displaySeries = document.getElementById('series');
-
+let displayAnimes = document.getElementById('anime');
 
 
 
 
 function renderMovies() {
 
-   for(let i = 0 ; i <allItem.length ; i++){
 
-     if(allItem[i].catagory ==="movie") {
+  for (let i = 0; i < allItem.length; i++) {
 
-      let box = document.createElement('div');
-      displayMovies.appendChild(box);
-    
-      let image = document.createElement('img');
-      box.appendChild(image);
-      image.style.height = "100px";
-      image.style.width = "100px";
-    
-      let myP = document.createElement('p');
-      box.appendChild(myP);
-    
-    
-    
-      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-    
-    
-      image.src = allItem[i].sourse;
+    if (displayMovies !==null) {
+      
+      if (allItem[i].catagory === "movie") {
+  
+        let box = document.createElement('div');
+        displayMovies.appendChild(box);
+  
+        let image = document.createElement('img');
+        box.appendChild(image);
+        image.style.height = "100px";
+        image.style.width = "100px";
+  
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+  
+  
+  
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+  
+  
+        image.src = allItem[i].sourse;
+      }
+    }
 
-     }  
 
 
-   }
-   
 
+  }
 
 }
 
-
+ renderMovies();
 
 
 
 function renderSeries() {
 
-  for(let i = 0 ; i <allItem.length ; i++){
+  for (let i = 0; i < allItem.length; i++) {
+    if (displaySeries!==null) {
+      
+      if (allItem[i].catagory === "series") {
+  
+        let box = document.createElement('div');
+        displaySeries.appendChild(box);
+  
+        let image = document.createElement('img');
+        box.appendChild(image);
+        image.style.height = "100px";
+        image.style.width = "100px";
+  
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+  
+  
+  
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+  
+  
+        image.src = allItem[i].sourse;
+  
+      }
+    }
 
-    if(allItem[i].catagory ==="series") {
 
-     let box = document.createElement('div');
-     displaySeries.appendChild(box);
-   
-     let image = document.createElement('img');
-     box.appendChild(image);
-     image.style.height = "100px";
-     image.style.width = "100px";
-   
-     let myP = document.createElement('p');
-     box.appendChild(myP);
-   
-   
-   
-     myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-   
-   
-     image.src = allItem[i].sourse;
 
-    }  
+  }
+
+}
+
+renderSeries();
+
+
+function renderAnime() {
+  for (let i = 0; i < allItem.length; i++) {
+    if (displayAnimes!==null) {
+      
+      if (allItem[i].catagory === "anime") {
+  
+        let box = document.createElement('div');
+        displayAnimes.appendChild(box);
+  
+        let image = document.createElement('img');
+        box.appendChild(image);
+        image.style.height = "100px";
+        image.style.width = "100px";
+  
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+  
+  
+  
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+  
+  
+        image.src = allItem[i].sourse;
+  
+      }
+    }
+
 
 
   }
   
-
-
 }
-
-
-
-
-renderMovies();
-renderSeries();
-
-
+renderAnime()
 
 
 
@@ -206,124 +257,124 @@ render();
 
 // events 
 
-let allDisplay = document.getElementById('all');
+// let allDisplay = document.getElementById('all');
 
-allDisplay.addEventListener('click', allClick);
+// allDisplay.addEventListener('click', allClick);
 
-function allClick() {
-  display.textContent = ''
-  render();
+// function allClick() {
+//   display.textContent = ''
+//   render();
 
-}
+// }
 
-let comedy = document.getElementById('comedy');
+// let comedy = document.getElementById('comedy');
 
-comedy.addEventListener('click', comedyClick);
-
-
-function comedyClick() {
-
-  display.textContent = ''
-
-  for (let i = 0; i < allItem.length; i++) {
-    if (allItem[i].type == "comedy") {
-      let box = document.createElement('div');
-      display.appendChild(box);
+// comedy.addEventListener('click', comedyClick);
 
 
+// function comedyClick() {
 
-      let image = document.createElement('img');
-      box.appendChild(image);
-      image.style.height = "100px";
-      image.style.width = "100px";
+//   display.textContent = ''
 
-      let myP = document.createElement('p');
-      box.appendChild(myP);
-
-      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-      image.src = allItem[i].sourse;
-
-    }
-
-
-  }
-
-}
-
-
-let action = document.getElementById('action');
-
-action.addEventListener('click', actionClick);
-
-
-function actionClick() {
-
-  display.textContent = ''
-  for (let i = 0; i < allItem.length; i++) {
-    if (allItem[i].type == "action") {
-      let box = document.createElement('div');
-      display.appendChild(box);
+//   for (let i = 0; i < allItem.length; i++) {
+//     if (allItem[i].type == "comedy") {
+//       let box = document.createElement('div');
+//       display.appendChild(box);
 
 
 
+//       let image = document.createElement('img');
+//       box.appendChild(image);
+//       image.style.height = "100px";
+//       image.style.width = "100px";
+
+//       let myP = document.createElement('p');
+//       box.appendChild(myP);
+
+//       myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
 
 
-      let image = document.createElement('img');
-      box.appendChild(image);
-      image.style.height = "100px";
-      image.style.width = "100px";
+//       image.src = allItem[i].sourse;
 
-      let myP = document.createElement('p');
-      box.appendChild(myP);
-
-      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+//     }
 
 
-      image.src = allItem[i].sourse;
+//   }
+
+// }
 
 
-    }
+// let action = document.getElementById('action');
 
-  }
-
-}
+// action.addEventListener('click', actionClick);
 
 
-let drama = document.getElementById('drama');
+// function actionClick() {
 
-drama.addEventListener('click', dramaClick);
-
-
-function dramaClick() {
-
-  display.textContent = ''
-  for (let i = 0; i < allItem.length; i++) {
-    if (allItem[i].type == "drama") {
-      let box = document.createElement('div');
-      display.appendChild(box);
+//   display.textContent = ''
+//   for (let i = 0; i < allItem.length; i++) {
+//     if (allItem[i].type == "action") {
+//       let box = document.createElement('div');
+//       display.appendChild(box);
 
 
 
 
 
-      let image = document.createElement('img');
-      box.appendChild(image);
-      image.style.height = "100px";
-      image.style.width = "100px";
+//       let image = document.createElement('img');
+//       box.appendChild(image);
+//       image.style.height = "100px";
+//       image.style.width = "100px";
 
-      let myP = document.createElement('p');
-      box.appendChild(myP);
+//       let myP = document.createElement('p');
+//       box.appendChild(myP);
 
-      myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-      image.src = allItem[i].sourse;
+//       myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
 
 
-    }
+//       image.src = allItem[i].sourse;
 
-  }
 
-}
+//     }
+
+//   }
+
+// }
+
+
+// let drama = document.getElementById('drama');
+
+// drama.addEventListener('click', dramaClick);
+
+
+// function dramaClick() {
+
+//   display.textContent = ''
+//   for (let i = 0; i < allItem.length; i++) {
+//     if (allItem[i].type == "drama") {
+//       let box = document.createElement('div');
+//       display.appendChild(box);
+
+
+
+
+
+//       let image = document.createElement('img');
+//       box.appendChild(image);
+//       image.style.height = "100px";
+//       image.style.width = "100px";
+
+//       let myP = document.createElement('p');
+//       box.appendChild(myP);
+
+//       myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+//       image.src = allItem[i].sourse;
+
+
+//     }
+
+//   }
+
+// }
