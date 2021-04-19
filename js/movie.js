@@ -38,7 +38,6 @@ console.log(allItem);
 
 const display = document.getElementById('movies-display');
 /*********************Noor&Ibrahem**************************/
-const clearCartBtn  = document.getElementById("#clearCart");
 const tableBody = document.getElementById('tableBody');
 const clearAll = document.getElementById('clearCart');
 ///////////////////// making the table 
@@ -47,8 +46,10 @@ let itemSeperate = JSON.stringify(allItem);
 // console.log(itemSeperate);
 localStorage.setItem("key", itemSeperate);
 }
+function showItemsFromLocal(){
 let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
 console.log(itemNotSeperate);
+}
 // making the table 
 let noor = function () {
   
@@ -64,8 +65,8 @@ let noor = function () {
     nameColumn.textContent = allItem[i].name;
     //deleteItem
     let deleteIcon = document.createElement('td');
-    deleteIcon.classList.add("delete");
-    deleteIcon.setAttribute('data',allItem[i].sourse);
+    deleteIcon.classList.add("delete"); //don't forget for styling
+    deleteIcon.setAttribute('data',allItem[i].sourse);//
     firstRowElemnt.appendChild(deleteIcon);
     deleteIcon.textContent = 'X';  
     deleteIcon.style.color= 'red';
@@ -86,7 +87,8 @@ function deleteItem(e){
 function deleteItemFromLocal(attributeName){
   for (let i = 0; i < allItem.length; i++){
       if (allItem[i].sourse === attributeName[i]){
-        allItem.splice(i,1)
+        let x = allItem.splice(i); //remove all elements in that index
+      //  localStorage.removeItem(i);
       }
   }
   addItemToLocal();
@@ -136,7 +138,7 @@ render();
 
 
 // events 
-/*
+
 let allDisplay = document.getElementById('all');
 
 allDisplay.addEventListener('click', allClick);
@@ -274,4 +276,4 @@ function comedyClick() {
 
   }
 
-  */
+ 
