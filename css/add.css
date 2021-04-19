@@ -8,15 +8,16 @@ body:before {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg);
+	background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm94-rm21-nam-01-l_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=744ffda5084f8e92999925f499014e4d);
+	/* background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg); */
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
-	/* background-size: cover;
+	background-size: cover;
 	-webkit-filter: blur(10px);
 	-moz-filter: blur(10px);
-	filter: blur(10px); */
+	filter: blur(5px);
 }
 #sfrom{
     position: absolute;
@@ -24,10 +25,11 @@ body:before {
 	left: 30%;
 	transform: translate(-50%, -50%);
 	width: 400px;
-	height: 450px;
+	height: 400px;
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
  background-image:url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm309-adj-05.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=33bf9355664e888e28ed1e4f17bce729);
+border: red;
 
 
 	/* background-size: cover;
@@ -35,6 +37,7 @@ body:before {
 	-moz-filter: blur(10px);
 	filter: blur(1px); */
 }
+
 
 #avatar{
     position: absolute;
@@ -165,3 +168,22 @@ input[type=number]:focus {
 			border-radius: 20px;
 		
 	}
+
+
+	/* h3 {
+		font-size: 10px;
+		color: #fff;
+		text-align: center;
+		-webkit-animation: glow 1s ease-in-out infinite alternate;
+		-moz-animation: glow 1s ease-in-out infinite alternate;
+		animation: glow 1s ease-in-out infinite alternate;
+	  }
+	  
+	  @-webkit-keyframes h3 {
+		from {
+		  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		}
+		to {
+		  text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		}
+	  } */
