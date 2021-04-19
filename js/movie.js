@@ -82,17 +82,17 @@ let item29 = new Item("Haikyuu!!", 2014, "anime", "drama", "https://cdn.myanimel
 
 let item30 = new Item("Dota: Dragon's Blood", 2021, "anime", "action", "https://occ-0-92-1722.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABe8in7VbJ3banhIpwChLQfXefd3uwazbRLlUsZZFeghf39dtL-Io-Z3rmx-T2Q9UVECfKRygfVHsUpzHPQE1JO6ij5rz.jpg?r=792");
 
-let item31 = new Item("Black Lagoon", 2006, "anime", "action", "https://static.wikia.nocookie.net/lagooncompany/images/b/b1/Black_Lagoon.jpg/revision/latest?cb=20110718042001");
+let item31 = new Item("Black Lagoon", 2006, "anime", "action", "https://cdn.anisearch.com/images/anime/cover/full/3/3462.jpg");
 
 let item32 = new Item("The Legend of Korra", 2012, "anime", "action", "https://decider.com/wp-content/uploads/2020/05/the-legend-of-korra.jpg?quality=80&strip=all&w=680&h=356&crop=1");
 
-let item33 = new Item("Gintama", 2006, "anime", "comedy", "https://i.pinimg.com/originals/6a/9a/e1/6a9ae1584d676f3818afe468c85c648b.jpg");
+let item33 = new Item("Gintama", 2006, "anime", "comedy", "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Gintama%27firstdvd.jpg/220px-Gintama%27firstdvd.jpg");
 
 let item34 = new Item("Mr. Osomatsu", 2015, "anime", "comedy", "https://images-na.ssl-images-amazon.com/images/I/81RO8JrCFxL._RI_.jpg");
 
 let item35 = new Item("The Melancholy of Haruhi Suzumiya", 2006, "anime", "comedy", "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Haruhi_book_01_s.jpg/220px-Haruhi_book_01_s.jpg");
 
-let item36 = new Item("Tari Tari", 2012, "anime", "drama", "https://static.wikia.nocookie.net/taritari/images/0/0d/Tari_tari-06-konatsu-wakana-sawa-taichi-atsuhiro.jpg/revision/latest?cb=20121002024941");
+let item36 = new Item("Tari Tari", 2012, "anime", "drama", "https://i.ytimg.com/vi/bd9GrH88plU/maxresdefault.jpg");
 
 let item37 = new Item("Kokoro Connect", 2012, "anime", "drama", "https://cdn.myanimelist.net/images/anime/2/39665.jpg");
 
@@ -129,7 +129,7 @@ let item51 = new Item("Brooklyn Nine-Nine", 2013, "series", "comedy", "https://m
 
 let item52 = new Item("Modern Family", 2009, "series", "action", "https://cdn1.edgedatg.com/aws/v2/abc/ModernFamily/showimages/e06cb0991ee33445654b96d29aa0d02b/1200x627-Q80_e06cb0991ee33445654b96d29aa0d02b.jpg");
 
-let item53 = new Item("The Punisher", 2017, "series", "action", "https://i.pinimg.com/originals/c0/df/ce/c0dfce00051900ebd2006bffc4478001.jpg");
+let item53 = new Item("The Punisher", 2017, "series", "action", "https://wallpapercave.com/wp/wp8822616.jpg");
 
 let item54 = new Item("The Witcher", 2019, "series", "action", "https://arabicpost.net/wp-content/uploads/2019/12/thewitcher_101_unit_06900_rt-fk3ph4dhp-0.jpg");
 
@@ -276,7 +276,7 @@ Item.prototype.renderAnime = function () {
 
 
 
-// }
+
 // new Movie(added[i].name)
 
 
@@ -299,6 +299,7 @@ for (let i = 0; i < allItem.length; i++) {
 
 
 // Using local storge for favorite
+
 function store() {
   let stringOb = JSON.stringify(added);
   localStorage.setItem('favourites', stringOb)
@@ -356,15 +357,17 @@ function store() {
 
 
 
+
+
 // Events for the sorting  
 
 
 // 1) To display all movies or anime or series
 
+// if (allDisplay!= null){
+// }
 let allDisplay = document.getElementById('all');
-
 allDisplay.addEventListener('click', allClick);
-
 function allClick() {
 
   if (displayMovies !== null) {
@@ -414,9 +417,9 @@ function allClick() {
 
 // 2) To sort it by Comedy
 let comedy = document.getElementById('comedy');
-
+// if (comedy!=null){
+// }
 comedy.addEventListener('click', comedyClick);
-
 
 function comedyClick() {
 
@@ -444,12 +447,9 @@ function comedyClick() {
         button.textContent = 'Add to favorite'
         // let object = allItem[i];
         function submitter() {
-        //  for (let i = 0; i < allItem.length; i++) {
-                 
-        // }
         added.push(allItem[i]);
           console.log(added);
-          store()
+          // store()
         }
 
         myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
@@ -546,9 +546,9 @@ function comedyClick() {
 
 //  3) To sort it by Action
 let action = document.getElementById('action');
-
+// if(action!=null){
+// }
 action.addEventListener('click', actionClick);
-
 
 function actionClick() {
 
@@ -676,9 +676,9 @@ function actionClick() {
 // 4) To sort by Daram
 
 let drama = document.getElementById('drama');
-
+// if (drama != null){
+// }
 drama.addEventListener('click', dramaClick);
-
 
 function dramaClick() {
 
@@ -800,11 +800,52 @@ function dramaClick() {
 
     }
   }
-
-
-
-
 }
+
+
+// to render movie or anime or series by the user  
+
+function getForm() {
+    // get the data from the local storage
+    let data = localStorage.getItem('product');
+    console.log(data);
+  
+    //convert data back into a normal array of objects
+    let productData = JSON.parse(data);
+    //console.log(productData);
+    
+    //console.log(productData);
+  
+     for(let i = 0 ; i<productData.length ; i++){
+      allItem.push(productData[i]);
+     }
+     console.log(allItem);
+     
+   
+    // if the first time we visit the page, there will not be an array of objects inside the local storage so we should handle it here:
+    
+
+    
+    
+  }
+  getForm();
+
+  // for (let i = 0; i < allItem.length; i++) {
+  //   if (allItem[i].catagory === "movie") {
+          
+  //     allItem[i].renderMovies();
+  //   } else if (allItem[i].catagory === "series") {
+  
+  //     allItem[i].renderSeries();
+  //   } else if (allItem[i].catagory === "anime") {
+  
+  //     allItem[i].renderAnime();
+  //   }
+  // }
+
+
+
+
 
 
 
@@ -907,3 +948,85 @@ function dramaClick() {
 //   image.src = this.sourse;
 // }
 // }
+
+
+
+// /*********************Noor&Ibrahem**************************/
+// const tableBody = document.getElementById('tableBody');
+// const clearAll = document.getElementById('clearCart');
+// ///////////////////// making the table 
+// function addItemToLocal(){
+// let itemSeperate = JSON.stringify(allItem);
+// // console.log(itemSeperate);
+// localStorage.setItem("key", itemSeperate);
+// }
+// function showItemsFromLocal(){
+// let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
+// console.log(itemNotSeperate);
+// }
+// // making the table 
+// let listGenerator = function () {
+  
+//   for (let i = 0; i < allItem.length; i++) {
+//     let firstRowElemnt = document.createElement('tr');
+//     if (tableBody!= null){
+//     tableBody.appendChild(firstRowElemnt);}
+//     let imageCoulmn = document.createElement('img');
+//     firstRowElemnt.appendChild(imageCoulmn);
+//     imageCoulmn.src = allItem[i].sourse;
+//     imageCoulmn.style.width = '100px';
+//     let nameColumn = document.createElement('td');
+//     firstRowElemnt.appendChild(nameColumn);
+//     nameColumn.textContent = allItem[i].name;
+//     //deleteItem
+//     let deleteIcon = document.createElement('td');
+//     deleteIcon.classList.add("delete"); //don't forget for styling
+//     deleteIcon.setAttribute('data',allItem[i].sourse);//
+//     firstRowElemnt.appendChild(deleteIcon);
+//     deleteIcon.textContent = 'X';  
+//     deleteIcon.style.color= 'red';
+//     //link everyelemnt to its class name for design
+//   }
+// }
+// //click for add element ...
+// /* Not added yet */
+// //click for clear item ..
+// if (tableBody != null){
+// tableBody.addEventListener('click',deleteItem);
+// }
+// function deleteItem(e){
+//   if (e.target.classList.contains('delete')){
+//       let attributeName = e.target.getAttribute('data');
+//       deleteItemFromLocal(attributeName);
+//     e.target.parentElement.remove(); //parent which is row // parent parent is tbody
+//   }
+// }
+// function deleteItemFromLocal(attributeName){
+//   for (let i = 0; i < allItem.length; i++){
+//       if (allItem[i].sourse === attributeName[i]){
+//         let x = allItem.splice(i); //remove all elements in that index
+//       //  localStorage.removeItem(i);
+//       }
+//   }
+//   addItemToLocal();
+// }
+// //to delete all
+// if (clearAll!= null){
+// clearAll.addEventListener('click',deleteAll);
+// }
+// function deleteAll(e){
+//   e.preventDefault();
+//   while(tableBody!=null){ //tableBody.firstChild
+//     tableBody.removeChild(tableBody.firstChild);
+//   }
+//  // allItem = [];
+//   addItemToLocal();
+  
+// }
+// addItemToLocal();
+// showItemsFromLocal();
+// console.log(listGenerator());
+// allItem.image;
+// console.log(allItem[0].name);
+// /***************Finish Ibraheem&Noor Part**************************/
+

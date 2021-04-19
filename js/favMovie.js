@@ -14,63 +14,63 @@
 
 //   }
 
-let div = document.getElementById('s');
+// let div = document.getElementById('s');
 
-let allObject = [];
+// let allObject = [];
 
-function getStore() {
-  let callObjects = localStorage.getItem('favourites');
+// function getStore() {
+//   let callObjects = localStorage.getItem('favourites');
 
-  let displayOb = JSON.parse(callObjects);
-  console.log(displayOb);
+//   let displayOb = JSON.parse(callObjects);
+//   console.log(displayOb);
 
-  for (let i = 0; i < displayOb.length; i++) {
-    allObject.push(displayOb[i])
+//   for (let i = 0; i < displayOb.length; i++) {
+//     allObject.push(displayOb[i])
 
-  }
-
-
-  console.log(allObject);
+//   }
 
 
-
-  // if (displayOb !== null) {
-  //   Item.allItem = displayOb    
-  // }
-
-  for (let i = 0; i < displayOb.length; i++) {
-    console.log(displayOb[i].name);
-    // new Item (displayOb[i].name,displayOb[i].year,displayOb[i].catagory,displayOb[i].type,displayOb[i].sourse)
+//   console.log(allObject);
 
 
 
-    let innerDiv = document.createElement('div');
-    div.appendChild(innerDiv);
-    innerDiv.className = 'box';
+//   // if (displayOb !== null) {
+//   //   Item.allItem = displayOb    
+//   // }
 
-
-    let pa = document.createElement('p');
-    innerDiv.appendChild(pa);
-    pa.textContent = displayOb[i].name;
-
-    let type = document.createElement('p');
-    innerDiv.appendChild(type);
-    type.textContent = displayOb[i].type;
-
-    let img = document.createElement('img');
-    innerDiv.appendChild(img);
-    img.src = displayOb[i].sourse;
+//   for (let i = 0; i < displayOb.length; i++) {
+//     console.log(displayOb[i].name);
+//     // new Item (displayOb[i].name,displayOb[i].year,displayOb[i].catagory,displayOb[i].type,displayOb[i].sourse)
 
 
 
-  }
-
-}
-
-getStore()
+//     let innerDiv = document.createElement('div');
+//     div.appendChild(innerDiv);
+//     innerDiv.className = 'box';
 
 
-let button = document.createElement('button');
+//     let pa = document.createElement('p');
+//     innerDiv.appendChild(pa);
+//     pa.textContent = displayOb[i].name;
+
+//     let type = document.createElement('p');
+//     innerDiv.appendChild(type);
+//     type.textContent = displayOb[i].type;
+
+//     let img = document.createElement('img');
+//     innerDiv.appendChild(img);
+//     img.src = displayOb[i].sourse;
+
+
+
+//   }
+
+// }
+
+// getStore()
+
+
+// let button = document.createElement('button');
 
 
 

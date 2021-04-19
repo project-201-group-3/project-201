@@ -22,12 +22,10 @@
 
 <body>
     <main>
-      
+
         <div id='sfrom'>
-            <img id="avatar"
-                src="image/neon.PNG"
-                alt="popcorn">
-          
+            <img id="avatar" src="image/neon.PNG" alt="popcorn">
+
 
             <form action="" id="form">
 
@@ -39,7 +37,7 @@
 
                 <input style="
                     height: 30px;
-                    font-size: 16px;" placeholder="Enter your movie name" type="text" id='NameField' name="Name"
+                    font-size: 16px;" placeholder="Enter your movie name" type="text" id='NameField' name="NameField"
                     autocomplete="off">
                 </input>
                 <br>
@@ -51,12 +49,12 @@
                 <input style="
                     height: 30px;
                     
-                    font-size: 16px;" placeholder="Enter the year" type="number" id='YearOfProduction'
-                    name="YearOfProduction" autocomplete="off">
+                    font-size: 16px;" placeholder="Enter the year" type="number" id='yearId' name="yearId"
+                    autocomplete="off">
                 </input>
                 <br>
 
-                <label for="Rating">
+                <!-- <label for="Rating">
                     Rating :
                 </label>
 
@@ -65,15 +63,15 @@
                     
               font-size: 16px;" placeholder="Enter the Rate" type="number" id='Rating' name="Rating"
                     autocomplete="off">
-                </input>
+                </input> -->
                 <br>
 
-                <label for="Type">Type :</label>
+                <label for="catogary">catogary:</label>
                 <br>
-                <div id="browser">
-                    <input type="radio" name="browser" value="movie">movie<br>
-                    <input type="radio" name="browser" value="series">series<br>
-                    <input type="radio" name="browser" value="anime">anime<br>
+                <div id="catogaryId">  
+                    <input type="radio" name="catogaryId" value="movie">movie<br>
+                    <input type="radio" name="catogaryId" value="series">series<br>
+                    <input type="radio" name="catogaryId" value="anime">anime<br>
                 </div>
 
 
@@ -85,16 +83,16 @@
       <option value="moive">moive</option>
     <br> -->
                 <br>
-                <label for="catogary">catogary:</label>
-                <input type="text" id="catogary" ;name="catogary" , placeholder="Enter the Action |Comady|Drama">
+                <label for="Type">Type:</label>
+                <input type="text" id="typeId" name="typeId" , placeholder="Enter the Action |Comady|Drama">
                 <br>
                 <span>
                     <label for="file"> Please specify a file:
                     </label>
                     <br>
-                    <input type="file" id="file" ;name="file" ,value="file">
+                    <input type="file" id="file" name="file" value="file">
 
-                    <input type="url" id="url" ;name="url" ,value="url">
+                    <input type="url" id="sourseId" name="sourseId" value="url">
                 </span>
                 <br>
 
@@ -116,11 +114,11 @@
     <script src="js/add.js">
     </script>
     <script>
-function passvalue(){
-let first=document.getElementById('NameField').value;
-localStorage.setItem('textvalue',first);
-return false;
-}
+        function passvalue() {
+            let first = document.getElementById('NameField').value;
+            localStorage.setItem('textvalue', first);
+            return false;
+        }
     </script>
 </body>
 
