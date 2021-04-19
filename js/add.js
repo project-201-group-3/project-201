@@ -1,22 +1,35 @@
 'use strict';
 
+// miss one para element (Type) !!!!!!
 
-function FormPage(Name, YearOfProduction, Rating, catogary,browser, file) {
-  this.Name = Name;
-  this.YearOfProduction = YearOfProduction;
+function FormPage(name, year, catagory, type, sourse) {
+  this.name = name;
+  this.year = year;
   this.Rating = Rating;
-  this.browser = browser;
-  this.file = file;
-  this.catogary=catogary;
+  this.type = type;
+  this.sourse = sourse;
+  this.catagory = catagory;
   //create array as object 
   FormPage.addForm.push(this);
-
+ 
 
 }
+
 FormPage.addForm = [];
 
+let item1 = new FormPage("kkkk", 2020, 4, "movie", "asdqasd", "asdasd");
+let item2 = new FormPage("mmmm", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
 
-let image = document.getElementById('file');
+let item3 = new FormPage("lolo", 2020, 4, "movie", "asdqasd", "asdasd");
+let item4 = new FormPage("cccccc", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
+//let item3 = new FormPage("lololol", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
+
+console.log(FormPage.addForm);
+
+
+
+
+let image = document.getElementById('sourse');
 let form = document.getElementById('form');
 let submit = document.getElementById('submit');
 let display = document.getElementById('display');
@@ -49,10 +62,10 @@ form.addEventListener('submit', UserClick);
 //     let myP = document.createElement('p');
 //     box.appendChild(myP);
 
-//     myP.innerHTML = (`${FormPage.addForm[i].Name} \n ${FormPage.addForm[i].YearOfProduction} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catogary} \n ${FormPage.addForm[i].browser}`);
+//     myP.innerHTML = (`${FormPage.addForm[i].name} \n ${FormPage.addForm[i].year} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catagory} \n ${FormPage.addForm[i].type}`);
 
 
-//     image.src = FormPage.addForm[i].file;
+//     image.src = FormPage.addForm[i].sourse;
 
 
 
@@ -66,52 +79,52 @@ function UserClick(event) {
 
   event.preventDefault();
 
-  let NameMSA = event.target.Name.value;
-  console.log(NameMSA);
-  let YearOfProductionMSA = parseInt(event.target.YearOfProduction.value);
-  console.log(YearOfProductionMSA);
-  let RatingMSA = parseInt(event.target.Rating.value);
-  console.log(RatingMSA);
-  let browserMSA = event.target.browser.value;
-  console.log(browserMSA);
-  let catogaryMSA=event.target.catogary.value;
-  console.log(catogaryMSA);
+  let nameMSA = event.target.NameField.value;
+  console.log(nameMSA);
+  let yearMSA = parseInt(event.target.yearId.value);
+  console.log(yearMSA);
+  // let RatingMSA = parseInt(event.target.Rating.value);
+  // console.log(RatingMSA);
+  let typeMSA = event.target.typeId.value;
+  console.log(typeMSA);
+  let catagoryMSA = event.target.catogaryId.value;
+  console.log(catagoryMSA);
 
-  let fileMSA = event.target.file.value;
-  console.log(fileMSA);
+  let sourseMSA = event.target.sourseId.value;
+  console.log(sourseMSA);
 
-  const add = new FormPage(NameMSA, YearOfProductionMSA, RatingMSA,catogaryMSA ,browserMSA, fileMSA);
+  const add = new FormPage(nameMSA, yearMSA, catagoryMSA, typeMSA, sourseMSA);
   console.log(add);
   updateStorage();
 
 
 
-  if (browserMSA == 'movie') {
+  if (typeMSA == 'movie') {
     alert('Thank you for your updating ');
     // let arr= getForm();
-  
-window.location.href = "movies.html";
+
+    window.location.href = "movies.html";
 
     //  let fr = localStorage.getItem('FormPage.addForm ');
-      
+
     //   document.getElementById('result').innerHTML = fr;
-  
+
   }
-    // arr.push(window.location.assign("movies.html") )
-// ;    
-// render();
+  // arr.push(window.location.assign("movies.html") )
+  // ;    
+  // render();
 
 
-    //let data = localStorage.getItem('product');
-  
+  //let data = localStorage.getItem('product');
 
-  
-  else if (browserMSA == 'series') {
+
+
+  else if (typeMSA == 'series') {
     alert('Thank you for your updating ');
 
     window.location.href = "series.html";
     getForm();
-    
+
 
   }
   else {
@@ -119,13 +132,13 @@ window.location.href = "movies.html";
 
     window.location.href = "anime.html";
     getForm();
-    
-render();
+
+
   }
 }
 
 
-  submit.removeEventListener('submit', UserClick);
+submit.removeEventListener('submit', UserClick);
 
 
 
@@ -135,10 +148,11 @@ render();
 function updateStorage() {
 
   let arrayString = JSON.stringify(FormPage.addForm);
-  console.log(FormPage.addForm);
-  console.log(arrayString);
+  //console.log(FormPage.addForm);
+  //console.log(arrayString);
   //set item by put key and value
   localStorage.setItem('product', arrayString);
+
 }
 //updateStorage();
 
@@ -149,18 +163,20 @@ function updateStorage() {
 function getForm() {
   // get the data from the local storage
   let data = localStorage.getItem('product');
-  console.log(data);
+  //console.log(data);
 
   //convert data back into a normal array of objects
   let productData = JSON.parse(data);
+  //console.log(productData);
 
-  console.log(productData);
+
 
   // if the first time we visit the page, there will not be an array of objects inside the local storage so we should handle it here:
   if (productData !== null) {
     FormPage.addForm = productData;
   }
 
-}
 
-getForm()
+}
+getForm();
+

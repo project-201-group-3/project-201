@@ -616,82 +616,90 @@ function dramaClick() {
     }
   }
 }
-/*********************Noor&Ibrahem**************************/
-const tableBody = document.getElementById('tableBody');
-const clearAll = document.getElementById('clearCart');
-///////////////////// making the table 
-function addItemToLocal(){
-let itemSeperate = JSON.stringify(allItem);
-// console.log(itemSeperate);
-localStorage.setItem("key", itemSeperate);
-}
-function showItemsFromLocal(){
-let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
-console.log(itemNotSeperate);
-}
-// making the table 
-let listGenerator = function () {
+
+// get data from add form => on testJs
+
+
+
+
+
+
+// /*********************Noor&Ibrahem**************************/
+// const tableBody = document.getElementById('tableBody');
+// const clearAll = document.getElementById('clearCart');
+// ///////////////////// making the table 
+// function addItemToLocal(){
+// let itemSeperate = JSON.stringify(allItem);
+// // console.log(itemSeperate);
+// localStorage.setItem("key", itemSeperate);
+// }
+// function showItemsFromLocal(){
+// let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
+// console.log(itemNotSeperate);
+// }
+// // making the table 
+// let listGenerator = function () {
   
-  for (let i = 0; i < allItem.length; i++) {
-    let firstRowElemnt = document.createElement('tr');
-    if (tableBody!= null){
-    tableBody.appendChild(firstRowElemnt);}
-    let imageCoulmn = document.createElement('img');
-    firstRowElemnt.appendChild(imageCoulmn);
-    imageCoulmn.src = allItem[i].sourse;
-    imageCoulmn.style.width = '100px';
-    let nameColumn = document.createElement('td');
-    firstRowElemnt.appendChild(nameColumn);
-    nameColumn.textContent = allItem[i].name;
-    //deleteItem
-    let deleteIcon = document.createElement('td');
-    deleteIcon.classList.add("delete"); //don't forget for styling
-    deleteIcon.setAttribute('data',allItem[i].sourse);//
-    firstRowElemnt.appendChild(deleteIcon);
-    deleteIcon.textContent = 'X';  
-    deleteIcon.style.color= 'red';
-    //link everyelemnt to its class name for design
-  }
-}
-//click for add element ...
-/* Not added yet */
-//click for clear item ..
-if (tableBody != null){
-tableBody.addEventListener('click',deleteItem);
-}
-function deleteItem(e){
-  if (e.target.classList.contains('delete')){
-      let attributeName = e.target.getAttribute('data');
-      deleteItemFromLocal(attributeName);
-    e.target.parentElement.remove(); //parent which is row // parent parent is tbody
-  }
-}
-function deleteItemFromLocal(attributeName){
-  for (let i = 0; i < allItem.length; i++){
-      if (allItem[i].sourse === attributeName[i]){
-        let x = allItem.splice(i); //remove all elements in that index
-      //  localStorage.removeItem(i);
-      }
-  }
-  addItemToLocal();
-}
-//to delete all
-if (clearAll!= null){
-clearAll.addEventListener('click',deleteAll);
-}
-function deleteAll(e){
-  e.preventDefault();
-  while(tableBody!=null){ //tableBody.firstChild
-    tableBody.removeChild(tableBody.firstChild);
-  }
- // allItem = [];
-  addItemToLocal();
+//   for (let i = 0; i < allItem.length; i++) {
+//     let firstRowElemnt = document.createElement('tr');
+//     if (tableBody!= null){
+//     tableBody.appendChild(firstRowElemnt);}
+//     let imageCoulmn = document.createElement('img');
+//     firstRowElemnt.appendChild(imageCoulmn);
+//     imageCoulmn.src = allItem[i].sourse;
+//     imageCoulmn.style.width = '100px';
+//     let nameColumn = document.createElement('td');
+//     firstRowElemnt.appendChild(nameColumn);
+//     nameColumn.textContent = allItem[i].name;
+//     //deleteItem
+//     let deleteIcon = document.createElement('td');
+//     deleteIcon.classList.add("delete"); //don't forget for styling
+//     deleteIcon.setAttribute('data',allItem[i].sourse);//
+//     firstRowElemnt.appendChild(deleteIcon);
+//     deleteIcon.textContent = 'X';  
+//     deleteIcon.style.color= 'red';
+//     //link everyelemnt to its class name for design
+//   }
+// }
+// //click for add element ...
+// /* Not added yet */
+// //click for clear item ..
+// if (tableBody != null){
+// tableBody.addEventListener('click',deleteItem);
+// }
+// function deleteItem(e){
+//   if (e.target.classList.contains('delete')){
+//       let attributeName = e.target.getAttribute('data');
+//       deleteItemFromLocal(attributeName);
+//     e.target.parentElement.remove(); //parent which is row // parent parent is tbody
+//   }
+// }
+// function deleteItemFromLocal(attributeName){
+//   for (let i = 0; i < allItem.length; i++){
+//       if (allItem[i].sourse === attributeName[i]){
+//         let x = allItem.splice(i); //remove all elements in that index
+//       //  localStorage.removeItem(i);
+//       }
+//   }
+//   addItemToLocal();
+// }
+// //to delete all
+// if (clearAll!= null){
+// clearAll.addEventListener('click',deleteAll);
+// }
+// function deleteAll(e){
+//   e.preventDefault();
+//   while(tableBody!=null){ //tableBody.firstChild
+//     tableBody.removeChild(tableBody.firstChild);
+//   }
+//  // allItem = [];
+//   addItemToLocal();
   
-}
-addItemToLocal();
-showItemsFromLocal();
-console.log(listGenerator());
-allItem.image;
-console.log(allItem[0].name);
-/***************Finish Ibraheem&Noor Part**************************/
+// }
+// addItemToLocal();
+// showItemsFromLocal();
+// console.log(listGenerator());
+// allItem.image;
+// console.log(allItem[0].name);
+// /***************Finish Ibraheem&Noor Part**************************/
 
