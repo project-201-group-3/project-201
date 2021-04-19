@@ -1,10 +1,10 @@
 'use strict';
 
 
-function FormPage(Name, YearOfProduction, Rating, catogary,browser, file) {
+function FormPage(Name, YearOfProduction, catogary,browser, file) {
   this.Name = Name;
   this.YearOfProduction = YearOfProduction;
-  this.Rating = Rating;
+  // this.Rating = Rating;
   this.browser = browser;
   this.file = file;
   this.catogary=catogary;
