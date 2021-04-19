@@ -15,6 +15,7 @@ function Item(name, year, catagory, type, sourse) {
 
 }
 
+
 // Movie items
 
 let item1 = new Item("john wick", 2018, "movie", "action", "image/wick.jpg");
@@ -43,11 +44,11 @@ let item12 = new Item("The Hangover", 2009, "movie", "comedy", "https://upload.w
 
 let item13 = new Item("The Dictator", 2012, "movie", "comedy", "https://static.timesofisrael.com/www/uploads/2012/05/Dictator_Quad-1024x768.jpg");
 
-let item14 = new Item("The Hustle", 2019, "movie", "comedy", "https://lh3.googleusercontent.com/proxy/YkZZYD-wUE3Np7S5VkbFGr9wf4UoCMcX9CjvkXzuZBc7qp-zSF5XNM2rqCJxXOAU_XKEYBOeWqRk0_M3EQ7SMQS-EwtbWAp0_jUcc25_qiVRpz5CyLdcH1IQFL5byNZMMcrJxLpaOkT16gcOZAhUOS3qNXF_fwYwkPanxQd7uTR2");
+let item14 = new Item("The Hustle", 2019, "movie", "comedy", "https://images-na.ssl-images-amazon.com/images/I/814JCBZ9uaL._SL1500_.jpg");
 
 let item15 = new Item("The Irishman", 2019, "movie", "drama", "https://upload.wikimedia.org/wikipedia/en/8/80/The_Irishman_poster.jpg");
 
-let item16 = new Item("Fences", 2016, "movie", "drama", "https://static.wikia.nocookie.net/film-vault/images/d/d2/Fencespost.jpg/revision/latest?cb=20171210203942");
+let item16 = new Item("Fences", 2016, "movie", "drama", "https://images-na.ssl-images-amazon.com/images/I/91rlSZKayHL._SY445_.jpg");
 
 let item17 = new Item("The Judge", 2014, "movie", "drama", "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9224/9224007_so.jpg");
 
