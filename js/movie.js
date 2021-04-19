@@ -80,7 +80,7 @@ let item29 = new Item("Haikyuu!!", 2014, "anime", "drama", "https://cdn.myanimel
 
 let item30 = new Item("Dota: Dragon's Blood", 2021, "anime", "action", "https://occ-0-92-1722.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABe8in7VbJ3banhIpwChLQfXefd3uwazbRLlUsZZFeghf39dtL-Io-Z3rmx-T2Q9UVECfKRygfVHsUpzHPQE1JO6ij5rz.jpg?r=792");
 
-let item31 = new Item("Black Lagoon", 2006, "anime", "action", "https://static.wikia.nocookie.net/lagooncompany/images/b/b1/Black_Lagoon.jpg/revision/latest?cb=20110718042001");
+let item31 = new Item("Black Lagoon", 2006, "anime", "action", "https://cdn.anisearch.com/images/anime/cover/full/3/3462.jpg");
 
 let item32 = new Item("The Legend of Korra", 2012, "anime", "action", "https://decider.com/wp-content/uploads/2020/05/the-legend-of-korra.jpg?quality=80&strip=all&w=680&h=356&crop=1");
 
@@ -90,7 +90,7 @@ let item34 = new Item("Mr. Osomatsu", 2015, "anime", "comedy", "https://images-n
 
 let item35 = new Item("The Melancholy of Haruhi Suzumiya", 2006, "anime", "comedy", "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Haruhi_book_01_s.jpg/220px-Haruhi_book_01_s.jpg");
 
-let item36 = new Item("Tari Tari", 2012, "anime", "drama", "https://static.wikia.nocookie.net/taritari/images/0/0d/Tari_tari-06-konatsu-wakana-sawa-taichi-atsuhiro.jpg/revision/latest?cb=20121002024941");
+let item36 = new Item("Tari Tari", 2012, "anime", "drama", "https://i.ytimg.com/vi/bd9GrH88plU/maxresdefault.jpg");
 
 let item37 = new Item("Kokoro Connect", 2012, "anime", "drama", "https://cdn.myanimelist.net/images/anime/2/39665.jpg");
 
@@ -153,7 +153,7 @@ let displayAnimes = document.getElementById('anime');
 
 
 // To render all movies
-function renderMovies() {
+function renderMovies() { //prototype
 
   for (let i = 0; i < allItem.length; i++) {
 
@@ -166,8 +166,8 @@ function renderMovies() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        //image.style.height = "100px";
+        //image.style.width = "100px";
         /*************************/
         let favButton = document.createElement("button");
         box.appendChild(favButton);
@@ -183,6 +183,7 @@ function renderMovies() {
 
 
         image.src = allItem[i].sourse;
+     //   favButton.addEventListener("dblclick", favFunction);
       }
     }
 
@@ -293,8 +294,9 @@ renderAnime()
 // To display all movies or anime or series
 
 let allDisplay = document.getElementById('all');
+if (allDisplay!= null){
 allDisplay.addEventListener('click', allClick);
-
+}
 function allClick() {
 
   if (displayMovies !== null) {
@@ -322,9 +324,9 @@ function allClick() {
 
   // To sort it by Comedy
 let comedy = document.getElementById('comedy');
-
+if (comedy!=null){
 comedy.addEventListener('click', comedyClick);
-
+}
 
 function comedyClick() {
 
@@ -422,9 +424,9 @@ function comedyClick() {
 
   // To sort it by Action
 let action = document.getElementById('action');
-
+if(action!=null){
 action.addEventListener('click', actionClick);
-
+}
 
 function actionClick() {
 
@@ -521,9 +523,9 @@ function actionClick() {
 // To sort by Daram
 
 let drama = document.getElementById('drama');
-
+if (drama != null){
 drama.addEventListener('click', dramaClick);
-
+}
 
 function dramaClick() {
   
