@@ -149,8 +149,8 @@ function renderMovies() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -187,8 +187,8 @@ function renderSeries() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -223,8 +223,8 @@ function renderAnime() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -307,8 +307,8 @@ function comedyClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -335,8 +335,8 @@ function comedyClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -363,8 +363,8 @@ function comedyClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -407,8 +407,8 @@ function actionClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // // image.style.height = "100px";
+        // // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -435,8 +435,8 @@ function actionClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -463,8 +463,8 @@ function actionClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -506,8 +506,8 @@ function dramaClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -534,8 +534,8 @@ function dramaClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
@@ -562,8 +562,8 @@ function dramaClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        image.style.height = "100px";
-        image.style.width = "100px";
+        // image.style.height = "100px";
+        // image.style.width = "100px";
 
         let myP = document.createElement('p');
         box.appendChild(myP);
