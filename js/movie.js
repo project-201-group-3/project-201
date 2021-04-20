@@ -13,8 +13,10 @@ function Item(name, year, catagory, type, sourse) {
 
 
   allItem.push(this);
+  
+    
+  }
 
-}
 
 
 // Movie items
@@ -421,6 +423,19 @@ let comedy = document.getElementById('comedy');
 // }
 comedy.addEventListener('click', comedyClick);
 
+
+
+// let button = document.createElement('button')
+// box.appendChild(button)
+// button.addEventListener('click', submitter);
+// button.textContent = 'Add to favorite'
+// let object = this;
+// function submitter() {
+//   added.push(object);
+//   console.log(added);
+//   store()
+// }
+
 function comedyClick() {
 
   if (displayMovies !== null) {
@@ -432,8 +447,6 @@ function comedyClick() {
         let box = document.createElement('div');
         displayMovies.appendChild(box);
 
-
-
         let image = document.createElement('img');
         box.appendChild(image);
 
@@ -441,26 +454,89 @@ function comedyClick() {
         let myP = document.createElement('p');
         box.appendChild(myP);
 
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = allItem[i];
-        function submitter() {
-        added.push(allItem[i]);
-          console.log(added);
-          // store()
-        }
-
+        let button = document.createElement('button');
+        box.appendChild(button);
+        
+        button.textContent = 'Add to favorite';
+        // console.log(added[0]);
+        
+       
         myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
 
 
         image.src = allItem[i].sourse;
 
+        // for (let i = 0; i < allItem[i].length; i++) {
+          
+          
+          
+        
+        
+
       }
+      
+        // added.push(added[i]);
 
-
+        // console.log(added[1]);
+        // store();
+      // }
     }
+    let button = document.createElement('button');
+    button.addEventListener('click', submitter());
+    function submitter() {
+    for (let i = 0; i < allItem.length; i++){
+     
+      
+        console.log(allItem[0])
+        added.push(allItem[0]);
+      }
+    }
+
+    // Item.prototype.renderMovies = function () {
+
+    //   if (displayMovies !== null) {
+    
+    
+    //     let box = document.createElement('div');
+    //     displayMovies.appendChild(box);
+    
+    //     let image = document.createElement('img');
+    //     box.appendChild(image);
+    
+    
+    //     let myP = document.createElement('p');
+    //     box.appendChild(myP);
+    
+    
+    //     let button = document.createElement('button')
+    //     box.appendChild(button)
+    //     button.addEventListener('click', submitter);
+    //     button.textContent = 'Add to favorite'
+    //     let object = this;
+    //     function submitter() {
+    //       added.push(object);
+    //       console.log(added);
+    //       store();
+    //       // getStore();
+    //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
   } else if (displaySeries !== null) {
 
     displaySeries.textContent = ''
@@ -815,12 +891,12 @@ function getForm() {
     //console.log(productData);
     
     //console.log(productData);
-  
-     for(let i = 0 ; i<productData.length ; i++){
+  if (productData != null) {
+    for (let i = 0; i < productData.length; i++) {
       allItem.push(productData[i]);
-     }
-     console.log(allItem);
-     
+    }
+    console.log(allItem);
+  }
    
     // if the first time we visit the page, there will not be an array of objects inside the local storage so we should handle it here:
     
