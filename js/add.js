@@ -90,12 +90,14 @@ function UserClick(event) {
   console.log(catagoryMSA);
 
   let typeMSA = event.target.typeId.value;
+  let typeMSA1= typeMSA.toLowerCase();
+  // typeMSA.toLowerCase();
   console.log(typeMSA);
 
   let sourseMSA = event.target.sourseId.value;
   console.log(sourseMSA);
 
-  const add = new FormPage(nameMSA, yearMSA, catagoryMSA, typeMSA, sourseMSA);
+  const add = new FormPage(nameMSA, yearMSA, catagoryMSA, typeMSA1, sourseMSA);
   console.log(add);
   updateStorage();
 
@@ -105,7 +107,7 @@ function UserClick(event) {
     alert('Thank you for your updating ');
     // let arr= getForm();
 
-    // window.location.href = "movies.html";
+     window.location.href = "movies.html";
 
     //  let fr = localStorage.getItem('FormPage.addForm ');
 
@@ -131,8 +133,7 @@ function UserClick(event) {
   }
   else {
     alert('Thank you for your updating ');
-
-    // window.location.href = "anime.html";
+    //window.location.href = "anime.html";
     getForm();
 
 
@@ -148,7 +149,7 @@ function UserClick(event) {
 
 //create function for update storge
 function updateStorage() {
-
+//(name, year, catagory, type, sourse)
   let arrayString = JSON.stringify(FormPage.addForm);
   //console.log(FormPage.addForm);
   //console.log(arrayString);

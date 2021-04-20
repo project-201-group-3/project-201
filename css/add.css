@@ -199,7 +199,9 @@ input[type=number]:focus {
 		
 	}
 
-
+	typeId{
+		text-transform: lowercase;
+	}
 	/* h3 {
 		font-size: 10px;
 		color: #fff;

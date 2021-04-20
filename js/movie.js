@@ -1,22 +1,674 @@
 'use strict'
 
+// getting favourite form local storage
+function getData() {
+  let stringOb=localStorage.getItem('favourites');
+  let normalOb=JSON.parse(stringOb);
+  if (normalOb) {
+    added=normalOb;
+    // for (let i = 0; i < normalOb.length; i++) {
+      console.log('inside get data',normalOb);
+      // new Item(normalOb[i].name,normalOb[i].year,normalOb[i].catagory,normalOb[i].type,normalOb[i].sourse);
+      
+    // }
+  }
+}
+
+
 let allItem = [];
-
 function Item(name, year, catagory, type, sourse) {
-
   this.name = name;
   this.year = year;
   this.catagory = catagory;
   this.type = type;
-  this.sourse = sourse;
-  // this.renderMovies();
-
-
+  this.sourse = sourse;  
+  if (this.catagory === "movie") {
+    this.renderMovies();
+  } else if (this.catagory === "anime") {
+    this.renderAnime();
+  } else if (this.catagory === "series") {
+    this.renderSeries();
+  } 
   allItem.push(this);
-  
+}
+
+
+
+let added = []
+
+
+// Prototype to render all movies
+
+Item.prototype.renderMovies = function () {
+
+  if (displayMovies !== null) {
+
+
+    let box = document.createElement('div');
+    displayMovies.appendChild(box);
+
+    let image = document.createElement('img');
+    box.appendChild(image);
+
+
+    let myP = document.createElement('p');
+    box.appendChild(myP);
+
+
+    let button = document.createElement('button')
+    box.appendChild(button)
+    button.addEventListener('click', submitter);
+    button.textContent = 'Add to favorite'
+    let object = this;
+    function submitter() {
+      if(added.includes(object)== false){
+      added.push(object);
+      console.log(added);
+      store();
+    }}
+
+
+
+    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
+
+
+    image.src = this.sourse;
+  }
+}
+
+
+// Prototype to render all series
+
+Item.prototype.renderSeries = function () {
+
+  if (displaySeries !== null) {
+
+
+    let box = document.createElement('div');
+    displaySeries.appendChild(box);
+
+    let image = document.createElement('img');
+    box.appendChild(image);
+
+
+    let myP = document.createElement('p');
+    box.appendChild(myP);
+
+    let button = document.createElement('button')
+    box.appendChild(button)
+    button.addEventListener('click', submitter);
+    button.textContent = 'Add to favorite'
+    let object = this;
+    function submitter() {
+      if(added.includes(object)== false){
+        added.push(object);
+        console.log(added);
+        store();
+      }
+    }
+
+
+
+    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
+
+
+    image.src = this.sourse;
+  }
+}
+
+// Prototype to render all anime
+
+Item.prototype.renderAnime = function () {
+
+  if (displayAnimes !== null) {
+
+
+    let box = document.createElement('div');
+    displayAnimes.appendChild(box);
+
+    let image = document.createElement('img');
+    box.appendChild(image);
+
+
+    let myP = document.createElement('p');
+    box.appendChild(myP);
+
+    let button = document.createElement('button')
+    box.appendChild(button)
+    button.addEventListener('click', submitter);
+    button.textContent = 'Add to favorite'
+    let object = this;
+    function submitter() {
+      if(added.includes(object)== false){
+        added.push(object);
+        console.log(added);
+        store();
+      }
+    }
+
+    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
+
+
+    image.src = this.sourse;
+
+    // adding button
+
+
+  }
+}
+
+
+let displayMovies = document.getElementById('movies');
+let displaySeries = document.getElementById('series');
+let displayAnimes = document.getElementById('anime');
+
+
+// Using local storge for favorite
+
+function store() {
+  let stringOb = JSON.stringify(added);
+  localStorage.setItem('favourites', stringOb)
+  // console.log(stringOb);
+}
+
+
+// Events for the sorting  
+
+
+// 1) To display all movies or anime or series
+
+// if (allDisplay!= null){
+// }
+let allDisplay = document.getElementById('all');
+if (allDisplay!= null){
+allDisplay.addEventListener('click', allClick);}
+function allClick() {
+  getData();
+
+  if (displayMovies !== null) {
+
+    displayMovies.textContent = ''
+
+  }else if (displaySeries !== null) {
+
+    displaySeries.textContent = ''
+
+  }else if (displayAnimes !== null) {
+
+    displayAnimes.textContent = ''
+
+  }
+    for (let i = 0; i < allItem.length; i++) {      
+      if (allItem[i].catagory === "movie" &&displayMovies !== null) {
+        console.log('inside render all',allItem);
+        allItem[i].renderMovies();
+      }else if (allItem[i].catagory === "series" && displaySeries !== null) {
+        allItem[i].renderSeries();
+      }else if (allItem[i].catagory === "anime" && displayAnimes !== null) {
+        allItem[i].renderAnime();
+      }
+    }
+}
+
+
+// 2) To sort it by Comedy
+let comedy = document.getElementById('comedy');
+if (comedy!= null){
+
+comedy.addEventListener('click', comedyClick);}
+function comedyClick() {
+  getData()
+  if (displayMovies !== null) {
+    displayMovies.textContent = ''
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "comedy" && allItem[i].catagory == "movie") {
+        let box = document.createElement('div');
+        displayMovies.appendChild(box);
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+        // for (let i = 0; i < allItem[i].length; i++) {
+          
+          
+          
+
+
+      }
+      
+        // added.push(added[i]);
+
+        // console.log(added[1]);
+        // store();
+      // }
+    }
+    let button = document.createElement('button');
+    button.addEventListener('click', submitter());
+    function submitter() {
+    for (let i = 0; i < allItem.length; i++){
+     
+      
+        console.log(allItem[0])
+        added.push(allItem[0]);
+      }
+    }
+
+    // Item.prototype.renderMovies = function () {
+
+    //   if (displayMovies !== null) {
     
+    
+    //     let box = document.createElement('div');
+    //     displayMovies.appendChild(box);
+    
+    //     let image = document.createElement('img');
+    //     box.appendChild(image);
+    
+    
+    //     let myP = document.createElement('p');
+    //     box.appendChild(myP);
+    
+    
+    //     let button = document.createElement('button')
+    //     box.appendChild(button)
+    //     button.addEventListener('click', submitter);
+    //     button.textContent = 'Add to favorite'
+    //     let object = this;
+    //     function submitter() {
+    //       added.push(object);
+    //       console.log(added);
+    //       store();
+    //       // getStore();
+    //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+  } else if (displaySeries !== null) {
+
+    displaySeries.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "comedy" && allItem[i].catagory == "series") {
+        let box = document.createElement('div');
+        displaySeries.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  } else if (displayAnimes !== null) {
+
+    displayAnimes.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "comedy" && allItem[i].catagory == "anime") {
+        let box = document.createElement('div');
+        displayAnimes.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
   }
 
+
+}
+
+
+//  3) To sort it by Action
+let action = document.getElementById('action');
+if (action!= null){
+
+action.addEventListener('click', actionClick);
+}
+function actionClick() {
+  getData()
+
+  if (displayMovies !== null) {
+
+    displayMovies.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "action" && allItem[i].catagory == "movie") {
+        let box = document.createElement('div');
+        displayMovies.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  } else if (displaySeries !== null) {
+
+    displaySeries.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "action" && allItem[i].catagory == "series") {
+        let box = document.createElement('div');
+        displaySeries.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  } else if (displayAnimes !== null) {
+
+    displayAnimes.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "action" && allItem[i].catagory == "anime") {
+        let box = document.createElement('div');
+        displayAnimes.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  }
+
+
+
+}
+// 4) To sort by Daram
+
+let drama = document.getElementById('drama');
+if (drama!= null){
+
+drama.addEventListener('click', dramaClick);
+}
+function dramaClick() {
+  getData()
+
+  if (displayMovies !== null) {
+
+    displayMovies.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "drama" && allItem[i].catagory == "movie") {
+        let box = document.createElement('div');
+        displayMovies.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  } else if (displaySeries !== null) {
+
+    displaySeries.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "drama" && allItem[i].catagory == "series") {
+        let box = document.createElement('div');
+        displaySeries.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  } else if (displayAnimes !== null) {
+
+    displayAnimes.textContent = ''
+
+    for (let i = 0; i < allItem.length; i++) {
+      if (allItem[i].type == "drama" && allItem[i].catagory == "anime") {
+        let box = document.createElement('div');
+        displayAnimes.appendChild(box);
+
+
+
+        let image = document.createElement('img');
+        box.appendChild(image);
+
+
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+
+        let button = document.createElement('button')
+        box.appendChild(button)
+        button.addEventListener('click', submitter);
+        button.textContent = 'Add to favorite'
+        function submitter() {
+          if(added.includes(allItem[i])== false){
+        added.push(allItem[i]);
+          console.log('lines',added);
+          store()
+        }}
+
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
+
+
+        image.src = allItem[i].sourse;
+
+      }
+
+
+    }
+  }
+}
+
+
+// to render movie or anime or series by the user  
+function getForm() {
+    // get the data from the local storage
+    let data = localStorage.getItem('product');
+    console.log(data);
+    //convert data back into a normal array of objects
+    let productData = JSON.parse(data);
+    if (productData) {
+      
+      for(let i = 0 ; i<productData.length ; i++){
+       allItem.push(productData[i]);
+       new Item (productData[i].name,productData[i].year,productData[i].catagory,productData[i].type,productData[i].sourse);
+      }
+    }
+    }  
+  getForm();
 
 
 // Movie items
@@ -148,961 +800,4 @@ let item59 = new Item("House of Cards", 2013, "series", "drama", "https://upload
 let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://upload.wikimedia.org/wikipedia/en/a/aa/How_I_Met_Your_Mother_S9.jpg");
 
 
-
-
-let displayMovies = document.getElementById('movies');
-let displaySeries = document.getElementById('series');
-let displayAnimes = document.getElementById('anime');
-
-
-let added = []
-
-
-// Prototype to render all movies
-
-Item.prototype.renderMovies = function () {
-
-  if (displayMovies !== null) {
-
-
-    let box = document.createElement('div');
-    displayMovies.appendChild(box);
-
-    let image = document.createElement('img');
-    box.appendChild(image);
-
-
-    let myP = document.createElement('p');
-    box.appendChild(myP);
-
-
-    let button = document.createElement('button')
-    box.appendChild(button)
-    button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
-    let object = this;
-    function submitter() {
-      added.push(object);
-      console.log(added);
-      store();
-      // getStore();
-    }
-
-
-
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-    image.src = this.sourse;
-  }
-}
-
-
-// Prototype to render all series
-
-Item.prototype.renderSeries = function () {
-
-  if (displaySeries !== null) {
-
-
-    let box = document.createElement('div');
-    displaySeries.appendChild(box);
-
-    let image = document.createElement('img');
-    box.appendChild(image);
-
-
-    let myP = document.createElement('p');
-    box.appendChild(myP);
-
-    let button = document.createElement('button')
-    box.appendChild(button)
-    button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
-    let object = this;
-    function submitter() {
-      added.push(object);
-      console.log(added);
-      store()
-    }
-
-
-
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-    image.src = this.sourse;
-  }
-}
-
-// Prototype to render all anime
-
-Item.prototype.renderAnime = function () {
-
-  if (displayAnimes !== null) {
-
-
-    let box = document.createElement('div');
-    displayAnimes.appendChild(box);
-
-    let image = document.createElement('img');
-    box.appendChild(image);
-
-
-    let myP = document.createElement('p');
-    box.appendChild(myP);
-
-    let button = document.createElement('button')
-    box.appendChild(button)
-    button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
-    let object = this;
-    function submitter() {
-      added.push(object);
-      console.log(added);
-      store()
-    }
-
-
-
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-    image.src = this.sourse;
-
-    // adding button
-
-
-  }
-}
-
-
-
-
-// new Movie(added[i].name)
-
-
-
-
-// calling the prototype to render
-
-for (let i = 0; i < allItem.length; i++) {
-  if (allItem[i].catagory === "movie") {
-
-    allItem[i].renderMovies();
-  } else if (allItem[i].catagory === "series") {
-
-    allItem[i].renderSeries();
-  } else if (allItem[i].catagory === "anime") {
-
-    allItem[i].renderAnime();
-  }
-}
-
-
-// Using local storge for favorite
-
-function store() {
-  let stringOb = JSON.stringify(added);
-  localStorage.setItem('favourites', stringOb)
-  // console.log(stringOb);
-}
-
-// let div = document.getElementById('s');
-// function getStore() {
-//   let callObjects = localStorage.getItem('favourites');
-
-//   let displayOb= JSON.parse(callObjects);
-//   console.log(displayOb);
-
-//   for (let i = 0; i < displayOb.length; i++) {
-//     added.push(displayOb[i]);
-
-//     console.log(added);
-
-//     let innerDiv = document.createElement('div');
-//     div.appendChild(innerDiv);
-//     innerDiv.className = 'box';
-
-
-//     let pa = document.createElement('p');
-//     innerDiv.appendChild(pa);
-//     pa.textContent = displayOb[i].name;
-
-//     let type = document.createElement('p');
-//     innerDiv.appendChild(type);
-//     type.textContent = displayOb[i].type;
-
-//     let img = document.createElement('img');
-//     innerDiv.appendChild(img);
-//     img.src = displayOb[i].sourse;
-    
-//   }
-
-//   if (displayOb !== null) {
-//     Item.allItem = displayOb    
-//   }
-
-//   // for (let i = 0; i < displayOb.length; i++) {
-//   //   // console.log(displayOb[i]);
-//   //   new Item (displayOb[i].name,displayOb[i].year,displayOb[i].catagory,displayOb[i].type,displayOb[i].sourse)
-//   // }
-
-// }
-
-// getStore()
-
-// get favourites from local storage and make it equal to added 
-
-
-
-
-
-
-
-
-// Events for the sorting  
-
-
-// 1) To display all movies or anime or series
-
-// if (allDisplay!= null){
-// }
-let allDisplay = document.getElementById('all');
-allDisplay.addEventListener('click', allClick);
-function allClick() {
-
-  if (displayMovies !== null) {
-
-    displayMovies.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-
-      if (allItem[i].catagory === "movie") {
-
-        allItem[i].renderMovies();
-      }
-
-    }
-
-  } else if (displaySeries !== null) {
-
-    displaySeries.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-
-      if (allItem[i].catagory === "series") {
-
-        allItem[i].renderSeries();
-      }
-
-    }
-  } else if (displayAnimes !== null) {
-
-    displayAnimes.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-
-      if (allItem[i].catagory === "anime") {
-
-        allItem[i].renderAnime();
-      }
-
-    }
-
-
-  }
-
-
-}
-
-
-// 2) To sort it by Comedy
-let comedy = document.getElementById('comedy');
-// if (comedy!=null){
-// }
-comedy.addEventListener('click', comedyClick);
-
-
-
-// let button = document.createElement('button')
-// box.appendChild(button)
-// button.addEventListener('click', submitter);
-// button.textContent = 'Add to favorite'
-// let object = this;
-// function submitter() {
-//   added.push(object);
-//   console.log(added);
-//   store()
-// }
-
-function comedyClick() {
-
-  if (displayMovies !== null) {
-
-    displayMovies.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "comedy" && allItem[i].catagory == "movie") {
-        let box = document.createElement('div');
-        displayMovies.appendChild(box);
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button');
-        box.appendChild(button);
-        
-        button.textContent = 'Add to favorite';
-        // console.log(added[0]);
-        
-       
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-        // for (let i = 0; i < allItem[i].length; i++) {
-          
-          
-          
-        
-        
-
-      }
-      
-        // added.push(added[i]);
-
-        // console.log(added[1]);
-        // store();
-      // }
-    }
-    let button = document.createElement('button');
-    button.addEventListener('click', submitter());
-    function submitter() {
-    for (let i = 0; i < allItem.length; i++){
-     
-      
-        console.log(allItem[0])
-        added.push(allItem[0]);
-      }
-    }
-
-    // Item.prototype.renderMovies = function () {
-
-    //   if (displayMovies !== null) {
-    
-    
-    //     let box = document.createElement('div');
-    //     displayMovies.appendChild(box);
-    
-    //     let image = document.createElement('img');
-    //     box.appendChild(image);
-    
-    
-    //     let myP = document.createElement('p');
-    //     box.appendChild(myP);
-    
-    
-    //     let button = document.createElement('button')
-    //     box.appendChild(button)
-    //     button.addEventListener('click', submitter);
-    //     button.textContent = 'Add to favorite'
-    //     let object = this;
-    //     function submitter() {
-    //       added.push(object);
-    //       console.log(added);
-    //       store();
-    //       // getStore();
-    //     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-  } else if (displaySeries !== null) {
-
-    displaySeries.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "comedy" && allItem[i].catagory == "series") {
-        let box = document.createElement('div');
-        displaySeries.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  } else if (displayAnimes !== null) {
-
-    displayAnimes.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "comedy" && allItem[i].catagory == "anime") {
-        let box = document.createElement('div');
-        displayAnimes.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  }
-
-
-}
-
-
-
-
-//  3) To sort it by Action
-let action = document.getElementById('action');
-// if(action!=null){
-// }
-action.addEventListener('click', actionClick);
-
-function actionClick() {
-
-  if (displayMovies !== null) {
-
-    displayMovies.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "action" && allItem[i].catagory == "movie") {
-        let box = document.createElement('div');
-        displayMovies.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  } else if (displaySeries !== null) {
-
-    displaySeries.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "action" && allItem[i].catagory == "series") {
-        let box = document.createElement('div');
-        displaySeries.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  } else if (displayAnimes !== null) {
-
-    displayAnimes.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "action" && allItem[i].catagory == "anime") {
-        let box = document.createElement('div');
-        displayAnimes.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  }
-
-
-
-}
-
-// 4) To sort by Daram
-
-let drama = document.getElementById('drama');
-// if (drama != null){
-// }
-drama.addEventListener('click', dramaClick);
-
-function dramaClick() {
-
-  if (displayMovies !== null) {
-
-    displayMovies.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "drama" && allItem[i].catagory == "movie") {
-        let box = document.createElement('div');
-        displayMovies.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-        // image.style.height = "100px";
-        // image.style.width = "100px";
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  } else if (displaySeries !== null) {
-
-    displaySeries.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "drama" && allItem[i].catagory == "series") {
-        let box = document.createElement('div');
-        displaySeries.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  } else if (displayAnimes !== null) {
-
-    displayAnimes.textContent = ''
-
-    for (let i = 0; i < allItem.length; i++) {
-      if (allItem[i].type == "drama" && allItem[i].catagory == "anime") {
-        let box = document.createElement('div');
-        displayAnimes.appendChild(box);
-
-
-
-        let image = document.createElement('img');
-        box.appendChild(image);
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        let button = document.createElement('button')
-        box.appendChild(button)
-        button.addEventListener('click', submitter());
-        button.textContent = 'Add to favorite'
-        // let object = this;
-        // function submitter() {
-        //   added.push(object);
-        //   console.log(added);
-        //   store()
-        // }
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
-        image.src = allItem[i].sourse;
-
-      }
-
-
-    }
-  }
-}
-
-
-// to render movie or anime or series by the user  
-
-function getForm() {
-    // get the data from the local storage
-    let data = localStorage.getItem('product');
-    console.log(data);
-  
-    //convert data back into a normal array of objects
-    let productData = JSON.parse(data);
-    //console.log(productData);
-    
-    //console.log(productData);
-  if (productData != null) {
-    for (let i = 0; i < productData.length; i++) {
-      allItem.push(productData[i]);
-    }
-    console.log(allItem);
-  }
-   
-    // if the first time we visit the page, there will not be an array of objects inside the local storage so we should handle it here:
-    
-
-    
-    
-  }
-  getForm();
-
-  // for (let i = 0; i < allItem.length; i++) {
-  //   if (allItem[i].catagory === "movie") {
-          
-  //     allItem[i].renderMovies();
-  //   } else if (allItem[i].catagory === "series") {
-  
-  //     allItem[i].renderSeries();
-  //   } else if (allItem[i].catagory === "anime") {
-  
-  //     allItem[i].renderAnime();
-  //   }
-  // }
-
-
-
-
-
-
-
-
-
-// Item.prototype.renderComedy = function () {
-
-//   if (displayMovies !== null) {
-
-//     let box = document.createElement('div');
-//     displayMovies.appendChild(box);
-
-//     let image = document.createElement('img');
-//     box.appendChild(image);
-
-
-//     let myP = document.createElement('p');
-//     box.appendChild(myP);
-
-
-//     let button = document.createElement('button')
-//     box.appendChild(button)
-//     button.addEventListener('click', submitter);
-//     button.textContent = 'Add to favorite'
-//     let object = this;
-//     function submitter() {
-//       added.push(object);
-//       console.log(added);
-//       store()
-//     }
-
-
-
-//     myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-//     image.src = this.sourse;
-  
-// }else if (displaySeries !== null) {
-
-
-//   let box = document.createElement('div');
-//   displaySeries.appendChild(box);
-
-//   let image = document.createElement('img');
-//   box.appendChild(image);
-
-
-//   let myP = document.createElement('p');
-//   box.appendChild(myP);
-
-
-//   let button = document.createElement('button')
-//   box.appendChild(button)
-//   button.addEventListener('click', submitter);
-//   button.textContent = 'Add to favorite'
-//   let object = this;
-//   function submitter() {
-//     added.push(object);
-//     console.log(added);
-//     store()
-//   }
-
-
-
-//   myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-//   image.src = this.sourse;
-// } else if (displayAnimes !== null) {
-
-
-//   let box = document.createElement('div');
-//   displayAnimes.appendChild(box);
-
-//   let image = document.createElement('img');
-//   box.appendChild(image);
-
-
-//   let myP = document.createElement('p');
-//   box.appendChild(myP);
-
-
-//   let button = document.createElement('button')
-//   box.appendChild(button)
-//   button.addEventListener('click', submitter);
-//   button.textContent = 'Add to favorite'
-//   let object = this;
-//   function submitter() {
-//     added.push(object);
-//     console.log(added);
-//     store()
-//   }
-
-
-
-//   myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
-//   image.src = this.sourse;
-// }
-// }
-
-
-
-// /*********************Noor&Ibrahem**************************/
-// const tableBody = document.getElementById('tableBody');
-// const clearAll = document.getElementById('clearCart');
-// ///////////////////// making the table 
-// function addItemToLocal(){
-// let itemSeperate = JSON.stringify(allItem);
-// // console.log(itemSeperate);
-// localStorage.setItem("key", itemSeperate);
-// }
-// function showItemsFromLocal(){
-// let itemNotSeperate = JSON.parse(localStorage.getItem("key"));
-// console.log(itemNotSeperate);
-// }
-// // making the table 
-// let listGenerator = function () {
-  
-//   for (let i = 0; i < allItem.length; i++) {
-//     let firstRowElemnt = document.createElement('tr');
-//     if (tableBody!= null){
-//     tableBody.appendChild(firstRowElemnt);}
-//     let imageCoulmn = document.createElement('img');
-//     firstRowElemnt.appendChild(imageCoulmn);
-//     imageCoulmn.src = allItem[i].sourse;
-//     imageCoulmn.style.width = '100px';
-//     let nameColumn = document.createElement('td');
-//     firstRowElemnt.appendChild(nameColumn);
-//     nameColumn.textContent = allItem[i].name;
-//     //deleteItem
-//     let deleteIcon = document.createElement('td');
-//     deleteIcon.classList.add("delete"); //don't forget for styling
-//     deleteIcon.setAttribute('data',allItem[i].sourse);//
-//     firstRowElemnt.appendChild(deleteIcon);
-//     deleteIcon.textContent = 'X';  
-//     deleteIcon.style.color= 'red';
-//     //link everyelemnt to its class name for design
-//   }
-// }
-// //click for add element ...
-// /* Not added yet */
-// //click for clear item ..
-// if (tableBody != null){
-// tableBody.addEventListener('click',deleteItem);
-// }
-// function deleteItem(e){
-//   if (e.target.classList.contains('delete')){
-//       let attributeName = e.target.getAttribute('data');
-//       deleteItemFromLocal(attributeName);
-//     e.target.parentElement.remove(); //parent which is row // parent parent is tbody
-//   }
-// }
-// function deleteItemFromLocal(attributeName){
-//   for (let i = 0; i < allItem.length; i++){
-//       if (allItem[i].sourse === attributeName[i]){
-//         let x = allItem.splice(i); //remove all elements in that index
-//       //  localStorage.removeItem(i);
-//       }
-//   }
-//   addItemToLocal();
-// }
-// //to delete all
-// if (clearAll!= null){
-// clearAll.addEventListener('click',deleteAll);
-// }
-// function deleteAll(e){
-//   e.preventDefault();
-//   while(tableBody!=null){ //tableBody.firstChild
-//     tableBody.removeChild(tableBody.firstChild);
-//   }
-//  // allItem = [];
-//   addItemToLocal();
-  
-// }
-// addItemToLocal();
-// showItemsFromLocal();
-// console.log(listGenerator());
-// allItem.image;
-// console.log(allItem[0].name);
-// /***************Finish Ibraheem&Noor Part**************************/
-
+getData()
