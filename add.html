@@ -9,9 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add form</title>
     <link rel="stylesheet" href="css/add.css">
-    <link rel="" href="anime.html">
+    <link rel="stylesheet" href="css/header-footer.css">
+
+    <!-- <link rel="" href="anime.html">
     <link rel="" href="movies.html">
-    <link rel="" href="series.html">
+    <link rel="" href="series.html"> -->
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,40 +23,73 @@
 </head>
 
 <body>
+    <header>
+        <div id="h1">
+            <h1>M.S.A</h1>
+        </div>
+
+
+        <nav id="nav-header">
+            <ul>
+                <!-- <li>
+                     <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-contact-512.png" alt=""
+                        width="50" height="50"> 
+                </li>  -->
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="movies.html">Movies</a>
+                </li>
+                <li>
+                    <a href="series.html">Series</a>
+                </li>
+                <li>
+                    <a href="anime.html">Anime</a>
+                </li>
+                <li>
+                    <a href="cart.html">Cart</a>
+                </li>
+                <li>
+                    <a href="add.html">Adding to Web</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
+        <div id="parentForm">
+            <div id='sfrom'>
+                <img id="avatar" src="image/neon.PNG" alt="popcorn">
 
-        <div id='sfrom'>
-            <img id="avatar" src="image/neon.PNG" alt="popcorn">
 
+                <form action="" id="form">
 
-            <form action="" id="form">
+                    <!-- <input type="text" name="serialNumber" /> -->
 
-                <!-- <input type="text" name="serialNumber" /> -->
+                    <label for="Name">
+                        Name :
+                    </label>
 
-                <label for="Name">
-                    Name :
-                </label>
-
-                <input style="
+                    <input style="
                     height: 30px;
                     font-size: 16px;" placeholder="Enter your movie name" type="text" id='NameField' name="NameField"
-                    autocomplete="off">
-                </input>
-                <br>
+                        autocomplete="off">
+                    </input>
+                    <br>
 
-                <label for="YearOfProduction">
-                    YearOfProduction :
-                </label>
+                    <label for="YearOfProduction">
+                        YearOfProduction :
+                    </label>
 
-                <input style="
+                    <input style="
                     height: 30px;
                     
                     font-size: 16px;" placeholder="Enter the year" type="number" id='yearId' name="yearId"
-                    autocomplete="off">
-                </input>
-                <br>
+                        autocomplete="off">
+                    </input>
+                    <br>
 
-                <!-- <label for="Rating">
+                    <!-- <label for="Rating">
                     Rating :
                 </label>
 
@@ -64,18 +99,18 @@
               font-size: 16px;" placeholder="Enter the Rate" type="number" id='Rating' name="Rating"
                     autocomplete="off">
                 </input> -->
-                <br>
+                    <br>
 
-                <label for="catogary">catogary:</label>
-                <br>
-                <div id="catogaryId">  
-                    <input type="radio" name="catogaryId" value="movie">movie<br>
-                    <input type="radio" name="catogaryId" value="series">series<br>
-                    <input type="radio" name="catogaryId" value="anime">anime<br>
-                </div>
+                    <label for="catogary">catogary:</label>
+                    <br>
+                    <div id="catogaryId">
+                        <input type="radio" name="catogaryId" value="movie">movie<br>
+                        <input type="radio" name="catogaryId" value="series">series<br>
+                        <input type="radio" name="catogaryId" value="anime">anime<br>
+                    </div>
 
 
-                <!-- <label for="Type:">Type :</label>
+            <!-- <label for="Type:">Type :</label>
     <select id="Type" name="Type :">
 
       <option value="series">series</option>
@@ -84,7 +119,7 @@
     <br> -->
                 <br>
                 <label for="Type">Type:</label>
-                <input type="text" id="typeId" name="typeId" , placeholder="Enter the Action |Comady|Drama">
+                <input type="text" id="typeId" name="typeId" , placeholder="Enter the Action |Comady|Drama" >
                 <br>
                 <span>
                     <label for="file"> Please insert the URL of photo:
@@ -92,25 +127,72 @@
                     <!-- <br> -->
                     <!-- <input type="file" id="file" name="file" value="file"> -->
 
-                    <input type="url" id="sourseId" name="sourseId" value="url">
-                </span>
-                <br>
+                <input type="url" id="sourseId" name="sourseId" value="url">
+            </span>
+            <br>
 
 
 
-                <input id="submit" type="submit" value="submit">
-                </input>
+            <input id="submit" type="submit" value="submit">
+            </input>
 
 
             </form>
         </div>
         <div id="display"></div>
 
+    </div>
 
     </main>
     <footer>
-        &copy;MSA
-    </footer>
+        
+    
+        <div>
+            <ul id="contact">
+                <li>
+                    <span>Contact Us</span> <br>
+                    Email : MSA@gmail.com <br>
+                    Phone number : +9627777789
+                </li>
+
+
+
+            </ul>
+        </div>
+        <nav id="nav-footer">
+
+            <ul>
+                <li>
+
+                    <a class="logo-icon" href="https://www.facebook.com/LTUC.JO/">
+                        <img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19757.png" alt="Facebook"
+                            width="30" height="30">
+                    </a>
+
+                </li>
+                <li>
+                    <a class="logo-icon" href="https://www.instagram.com/ltuc.jo/?hl=en">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+                            alt="Instagram" width="30" height="30">
+                    </a>
+                </li>
+
+                <li>
+                    <a class="logo-icon" href="https://twitter.com/ltucjo?lang=en">
+                        <img id="twt" src="https://image.flaticon.com/icons/png/512/124/124021.png" alt="Instagram"
+                            width="30" height="30">
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+        <p>
+            &copy; M.S.A Team 2021 <br>
+
+        </p>
+    </footer> 
+    
     <script src="js/add.js">
     </script>
     <script>
