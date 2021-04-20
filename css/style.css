@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
 
 *{
@@ -9,14 +8,14 @@
 }
 #parent{
   margin-left: 50px;
-}
+} 
 
 body{
   position:absolute;
   margin:0;
   background: rgb(154, 101, 156);
  /* background-color: rgba(0, 0, 0, 0.842); */
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU'); */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU');
  background-repeat:no-repeat ;
  width: 100%;
  height: 100%;
@@ -143,7 +142,7 @@ header h1{
 
 #nav-header ul li a:hover {
  color: red;
-}
+} */
 
 /* finish header css*/
 
@@ -468,5 +467,4 @@ footer p {
   padding: 20px;
  }
  
-
 

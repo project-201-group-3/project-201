@@ -19,7 +19,7 @@
 	  width: 100%;
   } */
 
-header{
+/* header{
 
 	background-color: black;
 	color: whitesmoke;
@@ -28,11 +28,11 @@ header{
   
   
   
-  }
+  } */
   
   
   
-  header h1{
+  /* header h1{
 	font-size: 60px;
   font-family: 'Coda Caption', sans-serif;
   font-family: 'Dancing Script', cursive;
@@ -42,7 +42,7 @@ header{
   display: inline;
   
   
-  }
+  } */
 /*   
  #canvas{
 	width:400px;
@@ -54,7 +54,7 @@ header{
   } */
   
   
-  #nav-header ul li {
+  /* #nav-header ul li {
 	display: inline-block;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -81,7 +81,7 @@ text-decoration: none;
   
   #nav-header ul li a:hover {
    color: red;
-  }
+  } */
   
 /*   
   #nav-header ul li:first-child {
