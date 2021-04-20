@@ -14,7 +14,7 @@
 body{
   position:absolute;
   margin:0;
-  background: rgb(84, 48, 85);
+  background: rgb(154, 101, 156);
  /* background-color: rgba(0, 0, 0, 0.842); */
   /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU'); */
  background-repeat:no-repeat ;
@@ -47,6 +47,9 @@ header{
   display: inline-block;
   
 }
+.box4{
+  display: inline-block;
+}
 .box.img{
   border-radius:100px;
 }
@@ -55,12 +58,48 @@ header{
   height: 600px;
   width: 500px;
 
+animation-name: example;
+animation-duration: 4s;
+animation-direction: reverse;
+
 }
 
 .box2{
   width: 30%;
   display: inline-block;
+ 
+
+animation-name: example;
+animation-duration: 4s;
+animation-direction: reverse;
 }
+
+
+.box2:hover {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+	animation: shake 0.5s;
+
+	/* When the animation is finished, start again */
+	animation-iteration-count: infinite;
+  transform: rotate(20deg);
+
+}
+
+  
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(-1deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(-3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
 
 header h1{
   font-size: 60px;
@@ -133,6 +172,7 @@ header h1{
 /* Hide the images by default */
 .mySlides {
   display: none;
+  /* transform: skewY(2deg); */
 }
 
 /* Next & previous buttons */
