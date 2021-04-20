@@ -30,7 +30,10 @@ body:before {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 450px;
+
+
 	height: 500px;
+
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
 background-color: whitesmoke;
