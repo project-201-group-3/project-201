@@ -24,13 +24,8 @@ body:before {
 	top: 50%;
 	left: 25%;
 	transform: translate(-50%, -50%);
-<<<<<<< HEAD
-	width: 600px;
-	height: 300px;
-=======
 	width: 450px;
 	height: 350px;
->>>>>>> e9a5dc29574fc3bec2ed3cbf8532b0f33dfa6ca6
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
 background-color: whitesmoke;
