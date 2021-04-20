@@ -94,8 +94,14 @@ header{
   body main{
       position: relative;
       left: 5%;
+      height: -500px;
   }
   body main h1{
+position: relative;
+left: -140px;
+bottom: 30px;
+font-size: 50px;
+top: 180px;
 
   }
   .my-container{
@@ -103,6 +109,7 @@ header{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    top: 200px;
   }
   .my-container .my-box{
       margin-left: 70px;
@@ -179,8 +186,8 @@ opacity: 1;
       transition: 1.4s;
       font-size: 12px;
       position: relative;
-      top: -100px;
-      right: 100px;
+      top: -90px;
+      right: 120px;
 
   }
   .my-container .my-box:hover .mycontent p{
@@ -196,3 +203,21 @@ opacity: 1;
       bottom: -600px;
   }
   
+  #wepid{
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 400px;
+      left: 200px;
+      border-radius: 50px;
+  }
+  .gg{
+      position: relative;
+    left: -160px; 
+    }
+    #alltime{
+        position: relative;
+        top: 250px;
+        left: 400px;
+        color: rgb(233, 18, 18);
+    }
