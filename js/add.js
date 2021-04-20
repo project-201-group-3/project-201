@@ -16,14 +16,6 @@ function FormPage(name, year, catagory, type, sourse) {
 
 FormPage.addForm = [];
 
-// let item1 = new FormPage("kkkk", 2020, 4, "movie", "asdqasd", "asdasd");
-// let item2 = new FormPage("mmmm", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
-
-// let item3 = new FormPage("lolo", 2020, 4, "movie", "asdqasd", "asdasd");
-// let item4 = new FormPage("cccccc", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
-// //let item3 = new FormPage("lololol", 455, 6, "anime", "mmmmmm", "zzzzzzzz");
-
-// console.log(FormPage.addForm);
 
 
 
@@ -36,39 +28,6 @@ let display = document.getElementById('display');
 form.appendChild(submit);
 
 
-
-
-
-
-
-
-//create eventlistner
-// form.addEventListener('submit', UserClick);
-
-// create render function to show new elemnt in next page that selecetd
-// function render() {
-
-//   for (let i = 0; i < FormPage.addForm.length; i++) {
-
-//     let box = document.createElement('div');
-//     display.appendChild(box);
-
-//     let image = document.createElement('img');
-//     box.appendChild(image);
-//     image.style.height = "100px";
-//     image.style.width = "100px";
-
-//     let myP = document.createElement('p');
-//     box.appendChild(myP);
-
-//     myP.innerHTML = (`${FormPage.addForm[i].name} \n ${FormPage.addForm[i].year} \n ${FormPage.addForm[i].Rating} \n ${FormPage.addForm[i].catagory} \n ${FormPage.addForm[i].type}`);
-
-
-//     image.src = FormPage.addForm[i].sourse;
-
-
-
-//   }
 
 
 form.addEventListener('submit', UserClick);
@@ -108,21 +67,8 @@ function UserClick(event) {
 
      window.location.href = "movies.html";
 
-    //  let fr = localStorage.getItem('FormPage.addForm ');
-
-    //   document.getElementById('result').innerHTML = fr;
-
-  }
-  // arr.push(window.location.assign("movies.html") )
-  // ;    
-  // render();
-
-
-  //let data = localStorage.getItem('product');
-
-
-
-  else if (catagoryMSA == 'series') {
+   
+  }  else if (catagoryMSA == 'series') {
     alert('Thank you for your updating ');
 
     // window.location.href = "series.html";
@@ -140,11 +86,6 @@ function UserClick(event) {
 }
 
 
-// submit.removeEventListener('submit', UserClick);
-
-
-
-
 
 //create function for update storge
 function updateStorage() {
@@ -156,12 +97,7 @@ function updateStorage() {
   localStorage.setItem('product', arrayString);
 
 }
-//updateStorage();
 
-// console.log(updateStorage());
-
-
-// get the data from local storge
 function getForm() {
   // get the data from the local storage
   let data = localStorage.getItem('product');
