@@ -22,7 +22,9 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body style="background: rgb(36,15,73);
+background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
+margin: 0 ;">
     <header>
         <div id="h1">
             <h1>M.S.A</h1>
@@ -57,15 +59,22 @@
         </nav>
     </header>
     <main>
+        <!-- <div id="parent"> -->
+            <div class="box2" style="float:left;margin-top: 150px; margin-left: 20px;">
+                <img style="height: 300px; width: 300px; margin-bottom: 120px; border-radius: 100px; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0VqPb7SKqk_epGGU-cfC1zWn4sAspGxTEXw&usqp=CAU" alt="">
+           </div>
+             <div class="box2" style="height: 300px; width: 300px; margin-bottom: 120px; border-radius: 100px; margin-left: 150px ">
+                <img   src="https://i.pinimg.com/originals/0b/44/55/0b44554761143242d63f7a2e3770ee51.jpg" alt="">
+           </div> 
+
         <div id="parentForm">
             <div id='sfrom'>
                 <img id="avatar" src="image/neon.PNG" alt="popcorn">
 
-
+                
+               <div class="box4">
                 <form action="" id="form">
-
-                    <!-- <input type="text" name="serialNumber" /> -->
-
+                    
                     <label for="Name">
                         Name :
                     </label>
@@ -110,13 +119,7 @@
                     </div>
 
 
-            <!-- <label for="Type:">Type :</label>
-    <select id="Type" name="Type :">
 
-      <option value="series">series</option>
-      <option value="anime">anime</option>
-      <option value="moive">moive</option>
-    <br> -->
                 <br>
                 <label for="Type">Type:</label>
                 <input type="text" id="typeId" name="typeId" , placeholder="Enter the Action |Comady|Drama" >
@@ -136,9 +139,17 @@
             <input id="submit" type="submit" value="submit">
             </input>
 
+           
 
             </form>
+           
+       
         </div>
+               
+    </div>
+    </div>
+
+
         <div id="display"></div>
 
     </div>
