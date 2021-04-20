@@ -15,6 +15,8 @@ function getData() {
 }
 
 
+// constructor
+
 let allItem = [];
 function Item(name, year, catagory, type, sourse) {
   this.name = name;
@@ -177,8 +179,7 @@ function store() {
 
 // 1) To display all movies or anime or series
 
-// if (allDisplay!= null){
-// }
+
 let allDisplay = document.getElementById('all');
 if (allDisplay!= null){
 allDisplay.addEventListener('click', allClick);}
@@ -247,75 +248,15 @@ function comedyClick() {
 
         image.src = allItem[i].sourse;
 
-        // for (let i = 0; i < allItem[i].length; i++) {
+            
           
-          
-          
-
-
+      
       }
       
-        // added.push(added[i]);
-
-        // console.log(added[1]);
-        // store();
-      // }
+        
     }
-    let button = document.createElement('button');
-    button.addEventListener('click', submitter());
-    function submitter() {
-    for (let i = 0; i < allItem.length; i++){
-     
-      
-        console.log(allItem[0])
-        added.push(allItem[0]);
-      }
-    }
-
-    // Item.prototype.renderMovies = function () {
-
-    //   if (displayMovies !== null) {
-    
-    
-    //     let box = document.createElement('div');
-    //     displayMovies.appendChild(box);
-    
-    //     let image = document.createElement('img');
-    //     box.appendChild(image);
-    
-    
-    //     let myP = document.createElement('p');
-    //     box.appendChild(myP);
-    
-    
-    //     let button = document.createElement('button')
-    //     box.appendChild(button)
-    //     button.addEventListener('click', submitter);
-    //     button.textContent = 'Add to favorite'
-    //     let object = this;
-    //     function submitter() {
-    //       added.push(object);
-    //       console.log(added);
-    //       store();
-    //       // getStore();
-    //     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+         
+  
 
   } else if (displaySeries !== null) {
 
@@ -800,4 +741,4 @@ let item59 = new Item("House of Cards", 2013, "series", "drama", "https://upload
 let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://upload.wikimedia.org/wikipedia/en/a/aa/How_I_Met_Your_Mother_S9.jpg");
 
 
-getData()
+getData();
