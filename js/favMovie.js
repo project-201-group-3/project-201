@@ -48,6 +48,8 @@ function getData() {
 }
 // getData();
 
+
+// To delete an item which selected by the user 
 div.addEventListener('click', deleteItem);
 function deleteItem(e) {
   if (e.target.id !== "s") {
@@ -71,6 +73,7 @@ function deleteItem(e) {
 }
 
 
+// To delete all the items
 clearAll.addEventListener('click', clearAllFun);
 function clearAllFun() {
   div.textContent = '';
@@ -84,6 +87,8 @@ function removeFav() {
 
 getData();
 
+
+// Constructor function 
 function Item(name, year, catagory, type, sourse) {
   this.name = name;
   this.year = year;
