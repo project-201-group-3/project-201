@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 }
+
 body:before {
 	content: '';
 	position: fixed;
@@ -21,7 +22,7 @@ body:before {
 }
 #sfrom{
     position: absolute;
-	top: 50%;
+	top: 70%;
 	left: 25%;
 	transform: translate(-50%, -50%);
 	width: 450px;
