@@ -800,4 +800,4 @@ let item59 = new Item("House of Cards", 2013, "series", "drama", "https://upload
 let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://upload.wikimedia.org/wikipedia/en/a/aa/How_I_Met_Your_Mother_S9.jpg");
 
 
-getData()
+getData();
