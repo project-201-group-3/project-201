@@ -3,13 +3,16 @@ body {
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 }
+/* body main{ */
+
+
 
 body:before {
 	content: '';
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(https://image.freepik.com/free-vector/movie-time-neon-sign-popcorn-bucket-clapperboard-film-reel-poster_1262-13530.jpg);
+	/* background-image: url(https://image.freepik.com/free-vector/movie-time-neon-sign-popcorn-bucket-clapperboard-film-reel-poster_1262-13530.jpg); */
 	/* background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg); */
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -21,12 +24,13 @@ body:before {
 	filter: blur(5px); */
 }
 #sfrom{
+	clear: both;
     position: absolute;
-	top: 70%;
-	left: 25%;
+	top: 120px;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 450px;
-	height: 350px;
+	height: 500px;
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
 background-color: whitesmoke;
@@ -43,7 +47,11 @@ background-color: whitesmoke;
 	-moz-filter: blur(10px);
 	filter: blur(1px); */
 }
+#parentForm{
+	position: relative;
+	top: 200px;
 
+}
 
 #avatar{
     position: absolute;
@@ -220,4 +228,8 @@ input[type=number]:focus {
 		  text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
 		}
 	  } */
-	 
+	 footer{
+		 position: absolute;
+		 bottom:-500px;
+		 width: 100%;
+	 }
