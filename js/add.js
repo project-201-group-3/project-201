@@ -1,6 +1,5 @@
 'use strict';
 
-// miss one para element (Type) !!!!!!
 
 function FormPage(name, year, catagory, type, sourse) {
   this.name = name;
