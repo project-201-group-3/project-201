@@ -4,6 +4,8 @@ let div = document.getElementById('s');
 let clearAll = document.getElementById('clearAll');
 let allItem = [];
 let added = [];
+let checkVar = 0;
+
 
 
 // To render from local storage 
@@ -13,10 +15,9 @@ function getData() {
   let normalOb = JSON.parse(stringOb);
   if (normalOb) {
     added = normalOb;
-    console.log(stringOb);
+   
     
     for (let i = 0; i < normalOb.length; i++) {
-      console.log('inside get data', normalOb);
       new Item(normalOb[i].name, normalOb[i].year, normalOb[i].catagory, normalOb[i].type, normalOb[i].sourse);
       
       let innerDiv = document.createElement('tr');
@@ -50,9 +51,10 @@ function getData() {
 
     }
   }
-
+  
 }
-// getData();
+
+
 
 
 // To delete an item which selected by the user 
@@ -73,6 +75,9 @@ function deleteItem(e) {
     e.target.parentElement.remove(); //parent which is row // parent parent is innerdiv
     let addItemToDelete = JSON.stringify(allItem);
     localStorage.setItem('favourites', addItemToDelete);
+    if (allItem.length == NaN || allItem.length == 0 ) {
+      clearAll.hidden = true;
+    }
     
     // getData();
   }
@@ -84,11 +89,16 @@ clearAll.addEventListener('click', clearAllFun);
 function clearAllFun() {
   div.textContent = '';
   removeFav();
+    clearAll.hidden = true;
+
 }
 
 function removeFav() {
   localStorage.removeItem('favourites');
 }
+
+
+// To display the delete icon
 
 
 getData();
@@ -103,6 +113,12 @@ function Item(name, year, catagory, type, sourse) {
   this.sourse = sourse;
   allItem.push(this);
 }
+if (allItem.length == NaN || allItem.length == 0 ) {
+  clearAll.hidden = true;
+}else if(allItem.length > 0 ) {
+  clearAll.hidden = false;
+}
+
 
 
 
