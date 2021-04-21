@@ -40,10 +40,8 @@ header{
 }
 
 header h1{
-  /* font-size: 60px;
-  font-family: 'Dancing Script', cursive !important; */
-  font-size: 70px;
-  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  font-family: 'Dancing Script', cursive !important;
   position: relative;
   top: 40px;
   left: 80px;
@@ -173,8 +171,4 @@ footer p {
     padding: 20px;
    bottom: 50px;
 
-   }
-
-   footer p:hover{
-     
    }

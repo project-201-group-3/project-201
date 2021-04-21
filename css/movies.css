@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
 *{
 	box-sizing:border-box !important;
@@ -181,15 +180,17 @@ color: cornsilk;
 	display: block;
 }
 /*****************Video******************/
-/* section .videoSection{
-} */
-video{
-	position: relative;
-	left: 170px;
-	/* width: auto; */
+ section .videoSection{
+	position:static;
     margin-bottom: 50px;
+	width: 30%;
     clear: both;
-	margin-left: 120px;
+	margin-left: 200px;
+} 
+video{
+     margin-bottom: 50px;
+    clear: both;
+	margin-left: 200px;
 }
 /*****************MoviesItems******************/
 .checked {
