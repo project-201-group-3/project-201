@@ -3,8 +3,12 @@
 }
 
 body{
-    background-image: url(https://wallpapercave.com/wp/wp2714592.jpg);
-    background-size: cover;
+    
+		background: rgb(158, 127, 212) !important;
+		background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
+		margin: 0 !important;
+    /* background-image: url(https://wallpapercave.com/wp/wp2714592.jpg);
+    background-size: cover; */
     /* background-position: center center; */
 	/* background-repeat: no-repeat;
 	background-attachment: fixed; */
@@ -12,35 +16,93 @@ body{
 }
 #s{
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+
+
 }
 /* #s tr{
     border-width: 3px; 
-    border-style: dotted;
-} */
+    /* border-style: dotted; */
+    /* padding-bottom: 30px; */
+#s #last {
+    position: relative;
+bottom: 30px;
+}
+#s #last2 {
+    position: relative;
+bottom: 30px;
+}
+.delete {
+    position: relative;
+bottom: 30px;
+}
+
 #s tr td{
-    padding-left: 300px;
+
+    padding-right: 50px;
     font-size: 20px;
     color: rgb(221, 204, 204);
+     padding-bottom: 7px; 
+
 
 
 }
 #s img{
+    /* position:relative; */
+    /* padding-right: 20px; */
     width: 100px;
     height: 150px;
-    padding-top: 15px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding-right: 20px;
+    /* padding-bottom:0px;
+    
+    margin-bottom: 0px; */
 }
 #s button{
    position: relative;
-   right: -350px;
+   /* right: -350px; */
    width: 30px;
+   padding-left: 4px;
+
 }
 
-#clearAll{
+
+
+
+/* #clearAll{
     position: relative;
     right: -1150px;
     text-decoration: none;
     width: 90px;
     height: 25px;    
-    background-color: rgb(160, 252, 175);
+    background-color: rgb(252, 160, 206);
+} */
+
+#clearAll{
+     position: relative; 
+   
+     margin-left: 800px; 
+   width: 100px;
+   height:45px;
+font-weight: bolder;
+   /* padding: 15px 25px; */
+ font-size: 18px;
+ text-align: left;
+ cursor: pointer;
+ outline: none;
+ color: rgb(226, 134, 211);
+  background-color:rgb(92, 30, 107); 
+text-align: center;
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 5px whitesmoke;
+top: 70px;
+margin-top: 10px;
+margin-left: 260px;
+}
+#clearAll:hover{
+    /* background-color:rgb(223, 151, 199);  */
+    box-shadow: 0 0 10px rgb(240, 230, 236), 0 0 40px rgb(240, 230, 236), 0 0 80px rgb(240, 230, 236);
+
 }
