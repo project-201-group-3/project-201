@@ -11,16 +11,14 @@
     margin-bottom: 30px;
     border-style: double;
     text-align: center;
-    margin-right: 200px;
     border-width: 10px;
     border-color: palevioletred;
     border-radius: 30px;
   }
   
   body{
-      background-color:  rgb(36,15,73);
-      background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
-      margin: 0 ;
+    background: #C1C8E4  !important;
+
       position: relative;
     margin-left:0 ;
     padding: 0;
@@ -148,10 +146,7 @@ opacity: 1;
       left: 200px;
       border-radius: 50px;
   }
-  .gg{
-      position: relative;
-    left: -160px; 
-    }
+
     #alltime{
         position: relative;
         top: 250px;
