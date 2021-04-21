@@ -15,34 +15,48 @@ body{
     
 }
 #s{
-    width: 100%;
+    /* width: 100%; */
     padding-bottom: 0px;
+    width: 100%;
+    margin: 0%;
+    background-color: rgb(116, 80, 177) ;
+    border-collapse: collapse;
+    
 
 
 }
 #s #last {
-    position: relative;
-bottom: 30px;
+position: relative;
+/* bottom: 30px; */
+/* right: -40px; */
+font-size: 25px;
 }
 #s #last2 {
-    position: relative;
-bottom: 30px;
+    /* position: relative; */
+    /* bottom: 30px; */
+    left: -150px;
+    font-size: 25px;
+
 }
 .delete {
-    position: relative;
-bottom: 30px;
+    /* position: fixed; */
+    /* bottom: 30px; */
+    right: -100px;
+
 }
+
+/* #last2 ,.delete{
+    float: right;
+    margin-right: 3000px;
+}  */
 
 #s tr td{
-
-    padding-right: 50px;
-    font-size: 20px;
-    color: rgb(221, 204, 204);
-     padding-bottom: 7px; 
-
-
-
+ /* padding-right: 50px; */
+ font-size: 20px;
+ color: rgb(221, 204, 204);
+ /* padding-bottom: 7px;  */
 }
+
 #s img{
     /* position:relative; */
     /* padding-right: 20px; */
@@ -50,16 +64,20 @@ bottom: 30px;
     height: 150px;
     margin-bottom: 0px;
     margin-left: 10px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     /* padding-bottom:0px;
     
     margin-bottom: 0px; */
 }
 #s button{
    position: relative;
-   /* right: -350px; */
-   width: 30px;
-   padding-left: 4px;
+   right: -50px;
+   width: 40px;
+   /* padding-left: 4px; */
+   height: 30px;
+   bottom: 70px;
+   background-color:rgb(92, 30, 107);   
+   
 
 }
 
@@ -77,7 +95,7 @@ bottom: 30px;
 
 #clearAll{
      position: relative; 
-   
+     right: -900px;
      margin-left: 800px; 
    width: 100px;
    height:45px;
@@ -94,7 +112,7 @@ text-align: center;
  border-radius: 15px;
  box-shadow: 0 5px whitesmoke;
 top: 70px;
-margin-top: 10px;
+/* margin-top: 0px; */
 margin-left: 260px;
 }
 #clearAll:hover{
