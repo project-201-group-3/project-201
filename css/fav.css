@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Oswald:wght@300&family=Poiret+One&display=swap');
+
+
 *{
     box-sizing: border-box;
 }
 
+
 body{
-    
-		background: rgb(158, 127, 212) !important;
-		background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
+    background: #C1C8E4  !important;
+
 		margin: 0 !important;
-    /* background-image: url(https://wallpapercave.com/wp/wp2714592.jpg);
-    background-size: cover; */
-    /* background-position: center center; */
-	/* background-repeat: no-repeat;
-	background-attachment: fixed; */
+   
     
 }
 #s{
@@ -20,10 +20,6 @@ body{
 
 
 }
-/* #s tr{
-    border-width: 3px; 
-    /* border-style: dotted; */
-    /* padding-bottom: 30px; */
 #s #last {
     position: relative;
 bottom: 30px;
@@ -91,8 +87,8 @@ font-weight: bolder;
  text-align: left;
  cursor: pointer;
  outline: none;
- color: rgb(226, 134, 211);
-  background-color:rgb(92, 30, 107); 
+ color: rgb(247, 244, 246);
+  background-color:rgb(119, 78, 165); 
 text-align: center;
  border: none;
  border-radius: 15px;
@@ -102,7 +98,12 @@ margin-top: 10px;
 margin-left: 260px;
 }
 #clearAll:hover{
-    /* background-color:rgb(223, 151, 199);  */
-    box-shadow: 0 0 10px rgb(240, 230, 236), 0 0 40px rgb(240, 230, 236), 0 0 80px rgb(240, 230, 236);
+    background-color:rgb(39, 8, 29); 
+    box-shadow: 0 0 10px  rgb(36, 1, 37), 0 0 40px  rgb(30, 2, 31) 0 0 80px rgb(35, 4, 36);
 
+}
+
+body header h1{
+    
+  font-family: 'Coda Caption', sans-serif;
 }
