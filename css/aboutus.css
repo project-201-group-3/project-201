@@ -1,77 +1,8 @@
+*{
+  box-sizing:border-box;
+  margin: 0;
 
-/* header{
-
-    background-color: black;
-    color: whitesmoke;
-  position: absolute;
-    margin-bottom: 15px;
-    top: 1%;
-    width: 100%;
-    clear: both;
-    margin-left: 0%;
-    left: 0;
-
-  
-  
-  
-  }
-  
-  
-  
-  header h1{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    position: absolute;
-    top: 10px;
-    left: 750px;
-    display: inline;
-  
-  
-  }
-  
-  
-  
-  
-  #nav-header ul li {
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    
-  }
-  
-  
-  #nav-header ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  #nav-header ul li a:hover {
-   color: red;
-  }
-  
-  
-  #nav-header ul li:first-child {
-    
-    background-color: whitesmoke;
-    float: right;
-    padding: 20px;
-    position: relative;
-    top: -18px;
-    right: 10px;
-  }
-  */
-
-header{
-    position: absolute;
-    top: 0%;
-    width: 100%;
 }
-
 #msa-team{
     color: rgb(221, 154, 176);
     margin-left:320px;
@@ -111,8 +42,11 @@ left: -140px;
 bottom: 30px;
 font-size: 50px;
 top: 180px;
-
-
+  }
+  header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
   }
   .my-container{
     position: relative;
@@ -231,4 +165,8 @@ opacity: 1;
         left: 400px;
         color: rgb(233, 18, 18);
     }
-    
+    header{
+      top: 0px;
+      width: 100%;
+      position: absolute;
+    }
