@@ -5,6 +5,9 @@ let clearAll = document.getElementById('clearAll');
 let allItem = [];
 let added = [];
 
+let checkVar = 0;
+
+
 
 // To render from local storage 
 function getData() {
@@ -13,7 +16,8 @@ function getData() {
   let normalOb = JSON.parse(stringOb);
   if (normalOb) {
     added = normalOb;
-    console.log(stringOb);
+    // console.log(stringOb);
+   
     
     for (let i = 0; i < normalOb.length; i++) {
       console.log('inside get data', normalOb);
@@ -50,9 +54,10 @@ function getData() {
 
     }
   }
-
+  
 }
-// getData();
+
+
 
 
 // To delete an item which selected by the user 
@@ -90,6 +95,18 @@ function removeFav() {
   localStorage.removeItem('favourites');
 }
 
+
+// To display the delete icon
+
+if (allItem.length == 0) {
+  clearAll.hidden = true;
+  console.log('hidden = true',allItem);
+}else if(allItem.length > 0 ) {
+  clearAll.hidden = false;
+  console.log('hidden = false',allItem);
+}
+
+ 
 
 getData();
 
