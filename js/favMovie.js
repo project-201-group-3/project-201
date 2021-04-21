@@ -44,9 +44,9 @@ function getData() {
       deleteIcon.style.color = 'red';
     }
   }
-
+ 
 }
-// getData();
+
 
 
 // To delete an item which selected by the user 
@@ -84,6 +84,11 @@ function removeFav() {
   localStorage.removeItem('favourites');
 }
 
+// if (allItem !== []) {
+//   clearAll.hidden = false;
+// }else if(al
+// }
+// console.log(allItem);
 
 getData();
 
