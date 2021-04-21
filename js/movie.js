@@ -44,15 +44,10 @@ let added = []
 Item.prototype.renderMovies = function () {
 
   if (displayMovies !== null) {
-
-
     let box = document.createElement('div');
     displayMovies.appendChild(box);
-
     let image = document.createElement('img');
     box.appendChild(image);
-
-
     let myP = document.createElement('p');
     box.appendChild(myP);
     myP.classList.add('myP');
@@ -71,13 +66,8 @@ Item.prototype.renderMovies = function () {
     console.log(added);
     store();
     }}
-
-
-
     myP.innerHTML = (`${this.name} ${this.year} `);
     typeP.innerHTML = (` \n ${this.type}`);
-
-
     image.src = this.sourse;
   }
 }
@@ -88,36 +78,31 @@ Item.prototype.renderMovies = function () {
 Item.prototype.renderSeries = function () {
 
   if (displaySeries !== null) {
-
-
     let box = document.createElement('div');
     displaySeries.appendChild(box);
-
     let image = document.createElement('img');
     box.appendChild(image);
-
-
     let myP = document.createElement('p');
     box.appendChild(myP);
-
-    let button = document.createElement('a')
+    myP.classList.add('myP');
+    let typeP = document.createElement('p');
+    box.appendChild(typeP);
+    let button = document.createElement('a');
+    button.classList.add('addFav');
     box.appendChild(button)
     button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
+    button.textContent = '♡';
     let object = this;
     function submitter() {
       if(added.includes(object)== false){
         added.push(object);
+        button.textContent = '❤️'; 
         console.log(added);
         store();
       }
     }
-
-
-
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
+    myP.innerHTML = (`${this.name} ${this.year} `);
+    typeP.innerHTML = (` \n ${this.type}`);
     image.src = this.sourse;
   }
 }
@@ -127,39 +112,32 @@ Item.prototype.renderSeries = function () {
 Item.prototype.renderAnime = function () {
 
   if (displayAnimes !== null) {
-
-
     let box = document.createElement('div');
     displayAnimes.appendChild(box);
-
     let image = document.createElement('img');
     box.appendChild(image);
-
-
     let myP = document.createElement('p');
     box.appendChild(myP);
-
-    let button = document.createElement('button')
-    box.appendChild(button)
+    myP.classList.add('myP');
+    let typeP = document.createElement('p');
+    box.appendChild(typeP);
+    let button = document.createElement('a')
+    box.appendChild(button);
+    button.classList.add('addFav');
     button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
+    button.textContent = '♡';
     let object = this;
     function submitter() {
       if(added.includes(object)== false){
+        button.textContent = '❤️'; 
         added.push(object);
         console.log(added);
         store();
       }
     }
-
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
-
-
+    myP.innerHTML = (`${this.name} ${this.year} `);
+    typeP.innerHTML = (` \n ${this.type}`);
     image.src = this.sourse;
-
-    // adding button
-
-
   }
 }
 
@@ -231,36 +209,28 @@ function comedyClick() {
         displayMovies.appendChild(box);
         let image = document.createElement('img');
         box.appendChild(image);
-
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
-
-            
-          
-      
-      }
-      
-        
+      } 
     }
-         
-  
 
   } else if (displaySeries !== null) {
 
@@ -275,24 +245,25 @@ function comedyClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-        let button = document.createElement('button')
+        let myP = document.createElement('p');
+        box.appendChild(myP);
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-
-        let myP = document.createElement('p');
-        box.appendChild(myP);
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -315,21 +286,23 @@ function comedyClick() {
 
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
 
         image.src = allItem[i].sourse;
 
@@ -360,30 +333,27 @@ function actionClick() {
       if (allItem[i].type == "action" && allItem[i].catagory == "movie") {
         let box = document.createElement('div');
         displayMovies.appendChild(box);
-
-
-
         let image = document.createElement('img');
         box.appendChild(image);
-
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -403,25 +373,25 @@ function actionClick() {
 
         let image = document.createElement('img');
         box.appendChild(image);
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -436,30 +406,27 @@ function actionClick() {
       if (allItem[i].type == "action" && allItem[i].catagory == "anime") {
         let box = document.createElement('div');
         displayAnimes.appendChild(box);
-
-
-
         let image = document.createElement('img');
         box.appendChild(image);
-
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
 
         image.src = allItem[i].sourse;
 
@@ -497,20 +464,23 @@ function dramaClick() {
         box.appendChild(image);
         let myP = document.createElement('p');
         box.appendChild(myP);
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -525,31 +495,27 @@ function dramaClick() {
       if (allItem[i].type == "drama" && allItem[i].catagory == "series") {
         let box = document.createElement('div');
         displaySeries.appendChild(box);
-
-
-
         let image = document.createElement('img');
         box.appendChild(image);
-
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -564,30 +530,27 @@ function dramaClick() {
       if (allItem[i].type == "drama" && allItem[i].catagory == "anime") {
         let box = document.createElement('div');
         displayAnimes.appendChild(box);
-
-
-
         let image = document.createElement('img');
         box.appendChild(image);
-
-
         let myP = document.createElement('p');
         box.appendChild(myP);
-
-        let button = document.createElement('button')
+        myP.classList.add('myP');
+        let typeP = document.createElement('p');
+         box.appendChild(typeP);
+        let button = document.createElement('a')
         box.appendChild(button)
         button.addEventListener('click', submitter);
-        button.textContent = 'Add to favorite'
+        button.classList.add('addFav');
+        button.textContent = '♡';
         function submitter() {
+          button.textContent = '❤️';
           if(added.includes(allItem[i])== false){
         added.push(allItem[i]);
           console.log('lines',added);
           store()
         }}
-
-        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year} \n ${allItem[i].type}`);
-
-
+        myP.innerHTML = (`${allItem[i].name} \n ${allItem[i].year}`);
+        typeP.innerHTML = (` \n ${allItem[i].type}`);
         image.src = allItem[i].sourse;
 
       }
@@ -704,13 +667,13 @@ let item40 = new Item("Dragon Ball Super", 2015, "anime", "action", "https://upl
 
 // sereis 
 
-let item41 = new Item("The Walking Dead", 2010, "series", "drama", "https://m.media-amazon.com/images/M/MV5BMTc5ZmM0OTQtNDY4MS00ZjMyLTgwYzgtOGY0Y2VlMWFmNDU0XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UX67_CR0,0,67,98_AL_.jpg");
+let item41 = new Item("The Walking Dead", 2010, "series", "drama", "https://m.media-amazon.com/images/M/MV5BMTc5ZmM0OTQtNDY4MS00ZjMyLTgwYzgtOGY0Y2VlMWFmNDU0XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg");
 
-let item42 = new Item("Jupiter's Legacy ", 2021, "series", "drama", "https://m.media-amazon.com/images/M/MV5BMDU4MWViOGItZGJjYi00YjczLTk1YmMtY2ZmNmY4YTllNDA0XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY98_CR5,0,67,98_AL_.jpg");
+let item42 = new Item("Jupiter's Legacy ", 2021, "series", "drama", "https://m.media-amazon.com/images/M/MV5BMDU4MWViOGItZGJjYi00YjczLTk1YmMtY2ZmNmY4YTllNDA0XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg");
 
-let ite43 = new Item("Them", 2021, "series", "drama", "https://m.media-amazon.com/images/M/MV5BNGZiZTY2ZDEtMDY5MC00MGE1LWI1ZGYtOGE2N2VmNTNlNjUwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY98_CR5,0,67,98_AL_.jpg");
+let ite43 = new Item("Them", 2021, "series", "drama", "https://m.media-amazon.com/images/M/MV5BNGZiZTY2ZDEtMDY5MC00MGE1LWI1ZGYtOGE2N2VmNTNlNjUwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg");
 
-let item44 = new Item("Game of Thrones", 2011, "series", "action", "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY98_CR2,0,67,98_AL_.jpg");
+let item44 = new Item("Game of Thrones", 2011, "series", "action", "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg");
 
 let item45 = new Item("Vikings", 2013, "series", "action", "https://m.media-amazon.com/images/M/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg");
 
