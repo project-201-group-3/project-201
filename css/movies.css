@@ -11,13 +11,13 @@
   
   body{
 	/* background: rgb(36,15,73);
-	background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%); */
-	margin: 0;
-	background-color: rgb(146, 241, 241) !important;
+	background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
+	margin: 0; */
 	/* background: linear-gradient(90deg, rgba(36,15,73,1), rgba(75,27,97,1), rgba(110,54,135,1),rgba(110,54,135,1)); */
 	background-size: 400% 400%;
-	/* animation: change 10s ease infinite; */
-	/* animation: change 10s ease-in-out infinite !important; */
+	background: #A4B3B6  !important;
+
+
   }
 
 /*  anime slide show  */
@@ -150,10 +150,10 @@ color: cornsilk;
 	padding: 15px;
 	transition: all ease 0.3s;
 	font-size: 25px ;
-	background-image: url('https://ak.picdn.net/shutterstock/videos/1013393918/thumb/1.jpg?ip=x480');
-border-radius: 90px;
-	background-color:rgb(160, 102, 102);  
-	  box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);  
+	background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
+	border-radius: 90px;
+	/* background-color:rgb(241, 233, 233);  */
+	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
 
 }
 .sortContainer ul li a:hover{
@@ -214,6 +214,7 @@ video{
 		border-radius: 10px;
 		transition: 0.5s;
 		background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
+		 /* background-color: rgb(119, 70, 95); */
 		width: 305px; 
 		height: 400px;
 }
