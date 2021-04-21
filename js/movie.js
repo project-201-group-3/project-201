@@ -53,8 +53,9 @@ Item.prototype.renderMovies = function () {
 
     let myP = document.createElement('p');
     box.appendChild(myP);
-
-
+    myP.classList.add('myP');
+    let typeP = document.createElement('p');
+    box.appendChild(typeP);
     let button = document.createElement('a')
     button.classList.add('addFav');
     box.appendChild(button)
@@ -71,7 +72,8 @@ Item.prototype.renderMovies = function () {
 
 
 
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
+    myP.innerHTML = (`${this.name} ${this.year} `);
+    typeP.innerHTML = (` \n ${this.type}`);
 
 
     image.src = this.sourse;
@@ -679,7 +681,7 @@ let item1 = new Item("john wick", 2018, "movie", "action", "image/wick.jpg");
 
 let item2 = new Item("The equlizer", 2018, "movie", "action", "movies-Images/action the equalizer.jpg");
 
-let item3 = new Item("Batman The Dark Night", 2018, "movie", "action", "movies-Images/action batman the dark night.png");
+let item3 = new Item("Batman the dark night", 2018, "movie", "action", "movies-Images/action batman the dark night.png");
 
 let item4 = new Item("Harry Potter", 2018, "movie", "drama", "movies-Images/action harry potter.jpg");
 
