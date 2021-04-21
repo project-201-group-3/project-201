@@ -11,7 +11,7 @@
     margin-bottom: 30px;
     border-style: double;
     text-align: center;
-    margin-right: 200px;
+    /* margin-right: 200px; */
     border-width: 10px;
     border-color: palevioletred;
     border-radius: 30px;
@@ -148,10 +148,10 @@ opacity: 1;
       left: 200px;
       border-radius: 50px;
   }
-  .gg{
+  /* .gg{
       position: relative;
-    left: -160px; 
-    }
+    left: -auto; 
+    } */
     #alltime{
         position: relative;
         top: 250px;

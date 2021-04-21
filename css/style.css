@@ -1,6 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap');
 *{
   box-sizing:border-box;
   margin: 0;
@@ -10,13 +10,14 @@
 
 
 body{
-  background: rgb(201, 169, 202) !important;
-  
-  /* position:absolute;
-  /* margin:0; */
-   background: rgb(201, 169, 202) !important; 
+  /* background: rgb(201, 169, 202)  */
+  background-color: rgb(143, 152, 202)!important;; 
 
-  background-color: rgba(0, 0, 0, 0.842); 
+  margin:0;
+  /* position:absolute;
+
+   
+
 
  
 
@@ -25,24 +26,28 @@ body{
  width: 100%;
  height: 100%; */ 
 /* 
-	margin: 0; */
+
 	
 		/* background: rgb(36,15,73) !important; */
 		/* background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important; */
-		background: rgb(158, 127, 212) !important;
+		/* background: rgb(158, 127, 212) !important;
 		background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
-		margin: 0 !important;
+		margin: 0 !important; */
   }
 
 	
 
 
+#text{
+  padding-right: 100px;
 
+}
 p{
   color:blanchedalmond;
-  font-family:unset;
-font-size: 80px;
+  font-family: 'Antonio', sans-serif;
+ font-size: 30px;
 text-decoration: none;
+color: rgb(110, 21, 194);
 
 }
 #parent{
@@ -111,13 +116,17 @@ animation-direction: reverse;
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  left: -100px;
-  margin: 0;
+  left: -130px;
+
+  /* margin: 0; */
+
 }
 
 .slideshow-container img{
-  width: 600px !important;
+  width: 800px !important;
   height: 600px;
+  margin-top: 30px;
+
 }
 
 /* Hide the images by default */
@@ -126,7 +135,6 @@ animation-direction: reverse;
   /* transform: skewY(2deg); */
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -249,18 +257,7 @@ margin-bottom: 5px;
 
   
 }
-/* .box img{
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color:rgb(228, 44, 44);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px whitesmoke;
-top: 70px;
 
-} */
 
 .box img{
   border-radius: 50px;

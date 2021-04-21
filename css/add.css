@@ -9,8 +9,9 @@ main {
 	 position: absolute;
 	width: 100%;
 	height: 100%;
-	
-	background-attachment: fixed;
+	background-color: rgb(143, 152, 202)!important;
+
+	/* background-attachment: fixed; */
 	
 }
 #sfrom{

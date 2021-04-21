@@ -10,13 +10,15 @@
   }
   
   body{
-	background: rgb(36,15,73);
+	/* background: rgb(36,15,73);
 	background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
-	margin: 0;
+	margin: 0; */
 	/* background: linear-gradient(90deg, rgba(36,15,73,1), rgba(75,27,97,1), rgba(110,54,135,1),rgba(110,54,135,1)); */
 	background-size: 400% 400%;
+	background-color: rgb(143, 152, 202)!important;; 
+
 	/* animation: change 10s ease infinite; */
-	animation: change 10s ease-in-out infinite !important;
+	/* animation: change 10s ease-in-out infinite !important; */
   }
 
 /*  anime slide show  */
