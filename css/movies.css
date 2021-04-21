@@ -212,6 +212,7 @@ input[name="r"]{
 	width: 100px;
 	height: 100px;
 	border-width: 1.5px;
+	z-index: auto;
 }		 
 .sortContainer ul{
 	
