@@ -10,7 +10,10 @@
   }
   
   body{
+	/* background: rgb(36,15,73);
+	background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%); */
 	margin: 0;
+	background-color: rgb(146, 241, 241) !important;
 	/* background: linear-gradient(90deg, rgba(36,15,73,1), rgba(75,27,97,1), rgba(110,54,135,1),rgba(110,54,135,1)); */
 	background-size: 400% 400%;
 	/* animation: change 10s ease infinite; */
@@ -121,20 +124,23 @@ input[name="r"]{
 	width: 100px;
 	height: 100px;
 	border-width: 1.5px;
+	z-index: auto;
 }		 
 .sortContainer ul{
 	
     margin-bottom: 50px;
+	
 	
 }
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
 	
+	
 }
 .sortContainer ul li a{
 	display: inline-block;
-	color:whitesmoke;
+color: cornsilk;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -146,14 +152,15 @@ input[name="r"]{
 	font-size: 25px ;
 	background-image: url('https://ak.picdn.net/shutterstock/videos/1013393918/thumb/1.jpg?ip=x480');
 border-radius: 90px;
-	/* background-color:rgb(241, 233, 233);  */
-	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
+	background-color:rgb(160, 102, 102);  
+	  box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);  
 
 }
 .sortContainer ul li a:hover{
 	background-color:purple;
-	color: #fff !important;
+	color: red !important;
 }
+
 
 
 .sortContainer ul li.selection ul{
@@ -163,10 +170,12 @@ border-radius: 90px;
 	padding-left: 0;
 	min-width: 180px;
 	display: none;
+	
 }
 .sortContainer ul li.selection ul li a{
-	color: #000;
+	color: white;
 	width: 180px;
+	
 }
 .sortContainer ul li.selection:hover ul{
 	display: block;
@@ -212,8 +221,8 @@ video{
 	
 #movies div:hover,#anime div:hover,#series div:hover{
 	
-	background-color:rgb(223, 151, 151); 
-	box-shadow: 0 0 10px rgb(180, 104, 130), 0 0 40px rgb(180, 104, 130), 0 0 80px rgb(150, 193, 241);
+	
+	box-shadow: 0 0 10px blue, 0 0 40px , 0 0 80px rgb(150, 193, 241);
 		/* box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px); */
 		transform: translateY(-30px);
 

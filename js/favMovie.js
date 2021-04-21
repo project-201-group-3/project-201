@@ -4,7 +4,7 @@ let div = document.getElementById('s');
 let clearAll = document.getElementById('clearAll');
 let allItem = [];
 let added = [];
-let checkVar = 0;
+
 
 
 
@@ -46,8 +46,8 @@ function getData() {
       innerDiv.appendChild(deleteIcon);
       deleteIcon.textContent = 'X';
       deleteIcon.style.color = 'red';
-      let line = document.createElement('hr');
-      div.appendChild(line);
+      // let line = document.createElement('hr');
+      // div.appendChild(line);
 
     }
   }
