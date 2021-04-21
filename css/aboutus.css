@@ -73,14 +73,23 @@ header{
 }
 
 #msa-team{
-    color: rgb(233, 18, 18);
-    margin-left:40%;
+    color: rgb(221, 154, 176);
+    margin-left:320px;
     margin-top: -50%;
-  
+    font-family:  'Original Surfer', cursive;
+    margin-bottom: 30px;
+    border-style: double;
+    text-align: center;
+    margin-right: 200px;
+    border-width: 10px;
+    border-color: palevioletred;
+    border-radius: 30px;
   }
   
   body{
-      background-color: rgb(29, 25, 25);
+      background-color:  rgb(36,15,73);
+      background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
+      margin: 0 ;
       position: relative;
     margin-left:0 ;
     padding: 0;
@@ -102,6 +111,7 @@ left: -140px;
 bottom: 30px;
 font-size: 50px;
 top: 180px;
+
 
   }
   .my-container{
@@ -135,7 +145,7 @@ top: 180px;
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: linear-gradient(180deg,#f00,#000) ;
+    background: linear-gradient(180deg,rgb(158, 130, 206),rgba(100, 132, 156, 0.685)) ;
     mix-blend-mode: multiply;
     opacity: 0;
     transition: 0.5s;
@@ -221,3 +231,4 @@ opacity: 1;
         left: 400px;
         color: rgb(233, 18, 18);
     }
+    
