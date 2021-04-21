@@ -77,7 +77,7 @@
                     <input style="
                     height: 30px;
                     font-size: 16px;" placeholder="Enter your movie name" type="text" id='NameField' name="NameField"
-                        autocomplete="off">
+                        autocomplete="off" required>
                     </input>
                     <br>
 
@@ -89,7 +89,7 @@
                     height: 30px;
                     
                     font-size: 16px;" placeholder="Enter the year" type="number" id='yearId' name="yearId"
-                        autocomplete="off">
+                        autocomplete="off" required>
                     </input>
                     <br>
 
@@ -107,7 +107,7 @@
                     <label for="catogary">catogary:</label>
                     <br>
                     <div id="catogaryId">
-                        <input type="radio" name="catogaryId" value="movie">movie<br>
+                        <input type="radio" name="catogaryId" value="movie" checked>movie<br>
                         <input type="radio" name="catogaryId" value="series">series<br>
                         <input type="radio" name="catogaryId" value="anime">anime<br>
                     </div>
@@ -116,7 +116,7 @@
 
                 <br>
                 <label for="Type">Type:</label>
-                <input type="text" id="typeId" name="typeId" , placeholder=" Action|Comady|Drama" >
+                <input type="text" id="typeId" name="typeId" , placeholder=" Action|Comady|Drama" required>
                 <br>
                 <span>
                     <label for="file"> Please insert the URL of photo:
@@ -124,7 +124,7 @@
                     <!-- <br> -->
                     <!-- <input type="file" id="file" name="file" value="file"> -->
 
-                    <input type="url" id="sourseId" name="sourseId" placeholder="Enter URL ">
+                    <input type="url" id="sourseId" name="sourseId" placeholder="Enter URL " required>
                 </span>
                 <br>
 
