@@ -158,4 +158,8 @@ opacity: 1;
         left: 400px;
         color: rgb(233, 18, 18);
     }
-    
+    header{
+      top: 0px;
+      width: 100%;
+      position: absolute;
+    }

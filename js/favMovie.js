@@ -14,6 +14,7 @@ function getData() {
   if (normalOb) {
     added = normalOb;
     console.log(stringOb);
+    
     for (let i = 0; i < normalOb.length; i++) {
       console.log('inside get data', normalOb);
       new Item(normalOb[i].name, normalOb[i].year, normalOb[i].catagory, normalOb[i].type, normalOb[i].sourse);
@@ -28,11 +29,13 @@ function getData() {
       img.style.width = '100px';
 
       let pa = document.createElement('td');
+      pa.id='last';
       innerDiv.appendChild(pa);
       pa.textContent = allItem[i].name;
 
       let type = document.createElement('td');
       innerDiv.appendChild(type);
+      type.id='last2';
       type.textContent = allItem[i].type;
 
       let deleteIcon = document.createElement('button');
@@ -42,6 +45,9 @@ function getData() {
       innerDiv.appendChild(deleteIcon);
       deleteIcon.textContent = 'X';
       deleteIcon.style.color = 'red';
+      let line = document.createElement('hr');
+      div.appendChild(line);
+
     }
   }
 

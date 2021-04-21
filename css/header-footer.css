@@ -80,6 +80,9 @@ header h1{
   top: -15px;
  
 }
+#nav-header ul li a i{
+  padding-right: 5px;
+}
 
 #nav-header ul li a:hover {
  color: red;
