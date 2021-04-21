@@ -181,8 +181,8 @@ border-radius: 90px;
 	display: block;
 }
 /*****************Video******************/
-section .videoSection{
-}
+/* section .videoSection{
+} */
 video{
 	position: relative;
 	left: 170px;
@@ -250,7 +250,7 @@ video{
 	position: absolute;
 	width: 89%;
 	left: 17px;
-	background-color: rgba(169, 169, 169, 0.205);
+	/* background-color: rgba(169, 169, 169, 0.205); */
 	transition: all 0.3 ease-in-out;
 	opacity:0 ;
 	cursor: pointer;

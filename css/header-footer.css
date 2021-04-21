@@ -40,13 +40,11 @@ header{
 
 header h1{
   font-size: 60px;
-  font-family: 'Coda Caption', sans-serif;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive !important;
   position: relative;
   top: 40px;
   left: 50px;
   display: inline;
-
 
 }
 
