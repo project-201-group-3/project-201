@@ -1,45 +1,42 @@
-body {
+/* body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
-}
+} */
 /* body main{ */
 
 
 
-body:before {
+main {
 	content: '';
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	/* background-image: url(https://image.freepik.com/free-vector/movie-time-neon-sign-popcorn-bucket-clapperboard-film-reel-poster_1262-13530.jpg); */
-	/* background-image: url(https://image.freepik.com/free-photo/arrangement-film-elements-red-background-with-copy-space_23-2148457861.jpg); */
-	background-position: center center;
-	background-repeat: no-repeat;
+	 position: absolute;
+	width: 100%;
+	height: 100%;
+	
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	background-size: cover;
-	/* -webkit-filter: blur(10px);
-	-moz-filter: blur(10px);
-	filter: blur(5px); */
+	
 }
 #sfrom{
 	clear: both;
     position: absolute;
-	top: 120px;
+	margin-top: 200px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 450px;
-	height: 500px;
+
+/* bottom: 90px; */
+	height: 550px;
+
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
-background-color: whitesmoke;
+/* background-color: rgb(202, 193, 212); */
  /* background-image:url(https://ak.picdn.net/shutterstock/videos/1042121761/thumb/1.jpg) ; */
- box-shadow: 10px 10px 40px 20px #CDC7FF;
- /* border-top-left-radius: 100px;
- border-bottom-right-radius: 100px; */
+ box-shadow: 10px 10px 20px 20px #CDC7FF;
+  /* border-top-left-radius: 100px;
+ border-bottom-right-radius: 100px;  */
  border-bottom-left-radius: 100px;
  border-top-right-radius: 100px;
+ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTQHfkEq0bK-yHMbgZSgDk4JMC1fNnxITrg&usqp=CAU');
 
 
 	/* background-size: cover;
@@ -60,7 +57,7 @@ background-color: whitesmoke;
 	border-radius: 30%;
 	
 	top: calc(-80px/2);
-	left: 220px;
+	left: 170px;
 	animation-name: example;
 	animation-duration: 4s;
 	animation-direction: reverse;
@@ -102,8 +99,8 @@ label{
     margin: 0;
 	padding: 0;
 	font-weight: bold;
-	
-
+	color: rgb(255, 255, 255);
+	font-size: 20px;
 
 	
 	
@@ -132,23 +129,25 @@ label{
 	 margin-left: 300px;
 	width: 100px;
 	height: 50px;
-
+font-weight: bolder;
 	padding: 15px 25px;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
   outline: none;
-  color: #fff;
-  background-color:rgb(228, 44, 44);
+  color: rgb(226, 134, 211);
+   background-color:rgb(92, 30, 107); 
+text-align: center;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px whitesmoke;
+  box-shadow: 0 5px whitesmoke;
 top: 70px;
-margin-bottom: 5px;
+margin-top: 10px;
+margin-left: 260px;
 }
 #submit:hover{
-	 background-color:rgb(223, 151, 151); 
-	 box-shadow: 0 0 10px orangered, 0 0 40px orangered, 0 0 80px orangered;
+	 /* background-color:rgb(223, 151, 199);  */
+	 box-shadow: 0 0 10px rgb(240, 230, 236), 0 0 40px rgb(240, 230, 236), 0 0 80px rgb(240, 230, 236);
 
 }
 
@@ -170,6 +169,7 @@ input[type=number]:focus {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	color: whitesmoke;
 	
 
   }
@@ -182,9 +182,16 @@ input[type=number]:focus {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	color: whitesmoke;
+
   }
 
   
+
+  #catogaryId{
+	  color: whitesmoke ;
+
+  }
   
  hr {
 	height: 30px;
@@ -233,3 +240,120 @@ input[type=number]:focus {
 		 bottom:-500px;
 		 width: 100%;
 	 }
+
+/* 
+	 .box4{
+		display: inline-block;
+	  }
+	  .box.img{
+		border-radius:100px;
+	  }
+	  
+	  .box2 img{
+		margin-right: 10px;
+		height: 600px;
+		width: 300px !important;
+	  float: left;
+	  animation-name: example;
+	  animation-duration: 4s;
+	  animation-direction: reverse;
+	  
+	  }
+	  
+	  .box2{
+		width: 30%;
+		display: inline-block !important;
+	   
+	  
+	  animation-name: example;
+	  animation-duration: 4s;
+	  animation-direction: reverse;
+	  }
+	  
+	  
+	  .box2:hover {
+		  /* Start the shake animation and make the animation last for 0.5 seconds */
+		  /* animation: shake 0.5s; */
+	  
+		  /* When the animation is finished, start again */
+		  /* animation-iteration-count: infinite;
+		transform: rotate(20deg);
+	  
+	  } */
+	  
+		
+		/* @keyframes shake {
+		  0% { transform: translate(1px, 1px) rotate(-1deg); }
+		  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+		  20% { transform: translate(-3px, 0px) rotate(1deg); }
+		  30% { transform: translate(3px, 2px) rotate(0deg); }
+		  40% { transform: translate(1px, -1px) rotate(1deg); }
+		  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+		  60% { transform: translate(-3px, 1px) rotate(0deg); }
+		  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+		  80% { transform: translate(-1px, -1px) rotate(1deg); }
+		  90% { transform: translate(1px, 2px) rotate(0deg); }
+		  100% { transform: translate(1px, -2px) rotate(-1deg); }
+		}
+		#parent{
+			display: inline-block;
+		}  */
+#parent{
+  width: 100%;
+  
+  display: inline-block;
+  
+}
+.box4{
+  display: inline-block;
+}
+.box.img{
+  border-radius:100px;
+}
+
+.box2 img{
+  /* margin-right: 10px; */
+  height: 600px;
+  width: 300px !important;
+
+animation-name: example;
+animation-duration: 4s;
+animation-direction: reverse;
+
+}
+
+.box2{
+  width: 30%;
+  display: inline-block !important;
+ 
+
+animation-name: example;
+animation-duration: 4s;
+animation-direction: reverse;
+}
+
+
+.box2:hover {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+	animation: shake 0.5s;
+
+	/* When the animation is finished, start again */
+	animation-iteration-count: infinite;
+  transform: rotate(20deg);
+
+}
+
+  
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(-1deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(-3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
