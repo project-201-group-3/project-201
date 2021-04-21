@@ -98,12 +98,12 @@ function removeFav() {
 
 // To display the delete icon
 
-if (allItem.length <= 0) {
-  clearAll.hidden = false;
-  console.log('hidden = false',allItem);
-}else if(allItem.length > 0 ) {
+if (allItem.length == 0) {
   clearAll.hidden = true;
   console.log('hidden = true',allItem);
+}else if(allItem.length > 0 ) {
+  clearAll.hidden = false;
+  console.log('hidden = false',allItem);
 }
 
  
