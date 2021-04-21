@@ -25,6 +25,11 @@ body{
 
 
 }
+#s tr{
+/* background-color: rgba(36,15,73,1) ; */
+width: 100%;
+border-bottom: 5px solid rgb(174, 214, 28);
+}
 #s #last {
 position: relative;
 /* bottom: 30px; */
