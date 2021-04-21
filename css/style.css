@@ -110,8 +110,8 @@ animation-direction: reverse;
 
 /* Slideshow container */
 .slideshow-container {
-  width: 1000px !important;
   position: relative;
+  left: -100px;
   margin: 0;
 }
 
@@ -172,7 +172,10 @@ animation-direction: reverse;
   position: absolute;
   top: 0;
 }
-
+.dotClass{
+  position:relative;
+  left: -90px;
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;

@@ -19,14 +19,6 @@
 	animation: change 10s ease-in-out infinite !important;
   }
 
-
-.videoSection{
-	position: relative;
-	/* left: 240px; */
-	padding-left: 240px;
-}
-
-
 /*  anime slide show  */
 
 #anime{
@@ -128,7 +120,6 @@ input[name="r"]{
 /*** Generated Box ***/
 
 .box1{
-	
 	width: 100px;
 	height: 100px;
 	border-width: 1.5px;
@@ -167,13 +158,6 @@ border-radius: 90px;
 }
 
 
-
-
-
-
-
-
-
 .sortContainer ul li.selection ul{
 	/* background-color: #fff; */
 	position: absolute;
@@ -190,15 +174,12 @@ border-radius: 90px;
 	display: block;
 }
 /*****************Video******************/
- .videoSection{
-	 
-    width: 100%;
-} 
 section .videoSection{
-    width: 100%;
 }
 video{
-	width: auto;
+	position: relative;
+	left: 170px;
+	/* width: auto; */
     margin-bottom: 50px;
     clear: both;
 	margin-left: 120px;
@@ -215,15 +196,12 @@ video{
 }
 
 
-
-
-
 #movies div,#anime div,#series div{
 	
 		margin-bottom: 15px;
 		padding: 10px;
 		float: left;
-		 margin-left: 140px;
+		 margin-left: 100px;
 		box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
 	/*	border: 2px solid rgba(128, 72, 111, 0.315);*/
 		border-radius: 10px;
