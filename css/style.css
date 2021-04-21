@@ -100,7 +100,7 @@ animation-direction: reverse;
   }
 
 
-header h1{
+/* header h1{
   font-size: 60px;
   font-family: 'Coda Caption', sans-serif;
   font-family: 'Dancing Script', cursive;
@@ -142,8 +142,7 @@ header h1{
 
 #nav-header ul li a:hover {
  color: red;
-} */
-
+}  */
 /* finish header css*/
 
 

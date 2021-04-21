@@ -55,16 +55,18 @@ Item.prototype.renderMovies = function () {
     box.appendChild(myP);
 
 
-    let button = document.createElement('button')
+    let button = document.createElement('a')
+    button.classList.add('addFav');
     box.appendChild(button)
     button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
+    button.textContent = '♡';
     let object = this;
     function submitter() {
-      if(added.includes(object)== false){
-      added.push(object);
-      console.log(added);
-      store();
+    if(added.includes(object)== false){
+    button.textContent = '❤️'; //to store locally
+    added.push(object);
+    console.log(added);
+    store();
     }}
 
 
@@ -94,7 +96,7 @@ Item.prototype.renderSeries = function () {
     let myP = document.createElement('p');
     box.appendChild(myP);
 
-    let button = document.createElement('button')
+    let button = document.createElement('a')
     box.appendChild(button)
     button.addEventListener('click', submitter);
     button.textContent = 'Add to favorite'
