@@ -129,10 +129,12 @@ input[name="r"]{
 	
     margin-bottom: 50px;
 	
+	
 }
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
+	
 	
 }
 .sortContainer ul li a{
@@ -166,10 +168,12 @@ border-radius: 90px;
 	padding-left: 0;
 	min-width: 180px;
 	display: none;
+	
 }
 .sortContainer ul li.selection ul li a{
 	color: #000;
 	width: 180px;
+	
 }
 .sortContainer ul li.selection:hover ul{
 	display: block;
