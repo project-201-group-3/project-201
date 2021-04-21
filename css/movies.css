@@ -1,8 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
 *{
 	box-sizing:border-box !important;
 	margin: 0;
@@ -20,8 +21,8 @@
 
 /*   #240f49 #390f49 
   #fixed-header{
-	  position: fixed;
-	  width: 100%;
+	  /* position: fixed; */
+	  /* width: 100%;
   } */
 
 /* header{
@@ -101,7 +102,8 @@ text-decoration: none;
 
 .videoSection{
 	position: relative;
-	left: 240px;
+	/* left: 240px; */
+	padding-left: 240px;
 }
 
 
@@ -123,26 +125,46 @@ text-decoration: none;
 .sortContainer ul{
 	
     margin-bottom: 50px;
+	
 }
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
+	
 }
 .sortContainer ul li a{
 	display: inline-block;
-	color: #fff;
+	color:whitesmoke;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
+	font-weight: bolder;
+	height: 60px;
+	width: 100px;
 	padding: 15px;
 	transition: all ease 0.3s;
+	font-size: 25px ;
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTQHfkEq0bK-yHMbgZSgDk4JMC1fNnxITrg&usqp=CAU');
+border-radius: 90px;
+	/* background-color:rgb(241, 233, 233);  */
+	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
+
 }
 .sortContainer ul li a:hover{
 	background-color:purple;
 	color: #fff !important;
 }
+
+
+
+
+
+
+
+
+
 .sortContainer ul li.selection ul{
-	background-color: #fff;
+	/* background-color: #fff; */
 	position: absolute;
 	left: 0;
 	padding-left: 0;
@@ -168,6 +190,7 @@ video{
 	width: auto;
     margin-bottom: 50px;
     clear: both;
+	margin-left: 120px;
 }
 /*****************MoviesItems******************/
 
@@ -258,10 +281,10 @@ video{
 
 #movies div{
 	
-		margin: 5px;
+		margin-bottom: 15px;
 		padding: 10px;
 		float: left;
-		margin-left: 120px;
+		 margin-left: 140px;
 		box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
 	/*	border: 2px solid rgba(128, 72, 111, 0.315);*/
 		border-radius: 10px;
@@ -347,20 +370,26 @@ video{
 	margin: 5px;
 	padding: 10px;
 	float: left;
-	margin-left: 80px;
+	margin-left: 140px;
 	box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
 	/* border: 2px solid rgba(95, 94, 94, 0.315); */
 	border-radius: 10px;
 	transition: 0.5s;
-	background-color: rgb(139, 3, 3);
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTQHfkEq0bK-yHMbgZSgDk4JMC1fNnxITrg&usqp=CAU');
+
+	/* background-color: rgb(139, 3, 3); */
 	width: 305px;
 	height: 400px;
 }
 
 #series div:hover{
 
-	box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px);
+	/* box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px); */
 	transform: translateY(-30px);
+	background-color:rgb(223, 151, 151); 
+	box-shadow: 0 0 10px rgb(180, 104, 130), 0 0 40px rgb(180, 104, 130), 0 0 80px rgb(150, 193, 241);
+		/* box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px); */
+		transform: translateY(-30px);
 
 }
 
@@ -377,8 +406,7 @@ left: 50px;
 color: whitesmoke;
 font-size: 25px;
 text-align: justify;
-font-family: Arial, Helvetica, sans-serif;
-
+font-family: 'Playfair Display', serif;
 } 
 
 #anime div{
@@ -386,20 +414,23 @@ font-family: Arial, Helvetica, sans-serif;
 	margin: 5px;
 	padding: 10px;
 	float: left;
-	margin-left: 80px;
+	margin-left: 140px;
 	box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
 	/* border: 2px solid rgba(95, 94, 94, 0.315); */
 	border-radius: 10px;
 	transition: 0.5s;
-	background-color: rgb(139, 3, 3);
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTQHfkEq0bK-yHMbgZSgDk4JMC1fNnxITrg&usqp=CAU');
 	width: 305px;
 	height: 400px;
 }
 
 #anime div:hover{
 
-	box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px);
 	transform: translateY(-30px);
+	background-color:rgb(223, 151, 151); 
+	box-shadow: 0 0 10px rgb(180, 104, 130), 0 0 40px rgb(180, 104, 130), 0 0 80px rgb(150, 193, 241);
+		/* box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px); */
+		transform: translateY(-30px);
 
 }
 
@@ -416,8 +447,7 @@ left: 50px;
 color: whitesmoke;
 font-size: 25px;
 text-align: justify;
-font-family: Arial, Helvetica, sans-serif;
-
+font-family: 'Playfair Display', serif;
 } 
 #button{
 	color: rgb(128, 0, 128);
