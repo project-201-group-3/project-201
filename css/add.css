@@ -22,14 +22,14 @@ main {
 	margin-top: 200px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 450px;
+	width: 500px;
 
 /* bottom: 90px; */
 	height: 550px;
 
 	padding: 80px 40px;
 /* background:rgb(240, 240, 240) */
-/* background-color: rgb(202, 193, 212); */
+/* background-color: rgb(202, 193, 212); 
  /* background-image:url(https://ak.picdn.net/shutterstock/videos/1042121761/thumb/1.jpg) ; */
  box-shadow: 10px 10px 20px 20px #CDC7FF;
   /* border-top-left-radius: 100px;
@@ -57,7 +57,7 @@ main {
 	border-radius: 30%;
 	
 	top: calc(-80px/2);
-	left: 170px;
+	left: 200px;
 	animation-name: example;
 	animation-duration: 4s;
 	animation-direction: reverse;
@@ -127,7 +127,7 @@ label{
 
 #submit{
 	 margin-left: 300px;
-	width: 100px;
+	width: 120px;
 	height: 50px;
 font-weight: bolder;
 	/* padding: 15px 25px; */
@@ -135,7 +135,7 @@ font-weight: bolder;
   text-align: center;
   cursor: pointer;
   outline: none;
-  color: rgb(226, 134, 211);
+  color: rgb(247, 178, 235);
    background-color:rgb(92, 30, 107); 
 text-align: center;
   border: none;
@@ -143,7 +143,7 @@ text-align: center;
   box-shadow: 0 5px whitesmoke;
 top: 70px;
 margin-top: 10px;
-margin-left: 260px;
+margin-left: 300px;
 }
 #submit:hover{
 	 /* background-color:rgb(223, 151, 199);  */
@@ -169,7 +169,7 @@ input[type=number]:focus {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
-	color: whitesmoke;
+	color: rgb(83, 9, 83);
 	
 
   }
@@ -182,7 +182,7 @@ input[type=number]:focus {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
-	color: whitesmoke;
+	color:rgb(83, 9, 83);
 
   }
 
