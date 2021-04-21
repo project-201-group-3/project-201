@@ -1,11 +1,8 @@
-/* body {
+*{
+	box-sizing:border-box;
 	margin: 0;
-	padding: 0;
-	font-family: 'Poppins', sans-serif;
-} */
-/* body main{ */
-
-
+  
+  }
 
 main {
 	content: '';
@@ -351,4 +348,8 @@ animation-direction: reverse;
 	80% { transform: translate(-1px, -1px) rotate(1deg); }
 	90% { transform: translate(1px, 2px) rotate(0deg); }
 	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  #footerCart{
+	  position: relative;
+	  bottom: -800px;
   }
