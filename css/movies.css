@@ -135,6 +135,7 @@ input[name="r"]{
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
+	z-index: 1;
 	
 	
 }
@@ -145,16 +146,17 @@ color: cornsilk;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	font-weight: bolder;
-	height: 60px;
-	width: 100px;
+	height: 45px;
+	width: 180px;
 	padding: 15px;
+	text-align: center;
 	transition: all ease 0.3s;
 	font-size: 25px ;
 	background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
 	border-radius: 90px;
 	/* background-color:rgb(241, 233, 233);  */
 	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
-
+/* z-index: 2; */
 }
 .sortContainer ul li a:hover{
 	background-color:purple;
@@ -208,7 +210,7 @@ video{
 		margin-bottom: 15px;
 		padding: 10px;
 		float: left;
-		 margin-left: 100px;
+		 margin-left: 80px;
 		box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
 	/*	border: 2px solid rgba(128, 72, 111, 0.315);*/
 		border-radius: 10px;
