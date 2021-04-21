@@ -656,7 +656,7 @@ let item35 = new Item("The Melancholy of Haruhi Suzumiya", 2006, "anime", "comed
 
 let item36 = new Item("Tari Tari", 2012, "anime", "drama", "https://i.ytimg.com/vi/bd9GrH88plU/maxresdefault.jpg");
 
-let item37 = new Item("Kokoro Connect", 2012, "anime", "drama", "https://cdn.myanimelist.net/images/anime/2/39665.jpg");
+let item37 = new Item("Kokoro Connect", 2012, "anime", "drama", "https://m.media-amazon.com/images/M/MV5BODQ1MDA2ZjYtMDU2Mi00ODE4LThlYTAtY2YzNGMwNTJjNTAxXkEyXkFqcGdeQXVyMjc0MjUzMzU@._V1_.jpg");
 
 let item38 = new Item("Free!", 2013, "anime", "drama", "https://upload.wikimedia.org/wikipedia/en/9/9b/Free%21_promotional_image_1.jpg");
 
@@ -675,19 +675,19 @@ let ite43 = new Item("Them", 2021, "series", "drama", "https://m.media-amazon.co
 
 let item44 = new Item("Game of Thrones", 2011, "series", "action", "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg");
 
-let item45 = new Item("Vikings", 2013, "series", "action", "https://m.media-amazon.com/images/M/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg");
+let item45 = new Item("Vikings", 2013, "series", "action", "https://i.egycdn.com/pic/WmFwZndlY21MTmJ2Y21tdk5lY214anhQbXZtdnhtdg.jpg");
 
-let item46 = new Item("Money Heist", 2017, "series", "action", "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg");
+let item46 = new Item("Money Heist", 2017, "series", "action", "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg");
 
-let item47 = new Item("Friends", 1994, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg");
+let item47 = new Item("Friends", 1994, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY1200_CR93,0,630,1200_AL_.jpg");
 
-let item48 = new Item("Schitt's Creek ", 2015, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX67_CR0,0,67,98_AL_.jpg");
+let item48 = new Item("Schitt's Creek ", 2015, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg");
 
-let item49 = new Item("The Big Bang Theory ", 2007, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg");
+let item49 = new Item("The Big Bang Theory ", 2007, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_.jpg");
 
-let item50 = new Item("Two and a Half Men", 2003, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BOTI2MjIzN2ItZDg0OS00MTlhLWIzMTMtYWI4ZTA0NGE4NDJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY1200_CR93,0,630,1200_AL_.jpg");
+let item50 = new Item("Two and a Half Men", 2003, "series", "comedy", "https://i.pinimg.com/736x/e3/82/28/e38228df4f2b95992b03bd9c4204b173.jpg");
 
-let item51 = new Item("Brooklyn Nine-Nine", 2013, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_UY1200_CR90,0,630,1200_AL_.jpg");
+let item51 = new Item("Brooklyn Nine-Nine", 2013, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_.jpg");
 
 let item52 = new Item("Modern Family", 2009, "series", "action", "https://cdn1.edgedatg.com/aws/v2/abc/ModernFamily/showimages/e06cb0991ee33445654b96d29aa0d02b/1200x627-Q80_e06cb0991ee33445654b96d29aa0d02b.jpg");
 
@@ -705,7 +705,7 @@ let item58 = new Item("Suits", 2011, "series", "drama", "https://images-na.ssl-i
 
 let item59 = new Item("House of Cards", 2013, "series", "drama", "https://upload.wikimedia.org/wikipedia/en/0/0b/House_of_Cards_season_1.png");
 
-let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://upload.wikimedia.org/wikipedia/en/a/aa/How_I_Met_Your_Mother_S9.jpg");
+let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_.jpg");
 
 
 getData();
