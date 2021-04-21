@@ -41,7 +41,6 @@ function getData() {
       let deleteIcon = document.createElement('button');
       deleteIcon.classList.add("delete"); //don't forget for styling
       // deleteIcon.setAttribute('data',allItem[i].sourse);//
-      deleteIcon.id='last3';
       deleteIcon.setAttribute('id', allItem[i].name);
       innerDiv.appendChild(deleteIcon);
       deleteIcon.textContent = 'X';
