@@ -135,6 +135,7 @@ input[name="r"]{
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
+	z-index: 1;
 	
 	
 }
@@ -155,7 +156,7 @@ color: cornsilk;
 	border-radius: 90px;
 	/* background-color:rgb(241, 233, 233);  */
 	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
-
+/* z-index: 2; */
 }
 .sortContainer ul li a:hover{
 	background-color:purple;

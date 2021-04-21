@@ -116,6 +116,7 @@ animation-direction: reverse;
   position: relative;
 
   margin-top: 40px;
+  right: 46px;
 
   /* margin: 0; */
 
@@ -185,7 +186,8 @@ animation-direction: reverse;
 }
 .dotClass{
   position:relative;
-  left: -140px;
+  left: -200px;
+
 
 }
 /* The dots/bullets/indicators */
