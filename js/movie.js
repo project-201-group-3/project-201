@@ -15,6 +15,8 @@ function getData() {
 }
 
 
+// constructor
+
 let allItem = [];
 function Item(name, year, catagory, type, sourse) {
   this.name = name;
@@ -53,23 +55,27 @@ Item.prototype.renderMovies = function () {
 
     let myP = document.createElement('p');
     box.appendChild(myP);
-
-
-    let button = document.createElement('button')
+    myP.classList.add('myP');
+    let typeP = document.createElement('p');
+    box.appendChild(typeP);
+    let button = document.createElement('a')
+    button.classList.add('addFav');
     box.appendChild(button)
     button.addEventListener('click', submitter);
-    button.textContent = 'Add to favorite'
+    button.textContent = '♡';
     let object = this;
     function submitter() {
-      if(added.includes(object)== false){
-      added.push(object);
-      console.log(added);
-      store();
+    if(added.includes(object)== false){
+    button.textContent = '❤️'; //to store locally
+    added.push(object);
+    console.log(added);
+    store();
     }}
 
 
 
-    myP.innerHTML = (`${this.name} \n ${this.year} \n ${this.type}`);
+    myP.innerHTML = (`${this.name} ${this.year} `);
+    typeP.innerHTML = (` \n ${this.type}`);
 
 
     image.src = this.sourse;
@@ -94,7 +100,7 @@ Item.prototype.renderSeries = function () {
     let myP = document.createElement('p');
     box.appendChild(myP);
 
-    let button = document.createElement('button')
+    let button = document.createElement('a')
     box.appendChild(button)
     button.addEventListener('click', submitter);
     button.textContent = 'Add to favorite'
@@ -177,8 +183,7 @@ function store() {
 
 // 1) To display all movies or anime or series
 
-// if (allDisplay!= null){
-// }
+
 let allDisplay = document.getElementById('all');
 if (allDisplay!= null){
 allDisplay.addEventListener('click', allClick);}
@@ -247,75 +252,15 @@ function comedyClick() {
 
         image.src = allItem[i].sourse;
 
-        // for (let i = 0; i < allItem[i].length; i++) {
+            
           
-          
-          
-
-
+      
       }
       
-        // added.push(added[i]);
-
-        // console.log(added[1]);
-        // store();
-      // }
+        
     }
-    let button = document.createElement('button');
-    button.addEventListener('click', submitter());
-    function submitter() {
-    for (let i = 0; i < allItem.length; i++){
-     
-      
-        console.log(allItem[0])
-        added.push(allItem[0]);
-      }
-    }
-
-    // Item.prototype.renderMovies = function () {
-
-    //   if (displayMovies !== null) {
-    
-    
-    //     let box = document.createElement('div');
-    //     displayMovies.appendChild(box);
-    
-    //     let image = document.createElement('img');
-    //     box.appendChild(image);
-    
-    
-    //     let myP = document.createElement('p');
-    //     box.appendChild(myP);
-    
-    
-    //     let button = document.createElement('button')
-    //     box.appendChild(button)
-    //     button.addEventListener('click', submitter);
-    //     button.textContent = 'Add to favorite'
-    //     let object = this;
-    //     function submitter() {
-    //       added.push(object);
-    //       console.log(added);
-    //       store();
-    //       // getStore();
-    //     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+         
+  
 
   } else if (displaySeries !== null) {
 
@@ -677,7 +622,7 @@ let item1 = new Item("john wick", 2018, "movie", "action", "image/wick.jpg");
 
 let item2 = new Item("The equlizer", 2018, "movie", "action", "movies-Images/action the equalizer.jpg");
 
-let item3 = new Item("Batman The Dark Night", 2018, "movie", "action", "movies-Images/action batman the dark night.png");
+let item3 = new Item("Batman the dark night", 2018, "movie", "action", "movies-Images/action batman the dark night.png");
 
 let item4 = new Item("Harry Potter", 2018, "movie", "drama", "movies-Images/action harry potter.jpg");
 
@@ -800,4 +745,4 @@ let item59 = new Item("House of Cards", 2013, "series", "drama", "https://upload
 let item60 = new Item("How I Met Your Mother", 2005, "series", "comedy", "https://upload.wikimedia.org/wikipedia/en/a/aa/How_I_Met_Your_Mother_S9.jpg");
 
 
-getData()
+getData();

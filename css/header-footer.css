@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Oswald:wght@300&family=Poiret+One&display=swap');
 *{
   box-sizing:border-box;
   margin: 0;
@@ -14,9 +13,8 @@ body{
 
 header{
 
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   color: whitesmoke;
-
   margin-bottom: 15px;
 
 
@@ -59,6 +57,8 @@ header h1{
   padding-right: 20px;
   margin-bottom: 20px;
   position: relative;
+  left: 100px;
+  
   
   
   
@@ -71,10 +71,11 @@ header h1{
 
 #nav-header ul li a {
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 25px;
   color: whitesmoke;
-  font-family: 'Coda Caption', sans-serif;
+  /* font-family: 'Coda Caption', sans-serif; */
+  font-family: 'Poiret One', cursive;
   position: relative;
   top: -15px;
  
@@ -83,6 +84,7 @@ header h1{
 #nav-header ul li a:hover {
  color: red;
 }
+
 footer{
     clear: both;
     background-color: rgb(17, 16, 16);

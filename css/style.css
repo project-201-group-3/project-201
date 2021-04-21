@@ -4,23 +4,30 @@
 *{
   box-sizing:border-box;
   margin: 0;
+  
 
 }
-#parent{
-  margin-left: 50px;
-} 
+
 
 body{
-  position:absolute;
-  margin:0;
-  background: rgb(154, 101, 156);
+  
+  /* position:absolute;
+  /* margin:0; */
+  /* background: rgb(201, 169, 202) !important; */
  /* background-color: rgba(0, 0, 0, 0.842); */
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU');
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU');
  background-repeat:no-repeat ;
  width: 100%;
- height: 100%;
+ height: 100%; */ 
+/* 
+	margin: 0; */
+	
+		/* background: rgb(36,15,73) !important; */
+		background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
+		margin: 0 !important;
+  }
 
-}
+
 p{
   color:blanchedalmond;
   font-family:unset;
@@ -32,7 +39,7 @@ text-decoration: none;
 
 header{
 
-  background-color: black;
+  /* background-color: rgb(228, 192, 192); */
   color: whitesmoke;
 
   margin-bottom: 15px;
@@ -42,7 +49,8 @@ header{
 }
 
 #parent{
-  width: 100%;
+  /* width: 100%; */
+  
   display: inline-block;
   
 }
@@ -54,8 +62,9 @@ header{
 }
 
 .box2 img{
+  /* margin-right: 10px; */
   height: 600px;
-  width: 500px;
+  width: 300px !important;
 
 animation-name: example;
 animation-duration: 4s;
@@ -65,7 +74,7 @@ animation-direction: reverse;
 
 .box2{
   width: 30%;
-  display: inline-block;
+  display: inline-block !important;
  
 
 animation-name: example;
@@ -100,7 +109,7 @@ animation-direction: reverse;
   }
 
 
-header h1{
+/* header h1{
   font-size: 60px;
   font-family: 'Coda Caption', sans-serif;
   font-family: 'Dancing Script', cursive;
@@ -142,8 +151,7 @@ header h1{
 
 #nav-header ul li a:hover {
  color: red;
-} */
-
+}  */
 /* finish header css*/
 
 
@@ -159,12 +167,13 @@ header h1{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
+  max-width: 500px !important;
   position: relative;
-  margin: auto;
+  margin: 0;
 }
 
 .slideshow-container img{
+  width: 500px !important;
   height: 600px;
 }
 
@@ -283,8 +292,8 @@ margin-bottom: 5px;
 
 #box-mid .box{
   display: inline-block;
-  width: 33%;
-  padding: 20px; 
+  width: 25%;
+  padding: 10px; 
 
 
   
