@@ -85,7 +85,7 @@ header h1{
 }
 
 #nav-header ul li a:hover {
- color: red;
+  color: rgb(221, 154, 176);
 }
 
 footer{
