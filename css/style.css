@@ -13,7 +13,7 @@ body{
   
   /* position:absolute;
   /* margin:0; */
-  /* background: rgb(201, 169, 202) !important; */
+   background: rgb(201, 169, 202) !important; 
  /* background-color: rgba(0, 0, 0, 0.842); */
   /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcKo6pBXnCPLouVo50sp0rLy5v9tQw6BcJM9mlL1yPKsTXoYL8Q0UVaOV6cF-M22-eBo&usqp=CAU');
  background-repeat:no-repeat ;
@@ -23,9 +23,9 @@ body{
 	margin: 0; */
 	
 		/* background: rgb(36,15,73) !important; */
-		background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
-		margin: 0 !important;
-  }
+		/* background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%) !important;
+		/* margin: 0 !important; */
+}
 
 
 p{
