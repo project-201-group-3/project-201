@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 
 
@@ -6,6 +9,7 @@
   box-sizing:border-box;
   margin: 0;
   
+
 }
 
 
@@ -110,17 +114,21 @@ animation-direction: reverse;
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  left: -130px;
+
   margin-top: 40px;
+  right: 46px;
 
   /* margin: 0; */
 
 }
 
 .slideshow-container img{
-  width: 800px !important;
+  position: relative;
+  width: 600px !important;
   height: 600px;
   margin-top: 30px;
+  right: 150px;
+
   /* margin-bottom: 30px; */
 
 }
@@ -178,7 +186,8 @@ animation-direction: reverse;
 }
 .dotClass{
   position:relative;
-  left: -140px;
+  left: -200px;
+
 
 }
 /* The dots/bullets/indicators */
@@ -350,14 +359,12 @@ bottom:  70px;
         transform: translateX(0);
     }
 }
-#p1{
 
-}
 
 .p2{
 position:relative;
   display: inline;
-  padding-right:300px ;
- right: -300px ;
+ padding:90px;
+ right: -100px ;
  top: 40px;
 }

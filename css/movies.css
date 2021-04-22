@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
 *{
 	box-sizing:border-box !important;
@@ -134,6 +135,7 @@ input[name="r"]{
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
+	z-index: 1;
 	
 	
 }
@@ -144,16 +146,17 @@ color: cornsilk;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	font-weight: bolder;
-	height: 60px;
-	width: 100px;
+	height: 45px;
+	width: 180px;
 	padding: 15px;
+	text-align: center;
 	transition: all ease 0.3s;
 	font-size: 25px ;
 	background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
 	border-radius: 90px;
 	/* background-color:rgb(241, 233, 233);  */
 	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
-
+/* z-index: 2; */
 }
 .sortContainer ul li a:hover{
 	background-color:purple;
@@ -180,17 +183,15 @@ color: cornsilk;
 	display: block;
 }
 /*****************Video******************/
- section .videoSection{
-	position:static;
-    margin-bottom: 50px;
-	width: 30%;
-    clear: both;
-	margin-left: 200px;
-} 
+section .videoSection{
+}
 video{
-     margin-bottom: 50px;
+	position: relative;
+	left: 170px;
+	/* width: auto; */
+    margin-bottom: 50px;
     clear: both;
-	margin-left: 200px;
+	margin-left: 120px;
 }
 /*****************MoviesItems******************/
 .checked {
@@ -209,17 +210,17 @@ video{
 		margin-bottom: 15px;
 		padding: 10px;
 		float: left;
-		 margin-left: 100px;
+		 margin-left: 80px;
 		box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
-		/* border: 2px solid rgba(128, 72, 111, 0.315); */
+	/*	border: 2px solid rgba(128, 72, 111, 0.315);*/
 		border-radius: 10px;
 		transition: 0.5s;
 		background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
+
 		 /* background-color: rgb(119, 70, 95); */
 		width: 305px; 
 		height: 400px;
 }
-
 	
 #movies div:hover,#anime div:hover,#series div:hover{
 	
@@ -252,7 +253,7 @@ video{
 	position: absolute;
 	width: 89%;
 	left: 17px;
-	/* background-color: rgba(169, 169, 169, 0.205); */
+	background-color: rgba(169, 169, 169, 0.205);
 	transition: all 0.3 ease-in-out;
 	opacity:0 ;
 	cursor: pointer;
