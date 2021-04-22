@@ -1,127 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 
 
-*{
-  box-sizing:border-box;
-  margin: 0;
-  
-
-}
-
-
-body{
-  background: #C1C8E4  !important;
-
-
-  margin:0;
-  
-  }
-
-	
 
 p{
-  font-family: 'Anton', sans-serif;
+font-family: 'Anton', sans-serif;
 font-family: 'Bebas Neue', cursive;
- font-size: 30px;
+font-size: 30px;
 text-decoration: none;
-text-align: center;
-padding-top: 10px;
+text-align: justify;
 font-weight: lighter;
-color: rgba(110, 21, 194) ;
-
-
+/* color: rgba(110, 21, 194) ; */
 }
-
-
-  #trans{
-  /* color: rgba(110, 21, 194, 0.658); */
+#trans{
+  text-transform: none;
+  text-indent: 10px;
+  color: rgba(0, 0, 0, 0.911);
   border: 5px;
-  /* border-color:cornflowerblue ; */
-  -webkit-text-stroke: 2px black; /* width and color */
-
-    font-family: sans; color: rgb(247, 0, 255);
-
-
-
+  font-family: 'Poiret One', cursive;
+  font-weight:500;
+      /* color: rgb(247, 0, 255); */
 }
  #welcome{
-  color: rgba(110, 21, 194) !important;
+   padding-top: 10px;
+   text-align: center;
+  -webkit-text-stroke: 1px black;
+  color: black!important;
   font-size: 40px;
 
 }
-#parent{
-  /* width: 100%; */
-  
+#parent{  
   display: inline-block;
   
 }
 .box4{
-  margin-left: 500px;
+  margin-top: -50px;
+  margin-left: 520px;
   display: inline-block;
 }
 .box.img{
   border-radius:100px;
 }
 
-.box2 img{
-  /* margin-right: 10px; */
-  height: 600px;
-  width: 300px !important;
-
-animation-name: example;
-animation-duration: 4s;
-animation-direction: reverse;
-
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(-1deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(-3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
-.box2{
-  width: 30%;
-  display: inline-block !important;
- 
-
-animation-name: example;
-animation-duration: 4s;
-animation-direction: reverse;
-}
-
-
-.box2:hover {
-	/* Start the shake animation and make the animation last for 0.5 seconds */
-	animation: shake 0.5s;
-
-	/* When the animation is finished, start again */
-	animation-iteration-count: infinite;
-  transform: rotate(20deg);
-
-}
-
-  
-  @keyframes shake {
-	0% { transform: translate(1px, 1px) rotate(-1deg); }
-	10% { transform: translate(-1px, -2px) rotate(-1deg); }
-	20% { transform: translate(-3px, 0px) rotate(1deg); }
-	30% { transform: translate(3px, 2px) rotate(0deg); }
-	40% { transform: translate(1px, -1px) rotate(1deg); }
-	50% { transform: translate(-1px, 2px) rotate(-1deg); }
-	60% { transform: translate(-3px, 1px) rotate(0deg); }
-	70% { transform: translate(-3px, 1px) rotate(-1deg); }
-	80% { transform: translate(-1px, -1px) rotate(1deg); }
-	90% { transform: translate(1px, 2px) rotate(0deg); }
-	100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
 
 
 
 /* Slideshow container */
 .slideshow-container {
-  position: relative;
-
   margin-top: 40px;
-  right: 46px;
 
   /* margin: 0; */
 
@@ -181,8 +122,8 @@ animation-direction: reverse;
   width: 70%;
   height: 300px;
   text-align: center;
-  border:5px double rgb(221, 100, 29);
-  left: 150px;
+  border:5px double #521548;
+  left: 200px;
 }
 
 /* Number text (1/3 etc) */
@@ -195,7 +136,7 @@ animation-direction: reverse;
 }
 .dotClass{
   position:relative;
-  left: -200px;
+  left: -170px;
 
 
 }
@@ -244,9 +185,7 @@ margin-bottom: 80px;
   background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
     margin-top: 40px;
   width: 100%;
- /* background-repeat: no-repeat; */
   text-align: center;
-
 cursor: pointer;
   outline: none;
   color: #fff;
@@ -254,7 +193,7 @@ cursor: pointer;
   border-radius: 15px;
   box-shadow: 0 9px whitesmoke;
 top: 70px;
-margin-bottom: 5px;
+margin-bottom: 100px;
 }
 
 
@@ -373,7 +312,24 @@ bottom:  70px;
 .p2{
 position:relative;
   display: inline;
- padding:90px;
+ padding:110px;
  right: -100px ;
  top: 40px;
+}
+#p1{
+  margin-left: 50px;
+}
+header{
+  margin-top: -1.1em;
+}
+footer{
+  margin-bottom: -1.1em;
+}
+.fa-long-arrow-down{
+  padding: 3px 10px;
+  background-color: #521548;
+  color:lavender;
+  border:2px solid black;
+  margin-bottom: 10px;
+  margin-left: 3px;
 }

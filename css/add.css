@@ -1,18 +1,9 @@
-*{
-	box-sizing:border-box;
-	margin: 0;
-  
-  }
-
 main {
 	content: '';
 	 position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #C1C8E4  !important;
-
-	/* background-attachment: fixed; */
-	
+	/* background: #C1C8E4  !important; */	
 }
 #sfrom{
 	clear: both;
