@@ -100,8 +100,8 @@ font-size: 25px;
 
 #clearAll{
      position: relative; 
-     right: -900px;
-     margin-left: 800px; 
+     right: -860px;
+     /* margin-left: 700px;  */
    width: 100px;
    height:45px;
 font-weight: bolder;
@@ -116,8 +116,8 @@ text-align: center;
  border: none;
  border-radius: 15px;
  box-shadow: 0 5px whitesmoke;
-top: 70px;
-/* margin-top: 0px; */
+top: 20px;
+margin-bottom: 20px;/* margin-top: 0px; */
 margin-left: 260px;
 }
 #clearAll:hover{
