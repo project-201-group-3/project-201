@@ -45,7 +45,8 @@ function getData() {
       deleteIcon.setAttribute('id', allItem[i].name);
       innerDiv.appendChild(deleteIcon);
       deleteIcon.textContent = 'X';
-      deleteIcon.style.color = 'red';
+      deleteIcon.style.color = 'white';
+      deleteIcon.style.fontWeight = 'Bold';
       // let line = document.createElement('hr');
       // div.appendChild(line);
 

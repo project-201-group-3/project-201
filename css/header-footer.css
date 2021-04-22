@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Oswald:wght@300&family=Poiret+One&display=swap');
 *{
-  box-sizing:border-box;
-  margin: 0;
-
+	box-sizing:border-box !important;
+	margin: 0 ;
 }
+  
 
 body{
+  text-transform: capitalize;
   margin: 0;
-  background-color:rgb(165, 103, 235);
+  background-size: 400% 400%;
+	background: #e1cff9 !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+  color: black !important;
+
 }
 
 header{
-
-  background-color:rgb(119, 78, 165) !important;
+  background-color:#160113!important;
   color: whitesmoke;
   margin-bottom: 15px;
 
@@ -51,7 +56,6 @@ header h1{
 }
 h1:hover{
   color: rgb(193, 160, 224);
-
 
 }
 
@@ -95,7 +99,7 @@ h1:hover{
 
 footer{
     clear: both;
-    background-color:rgb(102, 59, 151) !important;
+    background-color:#160113!important;
 
     box-shadow: 10px 10px 20px 20px #CDC7FF;
 
@@ -172,5 +176,3 @@ footer p {
    bottom: 50px;
 
    }
-
-  

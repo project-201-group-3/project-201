@@ -2,48 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
-*{
-	box-sizing:border-box !important;
-	margin: 0;
-  }
-  
-  body{
-	/* background: rgb(36,15,73);
-	background: linear-gradient(90deg, rgba(36,15,73,1) 35%, rgba(75,27,97,1) 75%, rgba(110,54,135,1) 100%);
-	margin: 0; */
-	/* background: linear-gradient(90deg, rgba(36,15,73,1), rgba(75,27,97,1), rgba(110,54,135,1),rgba(110,54,135,1)); */
-	background-size: 400% 400%;
-	background: #A4B3B6  !important;
 
-
-  }
 
 /*  anime slide show  */
 
-#anime{
-	position: absolute;
-	top: 900px;
-}
-#anime-footer{
-	position: absolute;
-	bottom: -3500px;
-	width: 100%;
-}
-
 .slidershow {
+	height: 31em;
 	width: 1000px;
 	height: 600px;
 	overflow: hidden;
 	clear: both;
-	margin-top: 50px;
-	margin-bottom: 50px;
 }
 
 .middel{
-	position: absolute;
-	top: 450px;
+	position: relative;
+	top: 250px;
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
@@ -127,21 +101,16 @@ input[name="r"]{
 	z-index: auto;
 }		 
 .sortContainer ul{
-	
     margin-bottom: 50px;
-	
-	
 }
 .sortContainer ul li{
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	
-	
 }
 .sortContainer ul li a{
 	display: inline-block;
-color: cornsilk;
+	color: cornsilk;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -152,18 +121,10 @@ color: cornsilk;
 	text-align: center;
 	transition: all ease 0.3s;
 	font-size: 25px ;
-	background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdTQHfkEq0bK-yHMbgZSgDk4JMC1fNnxITrg&usqp=CAU');
 	border-radius: 90px;
-	/* background-color:rgb(241, 233, 233);  */
 	box-shadow: 0 0 9px rgb(177, 95, 177), 0 0 20px rgb(214, 187, 214), 0 0 40px  rgb(214, 187, 214);
-/* z-index: 2; */
 }
-.sortContainer ul li a:hover{
-	background-color:purple;
-	color: red !important;
-}
-
-
 
 .sortContainer ul li.selection ul{
 	/* background-color: #fff; */
@@ -174,8 +135,14 @@ color: cornsilk;
 	display: none;
 	
 }
+
 .sortContainer ul li.selection ul li a{
-	color: white;
+	color: rgb(193, 160, 224) !important; 
+	width: 180px;
+	
+}
+.sortContainer ul li.selection ul li a:hover{
+	color: rgba(255, 255, 255, 0.863) !important;
 	width: 180px;
 	
 }
@@ -184,14 +151,19 @@ color: cornsilk;
 }
 /*****************Video******************/
 section .videoSection{
+	width: auto;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	 background: linear-gradient(rgba(0, 0, 0, 0.2),
+	rgba(0, 0, 0, 0.2)),  url(https://www.shokouheshafagh.ir/wp-content/uploads/2020/12/42-scaled.jpg);
+	/* background-color: #C6B5ED; */
+	margin-top: -109.6px ;
+	margin-bottom: 50px;
+	height: 31em;
+	text-align: center;
 }
 video{
-	position: relative;
-	left: 170px;
-	/* width: auto; */
-    margin-bottom: 50px;
-    clear: both;
-	margin-left: 120px;
+    margin-top: 3em;
 }
 /*****************MoviesItems******************/
 .checked {
@@ -204,31 +176,25 @@ video{
 	bottom: 35px;
 }
 
-
+.MovieSection{
+	margin: 100px 0;
+}
 #movies div,#anime div,#series div{
-	
-		margin-bottom: 15px;
-		padding: 10px;
-		float: left;
-		 margin-left: 80px;
-		box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
-	/*	border: 2px solid rgba(128, 72, 111, 0.315);*/
-		border-radius: 10px;
-		transition: 0.5s;
-		background-image: url('https://ak.picdn.net/shutterstock/videos/1013608700/thumb/1.jpg?ip=x480');
-
-		 /* background-color: rgb(119, 70, 95); */
-		width: 305px; 
-		height: 400px;
+	margin-bottom: 37px;
+	padding: 10px;
+	float: left;
+	margin-left: 109.5px;
+	box-shadow:0 20px 50px rgba(0, 0, 0, 0.5px);
+	border-radius: 10px;
+	transition: 0.5s;
+	background-image: url('https://media.istockphoto.com/vectors/purple-metal-background-with-horizontal-stripes-vector-illustration-vector-id903449976?k=6&m=903449976&s=612x612&w=0&h=QmKpgNnT7UsBQYhVQbEsM5l7rrcvT0ks48bRuToIT8M=');
+	width: 305px; 
+	height: 400px;
 }
 	
 #movies div:hover,#anime div:hover,#series div:hover{
-	
-	
-	box-shadow: 0 0 10px blue, 0 0 40px , 0 0 80px rgb(150, 193, 241);
-		/* box-shadow:0 40px 70px rgba(0, 0, 0, 0.5px); */
-		transform: translateY(-30px);
-
+	box-shadow: 0 0 10px rgb(132, 0, 255), 0 0 40px , 0 0 80px rgb(150, 193, 241);
+	transform: translateY(-30px);
 }
 
 
@@ -248,12 +214,14 @@ video{
     transition: .350ms;
 	margin-bottom: 10px;
 	opacity: .9;
+	background: #e9e5fa;
+	border: 5px solid #e9e5fa;
 }
 #movies div a.addFav,#anime div a.addFav,#series div a.addFav{
 	position: absolute;
 	width: 89%;
 	left: 17px;
-	background-color: rgba(169, 169, 169, 0.205);
+	/* background-color: rgba(169, 169, 169, 0.205); */
 	transition: all 0.3 ease-in-out;
 	opacity:0 ;
 	cursor: pointer;
